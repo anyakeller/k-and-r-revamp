@@ -4,4 +4,4 @@
     {{ get_the_author() }}
   </a>
 </p>
-<h1>asdfasd @php the_field('wistia-related_video_wistia_link') @endphp </h1>
+<a href="{{ the_field('wistia-related_video_wistia_link') }}">wistia link</a>
