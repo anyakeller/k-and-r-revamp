@@ -1,0 +1,18 @@
+// Aug 27, 2020
+
+.banner {
+  background-color: rgb(255, 102, 0);
+}
+
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.kite-rocket-logo-header {
+  object-fit: contain;
+  width: 70%;
+}
