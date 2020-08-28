@@ -98,3 +98,11 @@ $file_types = array_merge($file_types, $new_filetypes );
 return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+function wporg_add_custom_post_types($query) {
+    if ( is_home() && $query->is_main_query() ) {
+        $query->set( 'post_type', array( 'video' ) );
+    }
+    return $query;
+}
+add_action('pre_get_posts', 'wporg_add_custom_post_types');
