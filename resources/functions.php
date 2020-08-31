@@ -99,6 +99,7 @@ return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
 
+// ensure videos
 function wporg_add_custom_post_types($query) {
     if ( is_home() && $query->is_main_query() ) {
         $query->set( 'post_type', array( 'video' ) );
@@ -106,3 +107,6 @@ function wporg_add_custom_post_types($query) {
     return $query;
 }
 add_action('pre_get_posts', 'wporg_add_custom_post_types');
+
+// disable admin bar (for testing)
+add_filter('show_admin_bar', '__return_false');

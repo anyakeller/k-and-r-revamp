@@ -1,10 +1,39 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-$theme-colors: (
-  primary: #525ddc
-);
-
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+// WRITE YOUR BOOSTRAP VARIABLE OVERRIDES HERE
+// Some custom variables that work with boostrap are defined here but purely custom variables go at the bottom
+
+// fonts
+$font-family-sans-serif: Yantramanav, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// colors
+// K&R orange
+// text colors: body-color-default and link-color-default
+
+$theme-colors: (
+  kr-orange: #fa6602,
+  body-color-default: #706f6f,
+  link-color-default: #676767
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color: theme-color("body-color-default");
+
+// links
+$link-color: theme-color("link-color-default");
+$link-decoration: none;
+$link-hover-color: darken($link-color, 30%);
+$link-hover-decoration: none;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 40%;
+
+/* Purely custom variables
+* ====================================================== Purely custom variables
+*/

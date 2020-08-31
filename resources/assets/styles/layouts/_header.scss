@@ -2,6 +2,25 @@
 
 .banner {
   background-color: rgb(255, 102, 0);
+  height: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+
+  > div {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3rem;
+  }
+
+  &::after {
+    height: 20vh;
+    width: 100vw;
+    content: "";
+    background-color: inherit;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .banner .nav li {

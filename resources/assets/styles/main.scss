@@ -27,6 +27,10 @@
 // Swiper
 @import "~swiper/swiper.scss";
 
+/* TEXT
+* ================================================================ TEXT
+*/
+
 // Font setup
 @font-face {
   font-family: Yantramanav;
@@ -64,6 +68,31 @@
   font-weight: 800 900;
 }
 
-.test-font {
-  font-family: Yantramanav, sans-serif;
+// Links <a>
+a {
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+/* LAYOUT
+* ================================================================ LAYOUT
+*/
+
+.wrap.container {
+  @include media-breakpoint-up(xm) {
+    padding: 0 1.5rem 3rem;
+  }
+}
+
+// SINGLE video
+.main-video {
+  position: relative;
+  // top: -3rem;
+}
+
+.wistia-player {
+  -webkit-box-shadow: 5px 10px 15px 0 rgba(58, 46, 46, 0.69);
+  box-shadow: 5px 10px 15px 0 rgba(58, 46, 46, 0.69);
+  background: #fff;
 }
