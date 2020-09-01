@@ -26,6 +26,8 @@
 
 // Swiper
 @import "~swiper/swiper.scss";
+// fontawesome-free
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
 
 /* TEXT
 * ================================================================ TEXT
@@ -71,7 +73,6 @@
 // H tags
 h4 {
   color: theme-color("kr-orange");
-  margin: 1rem 0;
 }
 
 // Links <a>
@@ -93,12 +94,26 @@ a {
 
 // SINGLE video
 .main-video {
-  position: relative;
+  // position: relative;
   // top: -3rem;
 }
 
 .wistia-player {
-  -webkit-box-shadow: 5px 10px 15px 0 rgba(58, 46, 46, 0.69);
-  box-shadow: 5px 10px 15px 0 rgba(58, 46, 46, 0.69);
+  -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
+  box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   background: #fff;
+}
+
+.main-video-details {
+  padding: 1rem 0 0.2rem;
+
+  h4 {
+    display: inline-block;
+    color: theme-color("kr-orange");
+  }
+
+  span {
+    color: theme-color-level("body-color-default", -4);
+    // reduce level of main theme color to get a muted one
+  }
 }
