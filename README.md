@@ -10,8 +10,11 @@ This README file is specific to this theme but it draws some usage instructions 
 **Table of Contents**
 <!-- TOC -->
 
-- [WordPress info](#wordpress-info)
-- [Theme usage](#theme-usage)
+- [WordPress Info](#wordpress-info)
+- [Theme Usage](#theme-usage)
+  - [Styles](#styles)
+  - [File Structure](#file-structure)
+  - [Blade Tips](#blade-tips)
 
 <!-- /TOC -->
 

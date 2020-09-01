@@ -6,16 +6,30 @@
   .container {
     height: 10rem;
 
+    @include media-breakpoint-down(sm) {
+      height: 6rem;
+    }
+
     > div {
       position: -webkit-sticky;
       position: sticky;
       padding-bottom: 2rem;
       top: 3.5rem;
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 1.5rem;
+        top: 2.5rem;
+      }
     }
   }
 
   &::after {
     height: 20vh;
+
+    @include media-breakpoint-down(sm) {
+      height: 10vh;
+    }
+
     width: 100vw;
     content: "";
     background-color: inherit;

@@ -68,6 +68,12 @@
   font-weight: 800 900;
 }
 
+// H tags
+h4 {
+  color: theme-color("kr-orange");
+  margin: 1rem 0;
+}
+
 // Links <a>
 a {
   -webkit-transition: all 0.2s ease 0s;
@@ -80,7 +86,7 @@ a {
 */
 
 .wrap.container {
-  @include media-breakpoint-up(xm) {
+  @include media-breakpoint-up(sm) {
     padding: 0 1.5rem 3rem;
   }
 }
