@@ -82,6 +82,12 @@ a {
   transition: all 0.2s ease 0s;
 }
 
+button {
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
 /* LAYOUT
 * ================================================================ LAYOUT
 */
@@ -92,11 +98,7 @@ a {
   }
 }
 
-// SINGLE video
-.main-video {
-  // position: relative;
-  // top: -3rem;
-}
+// main-video
 
 .wistia-player {
   -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
@@ -114,6 +116,34 @@ a {
 
   span {
     color: theme-color-level("body-color-default", -4);
+    font-size: 1rem;
     // reduce level of main theme color to get a muted one
+  }
+}
+
+.video-sharing-button-div {
+  -webkit-transition: width 0.2s ease 0s;
+  -o-transition: width 0.2s ease 0s;
+  transition: width 0.2s ease 0s;
+
+  h5 {
+    @extend .my-auto;
+
+    font-size: 1.1rem;
+  }
+
+  button {
+    color: $link-color;
+    padding: 0;
+
+    &:hover {
+      color: darken($link-color, 20%);
+    }
+  }
+}
+
+#video-sharing-modal {
+  code {
+    word-break: break-all;
   }
 }

@@ -1,7 +1,6 @@
 <article @php post_class() @endphp>
   <div class="main-video">
     @include('partials/main-video')
-    <a href="{{ the_field('wistia_related_video_wistia_link') }}">wistia link</a>
 
 
     <p>{{ the_field('video_details_video_length') }}</p>

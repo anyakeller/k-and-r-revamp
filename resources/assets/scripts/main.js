@@ -25,3 +25,19 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+
+// Enable tooltips
+
+$(function() {
+  $('.video-sharing-icon').tooltip({
+    trigger: 'hover',
+  });
+  $('#video-sharing-modal').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var shareType = button.data('originalTitle');
+    var shareData = button.data('toshare');
+    var modal = $(this);
+    modal.find('.modal-title').text(shareType);
+    modal.find('.modal-body code').text(shareData);
+  });
+});
