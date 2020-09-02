@@ -65,21 +65,35 @@ To lint styles, run `yarn run lint:styles` or my custom name, `yarn run lies`
 
 ### File Structure
 
+#### Larvel Blade Templating
 Roots Sage uses [Laravel's Blade templating engine](https://laravel.com/docs/5.8/blade)
 
-The [file structure](https://roots.io/docs/sage/9.x/blade-templates/#passing-data-to-templates) follows that of wordpress.
+The [template file structure](https://roots.io/docs/sage/9.x/blade-templates/#passing-data-to-templates) follows that of wordpress.
 The main templates are locatd in resources/views
 The partials are locatd in `resources/views/partials`
 
 The main file which wraps ever page is `resources/views/layouts/app.blade.php`.  It is best not to modify this one.
 
-The files to be aware of: **files ok for editting in bold** the rest should not be edited unless necessary
+#### The template files to be aware of:
+##### Files in BOLD are *relatively easy to edit* (do not require extensive research to use properly and safely)
+##### The other files SHOULD NOT BE EDITED unless you fully understand their proper usage.
+
 * **`header.blade.php`** - the page header for all views - currently the "KITE AND ROCKET RESEARCH" text
 * `front-page.blade.php` - page view for the main landing/home page; contains post while loop - already set up only to display video posts
   - **`content-video.blade.php`** - partial for the `<article>` element for every post on the home page
     - **`entry-meta.blade.php`** - partial describing how each video post will be displayed on the home page in even more detail
 * `single-video.blade.php` - page for a singluar video-post page
   - **`content-single-video.blade.php`** - the partial for displaying a specific video post on its own page
+
+#### Wordpress PHP Files
+
+WordPress uses php.  All the templating ultimately ends up going through the wordpress stuff.
+
+#### The wordpress PHP files to be aware of:
+##### Files in BOLD are *relatively easy to edit* (do not require extensive research to use properly and safely)
+##### The other files SHOULD NOT BE EDITED unless you fully understand their proper usage.
+**files for *relatively easy* (do not require extensive research to understand) editting are in bold** the other files should not be edited unless you fully understand the usage of the file
+* `functions.php` - contains integral functions for the site at the top with some custom helper functions at the bottom - you can add helper functions that will be globally available across all the templates
 
 ### Blade Tips
 
