@@ -112,6 +112,15 @@ function add_file_types_to_uploads($file_types)
     return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
+function fix_svg_thumb_display() {
+  echo '<style>
+    .media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>';
+}
+add_action('admin_head', 'fix_svg_thumb_display');
 
 // ensure the automatic query on the homepage only gets videos (when there is no redirect)
 function wporg_add_custom_post_types($query)
@@ -127,7 +136,7 @@ add_action('pre_get_posts', 'wporg_add_custom_post_types');
 add_filter('show_admin_bar', '__return_false');
 
 /*
- * Custom helper functions
+ * Custom helper functions for the actual site
  */
 
 /**
