@@ -91,22 +91,92 @@ Container::getInstance()
         ]);
     }, true);
 
-function add_file_types_to_uploads($file_types){
-$new_filetypes = array();
-$new_filetypes['svg'] = 'image/svg+xml';
-$file_types = array_merge($file_types, $new_filetypes );
-return $file_types;
+
+
+/*************************************************************************
+ *
+ *   You have reached the editable section!
+ *
+ *   Everything below has been added for this specific Sage wordpress theme variant
+ *
+ *   Still, you should heed the warning at the top of the file
+ *
+ */
+
+// Allow svg uploads (video category icons are svgs)
+function add_file_types_to_uploads($file_types)
+{
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes);
+    return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
 
-// ensure videos
-function wporg_add_custom_post_types($query) {
-    if ( is_home() && $query->is_main_query() ) {
-        $query->set( 'post_type', array( 'video' ) );
+// ensure the automatic query on the homepage only gets videos (when there is no redirect)
+function wporg_add_custom_post_types($query)
+{
+    if (is_home() && $query->is_main_query()) {
+        $query->set('post_type', array( 'video' ));
     }
     return $query;
 }
 add_action('pre_get_posts', 'wporg_add_custom_post_types');
 
-// disable admin bar (for testing)
+// disable admin bar (for dev testing)
 add_filter('show_admin_bar', '__return_false');
+
+/*
+ * Custom helper functions
+ */
+
+/**
+ * helper function to get featured video
+ */
+function get_featured_video()
+{
+    $args = array(
+    'post_type' => 'video',
+    'posts_per_page' => 1,
+    'meta_key'		=> 'is_featured_video',
+    'meta_value'	=> 1
+  );
+    $main_video = new WP_Query($args);
+    return $main_video;
+}
+
+/**
+ * helper function to get all video categories
+ * uses get_terms()  https://developer.wordpress.org/reference/functions/get_terms/
+ */
+function get_video_categories()
+{
+    $args = array(
+    'taxonomy' => 'video_categories',
+    'hide_empty' => true
+  );
+    $video_category_terms = get_terms($args);
+    return $video_category_terms;
+}
+
+/**
+ * helper function to get all videos in a video category
+ * @param WP_Term[]|WP_Error $video_category_terms
+ * @return WP_Query
+ */
+function get_videos_from_category($video_category_terms = NULL)
+{
+
+    $args = array(
+    'post_type' => 'video',
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'video-categories',
+        'field' => 'slug',
+        'terms' => $term->slug,
+      )
+    ),
+  );
+    $videos_by_category = new WP_Query($args);
+    return $videos_by_category;
+}

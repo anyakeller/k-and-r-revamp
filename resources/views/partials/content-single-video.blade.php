@@ -1,5 +1,12 @@
 <article @php post_class() @endphp>
   <div class="main-video">
+
+    @forelse(get_video_categories() as $category)
+      {{ $category->name }}
+    @empty
+      NOPE
+    @endforelse
+
     @include('partials/main-video')
 
 
