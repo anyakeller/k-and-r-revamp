@@ -13,6 +13,9 @@ import aboutUs from './routes/about';
 // fontawesome
 import '@fortawesome/fontawesome-free/js/all.js';
 
+// swiper
+import './swiperScripts.js'
+
 /** Populate Router instance with DOM routes */
 const routes = new Router({
   // All pages
