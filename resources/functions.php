@@ -112,8 +112,9 @@ function add_file_types_to_uploads($file_types)
     return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
-function fix_svg_thumb_display() {
-  echo '<style>
+function fix_svg_thumb_display()
+{
+    echo '<style>
     .media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
       width: 100% !important;
       height: auto !important;
@@ -126,7 +127,7 @@ add_action('admin_head', 'fix_svg_thumb_display');
 function wporg_add_custom_post_types($query)
 {
     if (is_home() && $query->is_main_query()) {
-        $query->set('post_type', array( 'video' ));
+        $query->set('post_type', array( 'krvideo' ));
     }
     return $query;
 }
@@ -145,7 +146,7 @@ add_filter('show_admin_bar', '__return_false');
 function get_featured_video()
 {
     $args = array(
-    'post_type' => 'video',
+    'post_type' => 'krvideo',
     'posts_per_page' => 1,
     'meta_key'		=> 'is_featured_video',
     'meta_value'	=> 1
@@ -173,11 +174,10 @@ function get_video_categories()
  * @param WP_Term[]|WP_Error $video_category_terms
  * @return WP_Query
  */
-function get_videos_from_category($video_category_terms = NULL)
+function get_videos_from_category($video_category_terms = null)
 {
-
     $args = array(
-    'post_type' => 'video',
+    'post_type' => 'krvideo',
     'tax_query' => array(
       array(
         'taxonomy' => 'video-categories',

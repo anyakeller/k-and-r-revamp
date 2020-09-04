@@ -12,11 +12,17 @@
       exit;
     @endphp
   @else
-    @include('partials/main-video')
+    {{-- @include('partials/main-video')
     @while(have_posts()) @php the_post() @endphp
       @include('partials.content-'.get_post_type())
       @include('partials.content-page')
-    @endwhile
+    @endwhile --}}
+    @if (have_postS()) @php the_post() @endphp
+      @php
+        wp_safe_redirect( get_permalink() );
+        exit;
+      @endphp
+    @endif
   @endif
 
 @endsection

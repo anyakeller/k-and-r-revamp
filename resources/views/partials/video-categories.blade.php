@@ -4,7 +4,7 @@
   <!-- @include('partials.page-header') -->
   @php
     $args = array(
-      'post_type' => 'video',
+      'post_type' => 'krvideo',
       'posts_per_page' => 1,
       'meta_key'		=> 'is_featured_video',
       'meta_value'	=> 1
