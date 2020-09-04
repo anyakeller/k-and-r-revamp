@@ -14,7 +14,7 @@ import aboutUs from './routes/about';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 // swiper
-import './swiperScripts.js'
+import './swiperScripts.js';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -29,18 +29,29 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
 
-// Enable tooltips
+// Video Sharing Tabs
+// pure js
+// var copySocialBtn = document.querySelector('#copySocialShareValue');
+// copySocialBtn.addEventListener('click', () => {
+//   var activeSocialTab = document
+//     .querySelector('.social-tab.active')
+//     .querySelector('.form-control');
+//   activeSocialTab.select();
+//   document.execCommand('copy');
+// });
 
-$(function() {
-  $('.video-sharing-icon').tooltip({
-    trigger: 'hover',
-  });
-  $('#video-sharing-modal').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var shareType = button.data('originalTitle');
-    var shareData = button.data('toshare');
-    var modal = $(this);
-    modal.find('.modal-title').text(shareType);
-    modal.find('.modal-body code').text(shareData);
-  });
+// jquery
+var copySocialBtnJquery = $('#copySocialShareValue');
+copySocialBtnJquery.click(() => {
+  var activeSocialTabJquery = $('.social-tab.active').children('.form-control');
+  activeSocialTabJquery.select();
+  document.execCommand('copy');
+});
+copySocialBtnJquery.tooltip({
+  trigger: 'focus',
+  title: 'copied to clipboard',
+  delay: {
+    show: 0,
+    hide: 5000,
+  },
 });

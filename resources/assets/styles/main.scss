@@ -100,6 +100,16 @@ button {
 
 // main-video
 
+.main-video {
+  @include media-breakpoint-up(md) {
+    max-width: 800px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 850px;
+  }
+}
+
 .wistia-player {
   -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
@@ -119,6 +129,10 @@ button {
     font-size: 1rem;
     // reduce level of main theme color to get a muted one
   }
+
+  p {
+    line-height: 1.2em;
+  }
 }
 
 .video-sharing-button-div {
@@ -131,19 +145,31 @@ button {
 
     font-size: 1.1rem;
   }
+}
 
-  button {
-    color: $link-color;
-    padding: 0;
+#video-sharing-modal {
+  top: 10vh;
 
-    &:hover {
-      color: darken($link-color, 20%);
+  > .modal-dialog {
+    @include media-breakpoint-up(md) {
+      max-width: 700px;
     }
   }
 }
 
-#video-sharing-modal {
-  code {
-    word-break: break-all;
+.video-sharing-icon {
+  color: $link-color;
+  padding: 0;
+
+  &:hover {
+    color: darken($link-color, 20%);
   }
+}
+
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }

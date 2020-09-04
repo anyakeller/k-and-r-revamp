@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+  {{-- main video player --}}
   @while(have_posts()) @php the_post() @endphp
     @include('partials.content-single-'.get_post_type())
   @endwhile
 
+  {{-- all the other videos --}}
   @php
     $all_videos = get_krvideos();
   @endphp

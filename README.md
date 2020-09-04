@@ -13,8 +13,8 @@ This README file is specific to this theme but it draws some usage instructions 
 - [WordPress Info](#wordpress-info)
 - [Theme Usage](#theme-usage)
   - [Styles](#styles)
+  - [Javascript files](#javascript-files)
   - [File Structure](#file-structure)
-  - [Blade Tips](#blade-tips)
 
 <!-- /TOC -->
 
@@ -63,6 +63,15 @@ You can read more on [theming bootstrap here](https://getbootstrap.com/docs/4.5/
 
 To lint styles, run `yarn run lint:styles` or my custom name, `yarn run lies`
 
+### Javascript files
+
+Working with the scripts in resources/assets/scripts:
+#### The script files to be aware of:
+
+* `main.js` - the primary js file and hub for most js imports
+* `swiperScripts.js` - the code that initializes swiper
+
+
 ### File Structure
 
 #### Larvel Blade Templating
@@ -95,7 +104,7 @@ WordPress uses php.  All the templating ultimately ends up going through the wor
 **files for *relatively easy* (do not require extensive research to understand) editting are in bold** the other files should not be edited unless you fully understand the usage of the file
 * `functions.php` - contains integral functions for the site at the top with some custom helper functions at the bottom - you can add helper functions that will be globally available across all the templates
 
-### Blade Tips
+#### Blade Tips
 
 Comments
 `{{-- this is a comment --}}`

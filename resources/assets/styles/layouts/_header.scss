@@ -4,21 +4,29 @@
   background-color: rgb(255, 102, 0);
 
   .container {
-    height: 10rem;
+    height: 14vh;
 
-    @include media-breakpoint-down(sm) {
-      height: 6rem;
+    @include media-breakpoint-down(xs) {
+      height: 7vh;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 800px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 900px;
     }
 
     > div {
       position: -webkit-sticky;
       position: sticky;
-      padding-bottom: 2rem;
-      top: 3.5rem;
+      padding-bottom: 2vh;
+      top: 4vh;
 
-      @include media-breakpoint-down(sm) {
-        padding-bottom: 1.5rem;
-        top: 2.5rem;
+      @include media-breakpoint-down(xs) {
+        padding-bottom: 1vh;
+        top: 1.5vh;
       }
     }
   }
