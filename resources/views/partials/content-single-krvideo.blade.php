@@ -4,7 +4,7 @@
 
     @include('partials/main-video')
 
-    <p>{{ the_field('video_details_video_length') }}</p>
+    {{-- <p>{{ the_field('video_details_video_length') }}</p> --}}
 
     @php the_content() @endphp
   </div>
