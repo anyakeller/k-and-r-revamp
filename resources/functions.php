@@ -189,3 +189,19 @@ function get_videos_from_category($video_category_terms = null)
     $videos_by_category = new WP_Query($args);
     return $videos_by_category;
 }
+
+/**
+ * helper function to get all krvideos
+ * @return WP_Query
+ */
+function get_krvideos()
+{
+    $args = array(
+  'post_type' => 'krvideo',
+  'post_status'		=> 'publish',
+  'order'				=> 'DESC',
+  'posts_per_page' => 10,
+  );
+    $krvideos = new WP_Query($args);
+    return $krvideos;
+}
