@@ -200,7 +200,7 @@ function get_krvideos()
   'post_type' => 'krvideo',
   'post_status'		=> 'publish',
   'order'				=> 'DESC',
-  'posts_per_page' => 10,
+  'posts_per_page' => 40,
   );
     $krvideos = new WP_Query($args);
     return $krvideos;

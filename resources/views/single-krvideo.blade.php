@@ -19,6 +19,8 @@
 @include('partials.content-single-'.get_post_type())
 @endwhile
 
+<hr style="border-top: 3px solid rgba(0, 0, 0, 0.2);" />
+
 {{-- all the other videos --}}
 @php
 $all_videos = get_krvideos();
@@ -31,9 +33,9 @@ $all_videos = get_krvideos();
       @php $all_videos-> the_post()
       @endphp
       <div class="swiper-slide">
-        <img class="swiper-lazy img-fluid" data-src="{{ the_field('wistia_related_video_thumbnail')  }}">
-        <div class="swiper-lazy-preloader"></div>
-        <h5 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h5>
+        <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}">
+        {{-- <div class="swiper-lazy-preloader"></div> --}}
+        <h6 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h6>
       </div>
       {{-- @include('partials.content-'.get_post_type()) --}}
       @endwhile

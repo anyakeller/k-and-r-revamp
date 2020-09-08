@@ -113,7 +113,7 @@ button {
   box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   background: #fff;
 
-  // skinny container width constraints 
+  // skinny container width constraints
   @include skinny-containers;
 }
 
@@ -133,6 +133,7 @@ button {
 
   p {
     line-height: 1.2em;
+    margin-bottom: 0;
   }
 }
 
