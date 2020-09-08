@@ -2,16 +2,12 @@
 
 <style>
   .swiper-container {
-    width: 100%;
-    height: calc((100px + 30px) * 2);
-    margin-left: auto;
-    margin-right: auto;
+    height: calc((200px + 10px) * 2);
   }
+
   .swiper-slide {
     text-align: center;
-    font-size: 18px;
-    background: #fff;
-    height: 100px !important;
+    height: 200px !important;
   }
 </style>
 
@@ -40,10 +36,8 @@ $all_videos = get_krvideos();
         <h5 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h5>
       </div>
       {{-- @include('partials.content-'.get_post_type()) --}}
-    @endwhile
+      @endwhile
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
 
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>

@@ -104,10 +104,6 @@ button {
 
 .main-video {
   @include media-breakpoint-up(md) {
-    max-width: 800px;
-  }
-
-  @include media-breakpoint-up(xl) {
     max-width: 850px;
   }
 }
@@ -116,6 +112,9 @@ button {
   -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   background: #fff;
+
+  // skinny container width constraints 
+  @include skinny-containers;
 }
 
 .main-video-details {

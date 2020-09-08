@@ -1,4 +1,4 @@
-<div class="wistia-player">
+<div class="wistia-player mx-auto">
   {{ the_field('wistia_related_wistia_embed_code') }}
 </div>
 <div class="main-video-details">
