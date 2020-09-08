@@ -19,8 +19,6 @@
 @include('partials.content-single-'.get_post_type())
 @endwhile
 
-<hr style="border-top: 3px solid rgba(0, 0, 0, 0.2);" />
-
 {{-- all the other videos --}}
 @php
 $all_videos = get_krvideos();

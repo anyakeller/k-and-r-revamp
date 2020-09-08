@@ -7,7 +7,7 @@
     height: 3rem;
 
     // skinny container width constraints
-    @include skinny-containers;
+    // @include skinny-containers;
 
     @include media-breakpoint-up(sm) {
       height: 4.5rem;
