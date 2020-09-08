@@ -17,6 +17,7 @@ $categories = get_video_categories();
   @if($one_category->have_posts())
     @include('partials/swiper-video-category-row')
   @endif
+  <hr style="border-top: 2px solid rgba( 0, 0, 0, 0.2);"/>
 @endforeach
 
 @endsection
