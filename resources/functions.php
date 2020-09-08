@@ -181,12 +181,17 @@ function get_videos_from_category($video_category)
     'tax_query' => array(
       array(
         'taxonomy' => 'krvideo-cat',
-        'terms' => $term->term_id
+        'terms' => $video_category->term_id
       )
     ),
   );
     $videos_by_category = new WP_Query($args);
     return $videos_by_category;
+}
+
+function get_all_videos_in_all_categories()
+{
+    echo 'hello';
 }
 
 /**

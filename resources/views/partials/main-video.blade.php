@@ -2,14 +2,6 @@
   {{ the_field('wistia_related_wistia_embed_code') }}
 </div>
 
-<h4>
-@php
-$categories = get_video_categories();
-foreach( $categories as $category ) {
-  echo $category->term_id;
-}
-@endphp
-</h4>
 
 <div class="main-video-details">
   <h4>{{ the_field('video_details_video_title') }}

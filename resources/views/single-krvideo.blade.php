@@ -8,33 +8,15 @@
 @include('partials.content-single-'.get_post_type())
 @endwhile
 
-{{-- all the other videos --}}
+
 @php
-$all_videos = get_krvideos();
+$categories = get_video_categories();
 @endphp
+@foreach( $categories as $category )
+  @php $one_category = get_videos_from_category($category); @endphp
+  @if($one_category->have_posts())
+    @include('partials/swiper-video-category-row')
+  @endif
+@endforeach
 
-
-{{-- swiper tests --}}
-<div class="mt-4">
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      @while($all_videos->have_posts())
-        @php $all_videos-> the_post()
-        @endphp
-        <div class="swiper-slide">
-          <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}">
-          {{-- <div class="swiper-lazy-preloader"></div> --}}
-          <h6 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h6>
-        </div>
-        {{-- @include('partials.content-'.get_post_type()) --}}
-        @endwhile
-    </div>
-
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</div>
 @endsection
