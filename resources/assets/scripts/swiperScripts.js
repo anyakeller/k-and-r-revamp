@@ -4,7 +4,7 @@ import Swiper from 'swiper/bundle';
 var mySwiper = new Swiper('.swiper-container', {
   slidesPerView: 3,
   spaceBetween: 5,
-  slidesPerColumn: 2,
+  // slidesPerColumn: 2,
   freeMode: true,
 
   navigation: {
@@ -15,22 +15,22 @@ var mySwiper = new Swiper('.swiper-container', {
     576: {
       slidesPerView: 3,
       spaceBetween: 20,
-      slidesPerColumn: 2,
+      // slidesPerColumn: 2,
     },
     768: {
       slidesPerView: 3,
       spaceBetween: 20,
-      slidesPerColumn: 2,
+      // slidesPerColumn: 2,
     },
     992: {
       slidesPerView: 4,
       spaceBetween: 20,
-      slidesPerColumn: 2,
+      // slidesPerColumn: 2,
     },
     1200: {
       slidesPerView: 4,
       spaceBetween: 20,
-      slidesPerColumn: 2,
+      // slidesPerColumn: 2,
     },
   },
   mousewheel: {

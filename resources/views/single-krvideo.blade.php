@@ -1,16 +1,5 @@
 @extends('layouts.app')
 
-<style>
-  .swiper-container {
-    height: calc((200px + 10px) * 2);
-  }
-
-  .swiper-slide {
-    text-align: center;
-    height: 200px !important;
-  }
-</style>
-
 @section('content')
 {{-- main video player --}}
 @while(have_posts())
