@@ -162,7 +162,7 @@ function get_featured_video()
 function get_video_categories()
 {
     $args = array(
-    'taxonomy' => 'video_categories',
+    'taxonomy' => 'krvideo-cat',
     'hide_empty' => true
   );
     $video_category_terms = get_terms($args);
@@ -174,15 +174,14 @@ function get_video_categories()
  * @param WP_Term[]|WP_Error $video_category_terms
  * @return WP_Query
  */
-function get_videos_from_category($video_category_terms = null)
+function get_videos_from_category($video_category)
 {
     $args = array(
     'post_type' => 'krvideo',
     'tax_query' => array(
       array(
-        'taxonomy' => 'video-categories',
-        'field' => 'slug',
-        'terms' => $term->slug,
+        'taxonomy' => 'krvideo-cat',
+        'terms' => $term->term_id
       )
     ),
   );
