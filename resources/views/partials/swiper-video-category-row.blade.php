@@ -7,9 +7,9 @@
         @endphp
         <div class="swiper-slide">
           <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}">
-          <h6 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h6>
+          <p class="entry-title video-slide-text"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></p>
         </div>
-      @endwhile
+        @endwhile
     </div>
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>

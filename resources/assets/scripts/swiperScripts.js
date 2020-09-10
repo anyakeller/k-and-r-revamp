@@ -6,6 +6,8 @@ var mySwiper = new Swiper('.swiper-container', {
   spaceBetween: 5,
   // slidesPerColumn: 2,
   freeMode: true,
+  slidesOffsetBefore: 40,
+  slidesOffsetAfter: 40,
 
   navigation: {
     nextEl: '.swiper-button-next',
