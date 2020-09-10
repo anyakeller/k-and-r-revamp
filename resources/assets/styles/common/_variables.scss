@@ -41,22 +41,9 @@ $emphasized-link-hover-darken-percentage: 40%;
 * ====================================================== Purely custom variables
 */
 
-// Mixin to set _header width and video player width breakpoints
-// optional params:
-@mixin skinny-containers {
-  @include media-breakpoint-up(md) {
-    max-width: 600px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    max-width: 700px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    max-width: 775px;
-
-    @media (min-height: 800px) {
-      max-width: 825px;
-    }
-  }
-}
+/*
+ Skinny container widths for using the media-breakpoint-up() mixin
+*/
+$skinny-container-md: 600px;
+$skinny-container-lg: 700px;
+$skinny-container-xl: 775px;

@@ -6,22 +6,22 @@
   .container {
     height: 3rem;
 
-    // skinny container width constraints
-    // @include skinny-containers;
-
     @include media-breakpoint-up(sm) {
       height: 4.5rem;
     }
 
     @include media-breakpoint-up(md) {
+      max-width: $skinny-container-md;
       height: 4.5rem;
     }
 
     @include media-breakpoint-up(lg) {
+      max-width: $skinny-container-lg;
       height: 5.5rem;
     }
 
     @include media-breakpoint-up(xl) {
+      max-width: $skinny-container-xl;
       height: 6rem;
     }
 

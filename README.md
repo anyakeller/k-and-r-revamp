@@ -52,6 +52,13 @@ assets/scripts/main.js
 
 This theme is built on a customized version of Bootstrap v4.5
 
+**I DID modify some of the core bootstrap stuff** but I don't exactly remember which things I tweaked.
+That being said, it's nothing to worry about.  Running `yarn build` recompiles bootstrap.
+
+The things I do remember changing were:
+* I added an extra breakpoint class called `ph` at 420px.  It stands for phone and represents the max width of phone screens in portrait (approximately tho). You can use it like any of the bootstrap classes since it's compiled with the bootstrap stuffs in _variables.scss.
+*
+
 All easily modifyable styling can be found in resources/assets/styles/ but ultimatly you should incorperate your changes into bootstrap's scss (in node_modules).  All bootstrap scss variables are defined in node_modules/bootstra/scss/_variables.scss with some modifacations.
 
 Working with the scss in resources/assets/styles:

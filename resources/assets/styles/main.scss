@@ -27,7 +27,7 @@
 // Swiper
 @import "~swiper/swiper.scss";
 @import "~swiper/components/lazy/lazy.scss";
-@import "~swiper/components/navigation/navigation.scss";
+// @import "~swiper/components/navigation/navigation.scss";
 
 .swiper-slide {
   text-align: center;
@@ -99,29 +99,54 @@ button {
 * ================================================================ LAYOUT
 */
 
-.wrap.container {
-  @include media-breakpoint-up(sm) {
-    padding: 0 1.5rem 3rem;
+/*
+ * Mixins for standardized ASPECT RATIO media queries
+ * Important Notes:
+ *  - when including these mixins, call them in the order below
+ *  - When determining the website's behavior, we follow this order
+ *    1. Check if the viewer is on a phone-like screen in portrait mode using `@import aspect-ratio-portrait-phones`
+ *    2.
+ */
+
+// Phones in portrait
+@mixin aspect-ratio-portrait-phones {
+  @media (max-aspect-ratio: 3/4) {
+    background-color: #0bac2f; // green
+
+    @content;
+  }
+}
+
+// laptops
+@mixin aspect-ratio-three-four {
+  @media (min-aspect-ratio: 3/4) {
+    background-color: #0c4a83; // dusty blue
+
+    @content;
+  }
+}
+
+// lomg screnz
+@mixin aspect-ratio-sixteen-nine {
+  @media (min-aspect-ratio: 16/9) {
+    background-color: #a30590; //magenta
+
+    @content;
   }
 }
 
 // main-video
 
 .main-video {
-  @include skinny-containers;
-
-  @include media-breakpoint-up(md) {
-    max-width: 850px;
-  }
+  @include aspect-ratio-portrait-phones;
+  @include aspect-ratio-three-four;
+  @include aspect-ratio-sixteen-nine;
 }
 
 .wistia-player {
   -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   background: #fff;
-
-  // skinny container width constraints
-  // @include skinny-containers;
 }
 
 .main-video-details {
@@ -194,4 +219,12 @@ pre {
   white-space: -pre-wrap; /* Opera 4-6 */
   white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.swiper-button-next {
+  background-color: rgb(247, 129, 50);
+}
+
+.swiper-button-prev {
+  background-color: rgb(247, 129, 50);
 }
