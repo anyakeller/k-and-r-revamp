@@ -1,4 +1,5 @@
-.container-content {
+.container-main {
+  @include make-container();
   @include aspect-ratio-portrait-phones;
 
   @include aspect-ratio-three-four {

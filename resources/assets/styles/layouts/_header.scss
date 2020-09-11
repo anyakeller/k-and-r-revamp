@@ -3,7 +3,7 @@
 .banner {
   background-color: rgb(255, 102, 0);
 
-  .container-fluid {
+  .container-main {
     height: 3rem;
 
     @include media-breakpoint-up(sm) {
