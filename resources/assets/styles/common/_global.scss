@@ -1,0 +1,88 @@
+// fontawesome-free
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
+/* TEXT
+* ================================================================ TEXT
+*/
+
+// Font setup
+@font-face {
+  font-family: Yantramanav;
+  src: url("../fonts/Yantramanav/Yantramanav-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Yantramanav;
+  src: url("../fonts/Yantramanav/Yantramanav-Light.ttf") format("truetype");
+  font-weight: 200 300;
+}
+
+@font-face {
+  font-family: Yantramanav;
+  src: url("../fonts/Yantramanav/Yantramanav-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Yantramanav;
+  src: url("../fonts/Yantramanav/Yantramanav-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Yantramanav;
+  src: url("../fonts/Yantramanav/Yantramanav-Bold.ttf") format("truetype");
+  font-weight: 600 700;
+}
+
+@font-face {
+  font-family: Yantramanav;
+  src: url("../fonts/Yantramanav/Yantramanav-Black.ttf") format("truetype");
+  font-weight: 800 900;
+}
+
+// H tags
+h4 {
+  color: theme-color("kr-orange");
+}
+
+/* LAYOUT
+* ================================================================ LAYOUT
+*/
+
+/*
+ * Mixins for standardized ASPECT RATIO media queries
+ * Important Notes:
+ *  - when including these mixins, call them in the order below
+ *  - When determining the website's behavior, we follow this order
+ *    1. Check if the viewer is on a phone-like screen in portrait mode using `@import aspect-ratio-portrait-phones`
+ *    2.
+ */
+
+// Phones in portrait
+@mixin aspect-ratio-portrait-phones {
+  @media (max-aspect-ratio: 3/4) {
+    background-color: #0bac2f; // green
+
+    @content;
+  }
+}
+
+// laptops
+@mixin aspect-ratio-three-four {
+  @media (min-aspect-ratio: 3/4) {
+    background-color: #0c4a83; // dusty blue
+
+    @content;
+  }
+}
+
+// lomg screnz
+@mixin aspect-ratio-sixteen-nine {
+  @media (min-aspect-ratio: 16/9) {
+    background-color: #a30590; //magenta
+
+    @content;
+  }
+}

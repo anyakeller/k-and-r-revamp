@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- @include('partials.page-header') -->
+{{-- @include('partials.page-header') --}}
   @php
     $main_video = get_featured_video();
   @endphp
