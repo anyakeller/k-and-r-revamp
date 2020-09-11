@@ -1,76 +1,18 @@
-// Swiper
+/**
+  * Layout
+  *
+*/
+
+/**
+  * Swiper
+  *
+*/
 @import "~swiper/swiper.scss";
 @import "~swiper/components/lazy/lazy.scss";
 @import "~swiper/components/navigation/navigation.scss";
 
 .swiper-slide {
   text-align: center;
-}
-
-// main-video
-
-// testing aspect ratio
-// .main-video {
-//   @include aspect-ratio-portrait-phones;
-//   @include aspect-ratio-three-four;
-//   @include aspect-ratio-sixteen-nine;
-// }
-
-.wistia-player {
-  -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
-  box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
-  background: #fff;
-}
-
-.main-video-details {
-  padding: 1rem 0 0.2rem;
-
-  h4 {
-    display: inline-block;
-    color: theme-color("kr-orange");
-  }
-
-  span {
-    color: theme-color-level("body-color-default", -4);
-    font-size: 1rem;
-    // reduce level of main theme color to get a muted one
-  }
-
-  p {
-    line-height: 1.2em;
-    margin-bottom: 0;
-  }
-}
-
-.video-sharing-button-div {
-  -webkit-transition: width 0.2s ease 0s;
-  -o-transition: width 0.2s ease 0s;
-  transition: width 0.2s ease 0s;
-
-  h5 {
-    @extend .my-auto;
-
-    font-size: 1.1rem;
-  }
-}
-
-#video-sharing-modal {
-  top: 10vh;
-
-  > .modal-dialog {
-    @include media-breakpoint-up(md) {
-      max-width: 700px;
-    }
-  }
-}
-
-.video-sharing-icon {
-  color: $link-color;
-  padding: 0;
-
-  &:hover {
-    color: darken($link-color, 20%);
-  }
 }
 
 // Styling Swiper
@@ -175,5 +117,74 @@
       rgba(255, 255, 255, 0.82) 99%,
       rgba(240, 240, 240, 0.9) 100%
     );
+  }
+}
+
+/**
+  * Main Video
+  *
+*/
+
+// testing aspect ratio
+// .main-video {
+//   @include aspect-ratio-portrait-phones;
+//   @include aspect-ratio-three-four;
+//   @include aspect-ratio-sixteen-nine;
+// }
+
+.wistia-player {
+  -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
+  box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
+  background: #fff;
+}
+
+.main-video-details {
+  padding: 1rem 0 0.2rem;
+
+  h4 {
+    display: inline-block;
+    color: theme-color("kr-orange");
+  }
+
+  span {
+    color: theme-color-level("body-color-default", -4);
+    font-size: 1rem;
+    // reduce level of main theme color to get a muted one
+  }
+
+  p {
+    line-height: 1.2em;
+    margin-bottom: 0;
+  }
+}
+
+.video-sharing-button-div {
+  -webkit-transition: width 0.2s ease 0s;
+  -o-transition: width 0.2s ease 0s;
+  transition: width 0.2s ease 0s;
+
+  h5 {
+    @extend .my-auto;
+
+    font-size: 1.1rem;
+  }
+}
+
+#video-sharing-modal {
+  top: 10vh;
+
+  > .modal-dialog {
+    @include media-breakpoint-up(md) {
+      max-width: 700px;
+    }
+  }
+}
+
+.video-sharing-icon {
+  color: $link-color;
+  padding: 0;
+
+  &:hover {
+    color: darken($link-color, 20%);
   }
 }
