@@ -1,0 +1,15 @@
+p,
+a,
+li {
+  margin-bottom: 0;
+}
+
+footer .widget {
+  // Give the footers bootstrap column behavior
+  @include make-col-ready();
+
+  // each widget takes up equal width on medium screens and up
+  @include media-breakpoint-up(md) {
+    @include make-col-auto();
+  }
+}

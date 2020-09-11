@@ -3,7 +3,7 @@
 .banner {
   background-color: rgb(255, 102, 0);
 
-  .container {
+  .container-fluid {
     height: 3rem;
 
     @include media-breakpoint-up(sm) {
@@ -11,18 +11,15 @@
     }
 
     @include media-breakpoint-up(md) {
-      max-width: $skinny-container-md;
       height: 4.5rem;
     }
 
     @include media-breakpoint-up(lg) {
-      max-width: $skinny-container-lg;
       height: 5.5rem;
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: $skinny-container-xl;
-      height: 6rem;
+      height: 11rem;
     }
 
     > div {
@@ -44,6 +41,11 @@
       @include media-breakpoint-up(lg) {
         padding-bottom: 1rem;
         top: 1.25rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-bottom: 2rem;
+        top: 3.25rem;
       }
     }
   }

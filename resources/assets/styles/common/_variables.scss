@@ -6,7 +6,8 @@ $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
 
 // WRITE YOUR BOOSTRAP VARIABLE OVERRIDES HERE
-// Some custom variables that work with boostrap are defined here but purely custom variables go at the bottom
+
+$enable-responsive-font-sizes: true;
 
 // fonts
 $font-family-sans-serif: Yantramanav, sans-serif, -apple-system,
@@ -36,14 +37,3 @@ $link-hover-color: darken($link-color, 20%);
 $link-hover-decoration: none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 40%;
-
-/* Purely custom variables
-* ====================================================== Purely custom variables
-*/
-
-/*
- Skinny container widths for using the media-breakpoint-up() mixin
-*/
-$skinny-container-md: 600px;
-$skinny-container-lg: 700px;
-$skinny-container-xl: 775px;

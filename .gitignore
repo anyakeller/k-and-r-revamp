@@ -3,7 +3,6 @@
 .cache-loader
 dist
 node_modules/*
-!node_modules/bootstrap
 npm-debug.log
 yarn-error.log
 /vendor

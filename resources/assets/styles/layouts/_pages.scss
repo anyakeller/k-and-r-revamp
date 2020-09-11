@@ -1,0 +1,12 @@
+.container-content {
+  @include aspect-ratio-portrait-phones;
+
+  @include aspect-ratio-three-four {
+    padding: inherit {
+      right: 7rem;
+      left: 7rem;
+    }
+  }
+
+  @include aspect-ratio-sixteen-nine;
+}

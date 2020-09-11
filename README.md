@@ -105,15 +105,7 @@ WordPress global php functions: `resources/functions.php`
 ### Styles
 
 This theme is built on a customized version of Bootstrap v4.5
-
-#### **I DID modify some of the core bootstrap stuff** but I don't exactly remember which things I tweaked.
-
-That being said, it's nothing to worry about.  Running `yarn build` recompiles bootstrap.
-
-The things I do remember changing were:
-
--   I added an extra breakpoint class called `ph` at 420px.  It stands for phone and represents the max width of phone screens in portrait (approximately tho). You can use it like any of the bootstrap classes since it's compiled with the bootstrap stuffs in \_variables.scss.
--
+All customizations to bootstrap are in `assets.sttles/common/_variables.scss`
 
 All easily modifyable styling can be found in resources/assets/styles/ but ultimatly you should incorperate your changes into bootstrap's scss (in node_modules).  All bootstrap scss variables are defined in node_modules/bootstra/scss/\_variables.scss with some modifacations.
 
@@ -129,14 +121,14 @@ Take a look at the order of imports in main.scss.  There's a reason it's called 
 
 In the order they are imported in main.scss, here's how I thought of the usage of the style files
 
--   common/\_variables.scss - scss variables to be used by any of the other scss modules.
--   common/\_global.scss - I wrote my scss `@mixins` and defined some styles that would apply to every page on the site here
+-   common/\_variables.scss - scss variables for customizing bootstrap
+-   common/\_global.scss - I honestly am just using it for stuff I need everything else to be able to acess (e.g `@mixin`, font stuff...)
 -   components/\_buttons - general button styling.  I also defined the base link styling for `<a>` tags.
 -   layouts/\_header - styling for the big kite and rocket header at the top of every page.  The actual header is imported in the root template for every page on the site.  The actual header partial can be found in : `assets/views/partials/header.blade.php`
 -   layouts/\_pages.scss - Overall
 -   layouts/\_posts.scss - Overall
 
-To change default CSS attribute values and variables, you can overwrite the boostrap name in \_variables.scss
+To change default Bootstrap variables, you can overwrite the boostrap name in \_variables.scss
 You can view the [bootstrap variable default names here](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss)
 You can read more on [theming bootstrap here](https://getbootstrap.com/docs/4.5/getting-started/theming/)
 

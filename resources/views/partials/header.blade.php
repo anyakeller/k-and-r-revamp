@@ -1,5 +1,5 @@
 <header class="banner">
-  <div class="container">
+  <div class="container-fluid">
     <div>
       <a class="brand" href="{{ home_url('/') }}"><img class="kite-rocket-logo-header" src="@asset('images/kite-and-rocket-research-logo.png')" alt="{{ get_bloginfo('name', 'display') }}"></a>
     </div>

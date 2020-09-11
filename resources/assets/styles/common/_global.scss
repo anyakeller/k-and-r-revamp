@@ -1,6 +1,13 @@
 // fontawesome-free
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 
+/*
+ Skinny container widths for using the media-breakpoint-up() mixin
+*/
+$skinny-container-md: 600px;
+$skinny-container-lg: 700px;
+$skinny-container-xl: 775px;
+
 /* TEXT
 * ================================================================ TEXT
 */
@@ -63,7 +70,7 @@ h4 {
 // Phones in portrait
 @mixin aspect-ratio-portrait-phones {
   @media (max-aspect-ratio: 3/4) {
-    background-color: #0bac2f; // green
+    // background-color: #0bac2f; // green
 
     @content;
   }
@@ -72,7 +79,7 @@ h4 {
 // laptops
 @mixin aspect-ratio-three-four {
   @media (min-aspect-ratio: 3/4) {
-    background-color: #0c4a83; // dusty blue
+    // background-color: #0c4a83; // dusty blue
 
     @content;
   }
@@ -81,7 +88,7 @@ h4 {
 // lomg screnz
 @mixin aspect-ratio-sixteen-nine {
   @media (min-aspect-ratio: 16/9) {
-    background-color: #a30590; //magenta
+    // background-color: #a30590; //magenta
 
     @content;
   }
