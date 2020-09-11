@@ -137,11 +137,12 @@ button {
 
 // main-video
 
-.main-video {
-  @include aspect-ratio-portrait-phones;
-  @include aspect-ratio-three-four;
-  @include aspect-ratio-sixteen-nine;
-}
+// testing aspect ratio
+// .main-video {
+//   @include aspect-ratio-portrait-phones;
+//   @include aspect-ratio-three-four;
+//   @include aspect-ratio-sixteen-nine;
+// }
 
 .wistia-player {
   -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
@@ -211,17 +212,22 @@ button {
 
 .swiper-button-next,
 .swiper-button-prev {
-  // stuff to make swiper div full height of swiper container
+  background-color: white;
+  color: theme-color("kr-orange");
+
+  // To make swiper container full height and center icon
   top: 0;
   height: 100%;
   margin-top: 0;
-  padding-bottom: $headings-line-height * $h6-font-size * 4 + $headings-margin-bottom;
+  padding-bottom: $headings-line-height * $h6-font-size * 4 +
+    $headings-margin-bottom;
+  width: 40px;
 }
 
 .swiper-button-next {
-  color: theme-color("kr-orange");
+  right: 0;
 }
 
 .swiper-button-prev {
-  color: theme-color("kr-orange");
+  left: 0;
 }
