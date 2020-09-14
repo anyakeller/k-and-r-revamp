@@ -62,39 +62,96 @@ h4 {
  * Mixins for standardized ASPECT RATIO media queries
  * Important Notes:
  *  - when including these mixins, call them in the order below
- *  - When determining the website's behavior, we follow this order
- *    1. Check if the viewer is on a phone-like screen in portrait mode using `@import aspect-ratio-portrait-phones`
- *    2.
+ *  - $exact - determines if the content of the block should only apply to that breakpoint and not spill into the following one
+ *  - $devcolor - easy way to turn on a background-color for testing
+ *
  */
 
-// lomg screnz
-@mixin aspect-ratio-sixteen-nine {
-  @media (max-aspect-ratio: 16/9) {
-    // background-color: #a30590; // magenta
+// widest screnz
+@mixin aspect-ratio-widest($devcolor: false) {
+  @media (min-aspect-ratio: 16/9) {
+    @if $devcolor {
+      background-color: rgba(128, 19, 16, 0.6); // red
+    }
 
     @content;
   }
 }
 
-@mixin aspect-ratio-four-three {
-  @media (max-aspect-ratio: 4/3) {
-    // background-color: rgba(#80b413, 0.59); // lime
+// lomg screnz
+@mixin aspect-ratio-sixteen-nine-max($exact: false, $devcolor: false) {
+  @if $exact {
+    @media (max-aspect-ratio: 16/9) and (min-aspect-ratio: 4/3) {
+      @if $devcolor {
+        background-color: rgba(128, 59, 16, 0.6); // orange
+      }
 
-    @content;
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-aspect-ratio: 16/9) {
+      @if $devcolor {
+        background-color: rgba(128, 59, 16, 0.6); // orange
+      }
+
+      @content;
+    }
+  }
+}
+
+@mixin aspect-ratio-four-three-max($exact: false, $devcolor: false) {
+  @if $exact {
+    @media (max-aspect-ratio: 4/3) and (max-aspect-ratio: 1/1) {
+      @if $devcolor {
+        background-color: rgba(128, 120, 16, 0.6); // yellow
+      }
+
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-aspect-ratio: 4/3) {
+      @if $devcolor {
+        background-color: rgba(128, 120, 16, 0.6); // yellow
+      }
+
+      @content;
+    }
   }
 }
 
 // laptops
-@mixin aspect-ratio-one-one {
-  @media (max-aspect-ratio: 1/1) {
-    @content;
+@mixin aspect-ratio-one-one-max($exact: false, $devcolor: false) {
+  @if $exact {
+    @media (max-aspect-ratio: 1/1) and (max-aspect-ratio: 3/4) {
+      @if $devcolor {
+        background-color: rgba(128, 120, 16, 0.6); // yellow
+      }
+
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-aspect-ratio: 1/1) {
+      @if $devcolor {
+        background-color: rgba(128, 120, 16, 0.6); // yellow
+      }
+
+      @content;
+    }
   }
 }
 
 // Phones in portrait
-@mixin aspect-ratio-portrait-phones {
+@mixin aspect-ratio-portrait-phones($devcolor: false) {
   @media (max-aspect-ratio: 3/4) {
-    // background-color: #0bac2f; // green
+    @if $devcolor {
+      background-color: rgba(16, 104, 128, 0.6); // blue
+    }
 
     @content;
   }

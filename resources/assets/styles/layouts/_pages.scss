@@ -1,28 +1,18 @@
 .container-main {
   @include make-container();
 
-  background-color: rgba(128, 16, 29, 0.6); // red
   padding: 0 7rem;
   max-width: 1100px;
 
-  @include aspect-ratio-sixteen-nine {
-    background-color: rgba(128, 59, 16, 0.6); // orange
-  }
+  @include aspect-ratio-sixteen-nine-max($exact: true, $devcolor: true);
+  @include aspect-ratio-four-three-max;
 
-  @include aspect-ratio-four-three {
-    background-color: rgba(128, 120, 16, 0.6); // yellow
-  }
-
-  @include aspect-ratio-one-one {
-    background-color: rgba(65, 128, 16, 0.6); // green
+  @include aspect-ratio-one-one-max {
     padding: inherit {
       right: 1rem;
       left: 1rem;
     }
   }
 
-  @include aspect-ratio-portrait-phones {
-    background-color: rgba(16, 104, 128, 0.6); // blue
-  }
-  // @include aspect-ratio-three-four;
+  @include aspect-ratio-portrait-phones;
 }
