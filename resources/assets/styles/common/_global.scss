@@ -67,8 +67,8 @@ h4 {
  *
  */
 
-// widest screnz
-@mixin aspect-ratio-widest($devcolor: false) {
+// lomgest screnz
+@mixin aspect-ratio-longest($devcolor: false) {
   @media (min-aspect-ratio: 16/9) {
     @if $devcolor {
       background-color: rgba(128, 19, 16, 0.6); // red
@@ -155,4 +155,30 @@ h4 {
 
     @content;
   }
+}
+
+.container-main {
+  @include make-container(24rem);
+
+  // max-width: 1250px;
+
+  @include aspect-ratio-sixteen-nine-max;
+  @include aspect-ratio-four-three-max;
+
+  @include media-breakpoint-down(md) {
+    // max-width: 700px;
+    padding: inherit {
+      right: 8rem;
+      left: 8rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: inherit {
+      right: 4rem;
+      left: 4rem;
+    }
+  }
+
+  @include aspect-ratio-portrait-phones;
 }

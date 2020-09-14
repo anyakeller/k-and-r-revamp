@@ -3,7 +3,9 @@
 .banner {
   background-color: rgb(255, 102, 0);
 
-  .container-main {
+  .banner-row {
+    @include make-row();
+
     height: 3rem;
 
     @include media-breakpoint-up(sm) {
@@ -22,7 +24,7 @@
       height: 11rem;
     }
 
-    > div {
+    #sticky-logo {
       position: -webkit-sticky;
       position: sticky;
       padding-bottom: 0.5rem;
@@ -62,6 +64,7 @@
     background-color: inherit;
     display: block;
     position: absolute;
+    left: 0;
     z-index: -1;
   }
 }

@@ -1,4 +1,4 @@
-<div class="mt-4">
+<div class="col mt-4">
   <div class="swiper-container">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
