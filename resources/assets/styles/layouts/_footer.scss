@@ -15,4 +15,12 @@ footer .widget {
   @include media-breakpoint-up(lg) {
     @include make-col(4);
   }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
 }

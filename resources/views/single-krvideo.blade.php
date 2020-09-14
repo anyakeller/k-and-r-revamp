@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+{{-- Sets up header orange extention on post pages  --}}
+<style>
+  .banner::after {
+    content: "";
+  }
+</style>
+
+
 @section('content')
 {{-- main video player --}}
 <div class="row">
@@ -19,12 +27,13 @@ $categories = get_video_categories();
 <div class="row">
   <div class="col">
     @foreach( $categories as $category )
-      @php $one_category = get_videos_from_category($category); @endphp
-      @if($one_category->have_posts())
-        @include('partials/swiper-video-category-row')
+    @php $one_category = get_videos_from_category($category);
+    @endphp
+    @if($one_category->have_posts())
+      @include('partials/swiper-video-category-row')
       @endif
-      <hr style="border-top: 2px solid rgba( 0, 0, 0, 0.2);"/>
-    @endforeach
+      <hr style="border-top: 2px solid rgba( 0, 0, 0, 0.2);" />
+      @endforeach
   </div>
 </div>
 
