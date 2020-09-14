@@ -1,13 +1,28 @@
 .container-main {
   @include make-container();
-  @include aspect-ratio-portrait-phones;
 
-  @include aspect-ratio-three-four {
+  background-color: rgba(128, 16, 29, 0.6); // red
+  padding: 0 7rem;
+  max-width: 1200px;
+
+  @include aspect-ratio-sixteen-nine {
+    background-color: rgba(128, 59, 16, 0.6); // orange
+  }
+
+  @include aspect-ratio-four-three {
+    background-color: rgba(128, 120, 16, 0.6); // yellow
+  }
+
+  @include aspect-ratio-one-one {
+    background-color: rgba(65, 128, 16, 0.6); // green
     padding: inherit {
-      right: 7rem;
-      left: 7rem;
+      right: 1rem;
+      left: 1rem;
     }
   }
 
-  @include aspect-ratio-sixteen-nine;
+  @include aspect-ratio-portrait-phones {
+    background-color: rgba(16, 104, 128, 0.6); // blue
+  }
+  // @include aspect-ratio-three-four;
 }

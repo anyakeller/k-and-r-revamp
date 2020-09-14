@@ -7,9 +7,12 @@ li {
 footer .widget {
   // Give the footers bootstrap column behavior
   @include make-col-ready();
+  @include make-col(12);
+
+  @extend .text-center;
 
   // each widget takes up equal width on medium screens and up
-  @include media-breakpoint-up(md) {
-    @include make-col-auto();
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
   }
 }

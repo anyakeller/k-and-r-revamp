@@ -67,28 +67,34 @@ h4 {
  *    2.
  */
 
-// Phones in portrait
-@mixin aspect-ratio-portrait-phones {
-  @media (max-aspect-ratio: 3/4) {
-    // background-color: #0bac2f; // green
+// lomg screnz
+@mixin aspect-ratio-sixteen-nine {
+  @media (max-aspect-ratio: 16/9) {
+    // background-color: #a30590; // magenta
+
+    @content;
+  }
+}
+
+@mixin aspect-ratio-four-three {
+  @media (max-aspect-ratio: 4/3) {
+    // background-color: rgba(#80b413, 0.59); // lime
 
     @content;
   }
 }
 
 // laptops
-@mixin aspect-ratio-three-four {
-  @media (min-aspect-ratio: 3/4) {
-    // background-color: #0c4a83; // dusty blue
-
+@mixin aspect-ratio-one-one {
+  @media (max-aspect-ratio: 1/1) {
     @content;
   }
 }
 
-// lomg screnz
-@mixin aspect-ratio-sixteen-nine {
-  @media (min-aspect-ratio: 16/9) {
-    // background-color: #a30590; //magenta
+// Phones in portrait
+@mixin aspect-ratio-portrait-phones {
+  @media (max-aspect-ratio: 3/4) {
+    // background-color: #0bac2f; // green
 
     @content;
   }
