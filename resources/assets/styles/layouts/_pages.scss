@@ -3,7 +3,7 @@
 
   background-color: rgba(128, 16, 29, 0.6); // red
   padding: 0 7rem;
-  max-width: 1200px;
+  max-width: 1100px;
 
   @include aspect-ratio-sixteen-nine {
     background-color: rgba(128, 59, 16, 0.6); // orange
