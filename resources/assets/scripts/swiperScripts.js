@@ -3,7 +3,7 @@ import Swiper from 'swiper/bundle';
 
 var mySwiper = new Swiper('.swiper-container', {
   slidesPerView: 3,
-  spaceBetween: 5,
+  spaceBetween: 10,
   // slidesPerColumn: 2,
   freeMode: true,
   slidesOffsetBefore: 40,

@@ -16,12 +16,14 @@
 }
 
 // Styling Swiper
+$swiper-slide-text-height: 75px;
 
 .video-slide-text {
   @extend .h6;
 
   padding-bottom: 0;
-  height: $headings-line-height * $h6-font-size * 4 + $headings-margin-bottom;
+  margin-bottom: 0;
+  height: $swiper-slide-text-height;
 }
 
 .swiper-button-next,
@@ -33,8 +35,7 @@
   top: 0;
   height: 100%;
   margin-top: 0;
-  padding-bottom: $headings-line-height * $h6-font-size * 4 +
-    $headings-margin-bottom;
+  padding-bottom: $swiper-slide-text-height;
   width: 40px;
 
   // The fuzzy shadow over the videos
