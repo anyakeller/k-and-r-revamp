@@ -146,11 +146,11 @@ h4 {
   }
 }
 
-// Phones in portrait
-@mixin aspect-ratio-portrait-phones($devcolor: false) {
-  @media (max-aspect-ratio: 3/4) {
+// Phones in landscape
+@mixin aspect-ratio-phones-landscape($devcolor: false) {
+  @media (min-aspect-ratio: 4/3) {
     @if $devcolor {
-      background-color: rgba(16, 104, 128, 0.6); // blue
+      background-color: rgba(28, 16, 128, 0.6); // blurple
     }
 
     @content;
@@ -158,27 +158,38 @@ h4 {
 }
 
 .container-main {
-  @include make-container(24rem);
+  @include make-container(1rem);
 
-  // max-width: 1250px;
-
-  @include aspect-ratio-sixteen-nine-max;
-  @include aspect-ratio-four-three-max;
-
-  @include media-breakpoint-down(md) {
-    // max-width: 700px;
+  @include media-breakpoint-up(sm) {
     padding: inherit {
-      right: 8rem;
-      left: 8rem;
+      right: 2rem;
+      left: 2rem;
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-up(md) {
     padding: inherit {
       right: 4rem;
       left: 4rem;
     }
   }
 
-  @include aspect-ratio-portrait-phones;
+  @include media-breakpoint-up(lg) {
+    padding: inherit {
+      right: 8rem;
+      left: 8rem;
+    }
+  }
+
+  & > div {
+    @extend .mx-auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: 750px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 800px;
+    }
+  }
 }
