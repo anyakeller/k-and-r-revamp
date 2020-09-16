@@ -29,35 +29,26 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
+  // jquery
+  var copySocialBtnJquery = $('#copySocialShareValue');
+  copySocialBtnJquery.click(() => {
+    var activeSocialTabJquery = $('.social-tab.active').children(
+      '.form-control'
+    );
+    activeSocialTabJquery.select();
+    document.execCommand('copy');
+  });
+  copySocialBtnJquery.tooltip({
+    trigger: 'focus',
+    title: 'copied to clipboard',
+    delay: {
+      show: 0,
+      hide: 5000,
+    },
+  });
 });
 
-jQuery(window).on('load', () => {
-  swiperScripts.makeSwiper();
-});
-
-// Video Sharing Tabs
-// pure js
-// var copySocialBtn = document.querySelector('#copySocialShareValue');
-// copySocialBtn.addEventListener('click', () => {
-//   var activeSocialTab = document
-//     .querySelector('.social-tab.active')
-//     .querySelector('.form-control');
-//   activeSocialTab.select();
-//   document.execCommand('copy');
+// jQuery(window).on('load', () => {
+//   swiperScripts.makeSwiper();
 // });
-
-// jquery
-var copySocialBtnJquery = $('#copySocialShareValue');
-copySocialBtnJquery.click(() => {
-  var activeSocialTabJquery = $('.social-tab.active').children('.form-control');
-  activeSocialTabJquery.select();
-  document.execCommand('copy');
-});
-copySocialBtnJquery.tooltip({
-  trigger: 'focus',
-  title: 'copied to clipboard',
-  delay: {
-    show: 0,
-    hide: 5000,
-  },
-});
+swiperScripts.makeSwiper();

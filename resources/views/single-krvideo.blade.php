@@ -20,18 +20,41 @@
 </div>
 @endwhile
 
+<style>
+  .swiper-slide-video-category {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100px !important;
+  }
 
+  .category-svg-icon {
+    max-width: 40px;
+    /* max-height: 40px; */
+  }
+
+  .category-icon-div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .category-icon-offsetter {
+    height: 65px;
+  }
+</style>
 @php
 $categories = get_video_categories();
 @endphp
 <div class="row">
   @foreach( $categories as $category )
-    @php $one_category = get_videos_from_category($category) @endphp
-    @if($one_category->have_posts())
-      @include('partials/swiper-video-category-row')
+  @php $one_category = get_videos_from_category($category)
+  @endphp
+  @if($one_category->have_posts())
+    @include('partials/swiper-video-category-row')
     @endif
     <hr style="border-top: 2px solid rgba( 0, 0, 0, 0.2);" />
-  @endforeach
+    @endforeach
 
 </div>
 

@@ -3,9 +3,11 @@
     {{-- Additional required wrapper  --}}
     <div class="swiper-wrapper">
       {{-- The video category icon --}}
-      <div class="swiper-slide">
-        <img src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" height="87" width="100" />
+      <div class="swiper-slide swiper-slide-video-category">
+        <div class="category-icon-div"><img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" /></div>
+        {{-- <img style="background: url('{{ the_field('video_category_icon_main',$category )  }}') no-repeat center;" alt="triangle with all three sides equal"/> --}}
         <p>{{$category -> name}}</p>
+        <div class="category-icon-offsetter"></div>
       </div>
       {{-- The videos in the category --}}
       @while($one_category->have_posts())

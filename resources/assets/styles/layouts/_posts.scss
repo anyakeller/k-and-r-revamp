@@ -31,6 +31,8 @@ $swiper-slide-text-height: 65px;
 .swiper-button-prev {
   background-color: white;
   color: theme-color("kr-orange");
+  -webkit-box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
+  box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
 
   // To make swiper container full height and center icon
   top: 0;
@@ -39,51 +41,12 @@ $swiper-slide-text-height: 65px;
   width: 40px;
   padding-bottom: $swiper-slide-text-height;
 
-  // The fuzzy shadow over the videos
-  &::before {
-    position: absolute;
-    background-color: red;
-    height: 100%;
-    width: 1.2em;
-    content: "";
-  }
-}
+  @include media-breakpoint-down(sm) {
+    width: 0;
 
-// The styling for the shadow gradient near the swiper next and previous buttons
-// The mixin takes in one value in degrees which determines the direction of the linear-gradient
-// For example, the next button uses: `@inclue swiper-button-shadow-gradient(90deg);`
-@mixin swiper-button-shadow-gradient($direction-degrees) {
-  &::before {
-    right: 100%;
-    background: rgba(255, 255, 255, 0);
-    background: -moz-linear-gradient(
-      $direction-degrees,
-      rgba(255, 255, 255, 0) 0,
-      rgba(255, 255, 255, 0.35) 40%,
-      rgba(255, 255, 255, 0.82) 99%,
-      rgba(240, 240, 240, 0.9) 100%
-    );
-    background: -webkit-linear-gradient(
-      $direction-degrees,
-      rgba(255, 255, 255, 0) 0,
-      rgba(255, 255, 255, 0.35) 40%,
-      rgba(255, 255, 255, 0.82) 99%,
-      rgba(240, 240, 240, 0.9) 100%
-    );
-    background: -o-linear-gradient(
-      $direction-degrees,
-      rgba(255, 255, 255, 0) 0,
-      rgba(255, 255, 255, 0.35) 40%,
-      rgba(255, 255, 255, 0.82) 99%,
-      rgba(240, 240, 240, 0.9) 100%
-    );
-    background: linear-gradient(
-      $direction-degrees,
-      rgba(255, 255, 255, 0) 0,
-      rgba(255, 255, 255, 0.35) 40%,
-      rgba(255, 255, 255, 0.82) 99%,
-      rgba(240, 240, 240, 0.9) 100%
-    );
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -92,8 +55,6 @@ $swiper-slide-text-height: 65px;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-
-  @include swiper-button-shadow-gradient(90deg);
 }
 
 .swiper-button-prev {
@@ -101,8 +62,6 @@ $swiper-slide-text-height: 65px;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-
-  @include swiper-button-shadow-gradient(270deg);
 }
 
 /**
