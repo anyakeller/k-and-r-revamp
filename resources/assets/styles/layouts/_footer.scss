@@ -5,12 +5,31 @@ li {
   margin-bottom: 0;
 }
 
+footer {
+  background-color: theme-color("kr-orange");
+  color: rgb(255, 255, 255);
+
+  a {
+    color: inherit;
+    padding: 0 0.5rem;
+
+    &:hover {
+      color: rgb(243, 203, 177);
+    }
+  }
+
+  p {
+    font-weight: 300;
+  }
+}
+
 footer .widget {
   // Give the footers bootstrap column behavior
   @include make-col-ready();
   @include make-col(12);
 
   @extend .text-center;
+  @extend .py-1;
 
   // each widget takes up equal width on medium screens and up
   @include media-breakpoint-up(lg) {
@@ -19,6 +38,7 @@ footer .widget {
 
   ul {
     list-style: none;
+    padding-left: 0;
 
     li {
       display: inline-block;
