@@ -14,7 +14,7 @@ import aboutUs from './routes/about';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 // swiper
-import './swiperScripts.js';
+import swiperScripts from './swiperScripts.js';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -27,7 +27,13 @@ const routes = new Router({
 });
 
 // Load Events
-jQuery(document).ready(() => routes.loadEvents());
+jQuery(document).ready(() => {
+  routes.loadEvents();
+});
+
+jQuery(window).on('load', () => {
+  swiperScripts.makeSwiper();
+});
 
 // Video Sharing Tabs
 // pure js

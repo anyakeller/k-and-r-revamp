@@ -6,9 +6,13 @@
         @php $one_category-> the_post()
         @endphp
         <div class="swiper-slide">
-          <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}">
-          <p class="entry-title video-slide-text"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></p>
+          <a href="{{ get_permalink() }}">
+            {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
+            {{the_post_thumbnail(array( 240, 135 )  , array('class' => 'img-fluid' ))}}
+            <p class="entry-title video-slide-text">{!! get_the_title() !!}</p>
+          </a>
         </div>
+
         @endwhile
     </div>
     <!-- If we need navigation buttons -->
