@@ -56,9 +56,14 @@
 // USED FOR SWIPER VIDEO DESCRIPTIONS
 // needed to be moved up because of css rules
 $swiper-slide-text-height: 100px;
+$swiper-slide-text-height-xl: 85px;
 
 .category-icon-offsetter {
   height: $swiper-slide-text-height;
+
+  @include media-breakpoint-up(xl) {
+    height: $swiper-slide-text-height-xl;
+  }
 }
 
 // Styling Swiper
@@ -68,18 +73,25 @@ $swiper-slide-text-height: 100px;
 
   padding-bottom: 0;
   margin-bottom: 0;
-  height: $swiper-slide-text-height;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: $swiper-slide-text-height;
+
+  @include media-breakpoint-up(xl) {
+    height: $swiper-slide-text-height-xl;
+  }
 
   > p {
     flex-grow: 1;
     overflow: hidden;
     padding-top: 0.5em;
-    margin-bottom: 2em;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 1em;
+    }
   }
 
   span {
@@ -101,6 +113,10 @@ $swiper-slide-text-height: 100px;
   margin-top: 0;
   width: 30px;
   padding-bottom: $swiper-slide-text-height;
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: $swiper-slide-text-height-xl;
+  }
 
   @include media-breakpoint-down(xs) {
     width: 0;
