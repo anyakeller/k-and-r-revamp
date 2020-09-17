@@ -1,7 +1,3 @@
-{{--
-  Template Name: Font-Page Template
---}}
-
 @extends('layouts.app')
 
 @section('content')
