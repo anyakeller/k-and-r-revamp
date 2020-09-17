@@ -5,9 +5,8 @@
 
 <div class="main-video-details">
   <h4>{{ the_field('video_details_video_title') }}
-    <span style="display: block;">Posted on
-      @php $post_date = get_the_date(); echo $post_date;
-      @endphp
+    <span style="display: block;">
+      {{time_elapsed_string(get_the_date())}}
     </span>
   </h4>
 

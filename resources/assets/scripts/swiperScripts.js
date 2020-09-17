@@ -1,6 +1,6 @@
 // Swiper
 import Swiper from 'swiper/bundle';
-var mySwiper = new Swiper('.swiper-container', {
+new Swiper('.swiper-container', {
   slidesPerView: 3,
   spaceBetween: 10,
   // slidesPerColumn: 2,
@@ -37,19 +37,4 @@ var mySwiper = new Swiper('.swiper-container', {
   mousewheel: {
     forceToAxis: true,
   },
-  on: {
-    init: function() {
-      console.log('init');
-    },
-    // reachBeginning: function() {
-    //   this.el.parentNode.classList.add('shift-left');
-    //   console.log(this.el.parentNode.classList);
-    // },
-    // fromEdge: function() {
-    //   this.el.parentNode.classList.remove('shift-left');
-    //   console.log(this.el.parentNode.classList);
-    // },
-  },
 });
-
-console.log(mySwiper);
