@@ -162,11 +162,11 @@ The main file which wraps ever page is `resources/views/layouts/app.blade.php`. 
 ##### The other files should be modified with CARE and CAUTION
 
 -   **`header.blade.php`** - the page header for all views - currently the "KITE AND ROCKET RESEARCH" text
--   `front-page.blade.php` - page view for the main landing/home page; contains post while loop - already set up only to display video posts
-    -   **`content-video.blade.php`** - partial for the `<article>` element for every post on the home page
-        -   **`entry-meta.blade.php`** - partial describing how each video post will be displayed on the home page in even more detail
--   `single-video.blade.php` - page for a singluar video-post page
-    -   **`content-single-video.blade.php`** - the partial for displaying a specific video post on its own page
+-   `front-page.blade.php` - page view for the main landing/home page; - redirects to featured video, otherwise uses latest video
+-   `single-krvideo.blade.php` - page for a singluar video-post page - main video at top, the rest of the video posts in their categroies below
+    -   **`partials/content-single-video.blade.php`** - the partial for displaying a specific video post on its own page - uses main-video
+        -   **`partials/main-video.blade.php`** - the partial for displaying the main video player and description
+    -   **`partials/swiper-video-category-row.blade.php`** - the partial for displaying the video category swiper rows
 
 #### The only wordpress PHP file to care about
 
