@@ -17,7 +17,10 @@
           <a href="{{ get_permalink() }}">
             {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
             {{the_post_thumbnail(array( 240, 135 )  , array('class' => 'img-fluid' ))}}
-            <div class="entry-title video-slide-text">{!! get_the_title() !!} {{get_the_date()}}</div>
+            <div class="entry-title video-slide-text">
+              <p>{!! get_the_title() !!}</p>
+              <span> {{get_the_date()}}</span>
+            </div>
           </a>
         </div>
         @endwhile
