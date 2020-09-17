@@ -30,20 +30,4 @@ const routes = new Router({
 jQuery(document).ready(() => {
   routes.loadEvents();
   // jquery
-  var copySocialBtnJquery = $('#copySocialShareValue');
-  copySocialBtnJquery.click(() => {
-    var activeSocialTabJquery = $('.social-tab.active').children(
-      '.form-control'
-    );
-    activeSocialTabJquery.select();
-    document.execCommand('copy');
-  });
-  copySocialBtnJquery.tooltip({
-    trigger: 'focus',
-    title: 'copied to clipboard',
-    delay: {
-      show: 0,
-      hide: 5000,
-    },
-  });
 });

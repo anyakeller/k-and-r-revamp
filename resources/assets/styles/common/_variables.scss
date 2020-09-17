@@ -40,3 +40,12 @@ $link-hover-color: darken($link-color, 20%);
 $link-hover-decoration: none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 40%;
+
+/** Hamburger icon */
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 35px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 8px;
+$hamburger-layer-color: white;
+$hamburger-types: (minus);
