@@ -1,4 +1,4 @@
-<div class="col mt-4">
+<div class="col mt-4 swiper-col px-0 shift-left">
   <div class="swiper-container">
     {{-- Additional required wrapper  --}}
     <div class="swiper-wrapper">
@@ -17,7 +17,7 @@
           <a href="{{ get_permalink() }}">
             {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
             {{the_post_thumbnail(array( 240, 135 )  , array('class' => 'img-fluid' ))}}
-            <p class="entry-title video-slide-text">{!! get_the_title() !!}</p>
+            <div class="entry-title video-slide-text">{!! get_the_title() !!} {{get_the_date()}}</div>
           </a>
         </div>
         @endwhile

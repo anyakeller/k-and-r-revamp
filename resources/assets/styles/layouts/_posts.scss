@@ -15,8 +15,46 @@
   text-align: center;
 }
 
+//shifts whole swiper category row left because it looks funny when the previous button isn't visible
+.shift-left {
+  @include media-breakpoint-up(sm) {
+    right: 15px;
+  }
+}
+
+.swiper-slide-video-category {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100px !important;
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 30px;
+  }
+}
+
+.category-icon-div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.category-svg-icon {
+  max-width: 40px;
+
+  /* max-height: 40px; */
+}
+
+.category-icon-offsetter {
+  height: 65px;
+}
+
 // Styling Swiper
-// $swiper-slide-text-height: 75px;
+
+// .swiper-col {
+//   border-bottom: 4px solid rgb(173, 181, 189);
+// }
+
 $swiper-slide-text-height: 65px;
 
 .video-slide-text {
@@ -38,15 +76,19 @@ $swiper-slide-text-height: 65px;
   top: 0;
   height: 100%;
   margin-top: 0;
-  width: 40px;
+  width: 30px;
   padding-bottom: $swiper-slide-text-height;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xs) {
     width: 0;
 
     &::after {
       display: none;
     }
+  }
+
+  &.swiper-button-disabled {
+    display: none;
   }
 }
 

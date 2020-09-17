@@ -14,7 +14,7 @@ import aboutUs from './routes/about';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 // swiper
-import swiperScripts from './swiperScripts.js';
+import './swiperScripts.js';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -47,8 +47,3 @@ jQuery(document).ready(() => {
     },
   });
 });
-
-// jQuery(window).on('load', () => {
-//   swiperScripts.makeSwiper();
-// });
-swiperScripts.makeSwiper();
