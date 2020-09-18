@@ -19,7 +19,7 @@
             {{the_post_thumbnail(array( 240, 135 )  , array('class' => 'img-fluid' ))}}
             <div class="entry-title video-slide-text">
               <p>{!! get_the_title() !!}</p>
-              <span>{{time_elapsed_string(get_the_date())}}</span>
+              <span>{{App\time_elapsed_string(get_the_date())}}</span>
             </div>
           </a>
         </div>

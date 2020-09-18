@@ -104,6 +104,11 @@ add_filter('comments_template', function ($comments_template) {
     return $comments_template;
 }, 100);
 
+/**
+ *  YOU CAN PUT CUSTOM FILTERS HERE
+ *
+*/
+
 // disable admin bar (for dev testing)
 add_filter('show_admin_bar', '__return_false');
 
