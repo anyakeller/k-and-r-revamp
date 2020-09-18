@@ -17,8 +17,8 @@ add_action('wp_enqueue_scripts', function () {
     // swiper
     wp_enqueue_script('sage/swiperScripts.js', asset_path('scripts/swiperScripts.js'), ['jquery'], null, true);
 
-    if (is_page_template("views/template-static.blade.php") ){
-      wp_enqueue_style('sage/static-page.css', asset_path('styles/static-page.css'), false, null);
+    if (is_page_template("views/template-static.blade.php")) {
+        wp_enqueue_style('sage/static-page.css', asset_path('styles/static-page.css'), false, null);
     }
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
@@ -92,6 +92,10 @@ add_action('widgets_init', function () {
     register_sidebar([
         'name'          => __('Primary', 'sage'),
         'id'            => 'sidebar-primary'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Mobile', 'sage'),
+        'id'            => 'sidebar-mobile'
     ] + $config);
     register_sidebar([
         'name'          => __('Footer', 'sage'),

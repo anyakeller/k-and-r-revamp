@@ -92,7 +92,6 @@ Container::getInstance()
     }, true);
 
 
-
 /*************************************************************************
  *
  *   You have reached the editable section!
@@ -103,38 +102,6 @@ Container::getInstance()
  *
  */
 
-// Allow svg uploads (video category icons are svgs)
-function add_file_types_to_uploads($file_types)
-{
-    $new_filetypes = array();
-    $new_filetypes['svg'] = 'image/svg+xml';
-    $file_types = array_merge($file_types, $new_filetypes);
-    return $file_types;
-}
-add_filter('upload_mimes', 'add_file_types_to_uploads');
-function fix_svg_thumb_display()
-{
-    echo '<style>
-    .media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
-      width: 100% !important;
-      height: auto !important;
-    }
-  </style>';
-}
-add_action('admin_head', 'fix_svg_thumb_display');
-
-// ensure the automatic query on the homepage only gets videos (when there is no redirect)
-function wporg_add_custom_post_types($query)
-{
-    if (is_home() && $query->is_main_query()) {
-        $query->set('post_type', array( 'krvideo' ));
-    }
-    return $query;
-}
-add_action('pre_get_posts', 'wporg_add_custom_post_types');
-
-// disable admin bar (for dev testing)
-add_filter('show_admin_bar', '__return_false');
 
 /*
  * Custom helper functions for the actual site
@@ -214,7 +181,8 @@ function get_krvideos()
  * helper function to get how long a video was posted
  * @return string
  */
-function time_elapsed_string($datetime, $full = false) {
+function time_elapsed_string($datetime, $full = false)
+{
     $now = new DateTime;
     $ago = new DateTime($datetime);
     $diff = $now->diff($ago);
@@ -239,6 +207,8 @@ function time_elapsed_string($datetime, $full = false) {
         }
     }
 
-    if (!$full) $string = array_slice($string, 0, 1);
+    if (!$full) {
+        $string = array_slice($string, 0, 1);
+    }
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }

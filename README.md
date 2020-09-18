@@ -98,7 +98,7 @@ A few directories and files files you can, and probably will, modify:
 
 Route Configuration: `resources/assets/scripts/main.js`
 
-WordPress global php functions: `resources/functions.php`
+WordPress global php functions is usually in resources/functions.php but now the filters, helpers, and setup stuff should be broken into the corresponding php files in `app/` such as `filters.php`, `helpers.php`, and `setup .php`
 
 ## Customization Cheat Sheet
 
