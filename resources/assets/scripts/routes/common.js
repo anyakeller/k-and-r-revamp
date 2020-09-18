@@ -23,6 +23,7 @@ export default {
     //init hamburger
     $('.hamburger').click(function() {
       $(this).toggleClass('is-active');
+      $('.nav-primary').toggleClass('is-open', $(this).hasClass('is-active'));
     });
   },
   finalize() {

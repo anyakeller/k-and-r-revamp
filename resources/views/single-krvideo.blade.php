@@ -7,7 +7,6 @@
   }
 </style>
 
-
 @section('content')
 {{-- main video player --}}
 <div class="row mb-3">

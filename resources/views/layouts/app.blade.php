@@ -10,7 +10,10 @@
           @yield('content')
         </main>
         @if (App\display_sidebar())
-          <aside class="sidebar">
+          <aside class="sidebar sidebar-mobile">
+            @include('partials.sidebar')
+          </aside>
+          <aside class="sidebar sidebar-main">
             @include('partials.sidebar')
           </aside>
         @endif

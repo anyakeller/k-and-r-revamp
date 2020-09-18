@@ -17,7 +17,7 @@ add_action('wp_enqueue_scripts', function () {
     // swiper
     wp_enqueue_script('sage/swiperScripts.js', asset_path('scripts/swiperScripts.js'), ['jquery'], null, true);
 
-    if (is_page('labcam')){
+    if (is_page_template("views/template-static.blade.php") ){
       wp_enqueue_style('sage/static-page.css', asset_path('styles/static-page.css'), false, null);
     }
 
