@@ -3,7 +3,7 @@
 @section('content')
 {{-- @include('partials.page-header') --}}
   @php
-    $main_video = get_featured_video();
+    $main_video = App\get_featured_video();
   @endphp
 
   @if($main_video->have_posts()) @php $main_video -> the_post() @endphp

@@ -139,10 +139,86 @@ function display_sidebar()
 
 
 /**
+ *
+ * Custom helper functions for the site
+ *
+ */
+
+// Global modules
+use WP_Query;
+use DateTime;
+
+/**
+ * helper function to get featured video
+ */
+
+function get_featured_video()
+{
+    $args = array(
+    'post_type' => 'krvideo',
+    'posts_per_page' => 1,
+    'meta_key'		=> 'is_featured_video',
+    'meta_value'	=> 1
+  );
+    $main_video = new WP_Query($args);
+    return $main_video;
+}
+
+/**
+ * helper function to get all video categories
+ * uses get_terms()  https://developer.wordpress.org/reference/functions/get_terms/
+ */
+function get_video_categories()
+{
+    $args = array(
+    'taxonomy' => 'krvideo-cat',
+    'hide_empty' => true
+  );
+    $video_category_terms = get_terms($args);
+    return $video_category_terms;
+}
+
+/**
+ * helper function to get all videos in a video category
+ * @param WP_Term[]|WP_Error $video_category_terms
+ * @return WP_Query
+ */
+function get_videos_from_category($video_category)
+{
+    $args = array(
+    'post_type' => 'krvideo',
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'krvideo-cat',
+        'terms' => $video_category->term_id
+      )
+    ),
+  );
+    $videos_by_category = new WP_Query($args);
+    return $videos_by_category;
+}
+
+/**
+ * helper function to get all krvideos
+ * @return WP_Query
+ */
+function get_krvideos()
+{
+    $args = array(
+  'post_type' => 'krvideo',
+  'post_status'		=> 'publish',
+  'order'				=> 'DESC',
+  'posts_per_page' => 40,
+  );
+    $krvideos = new WP_Query($args);
+    return $krvideos;
+}
+
+/**
  * helper function to get how long a video was posted
  * @return string
  */
-use DateTime;
+
 function time_elapsed_string($datetime, $full = false)
 {
     $now = new DateTime;

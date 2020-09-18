@@ -20,12 +20,12 @@
 @endwhile
 
 @php
-$categories = get_video_categories();
+$categories = App\get_video_categories();
 @endphp
 
   @foreach( $categories as $category )
   <div class="row mx-0">
-    @php $one_category = get_videos_from_category($category)
+    @php $one_category = App\get_videos_from_category($category)
     @endphp
     @if($one_category->have_posts())
       @include('partials/swiper-video-category-row')
