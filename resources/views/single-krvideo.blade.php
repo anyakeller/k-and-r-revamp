@@ -1,3 +1,7 @@
+{{--
+  Template Name: Krvideo Front Page
+--}}
+
 @extends('layouts.app')
 
 {{-- Sets up header orange extention on post pages  --}}
