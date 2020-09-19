@@ -19,20 +19,18 @@
 </div>
 @endwhile
 
-@php
-$categories = App\get_video_categories();
-@endphp
 
-  @foreach( $categories as $category )
-  <div class="row mx-0">
-    @php $one_category = App\get_videos_from_category($category)
-    @endphp
-    @if($one_category->have_posts())
-      @include('partials/swiper-video-category-row')
-    @endif
-  </div>
-  <hr />
-  @endforeach
+
+@foreach( $video_categories as $category )
+<div class="row mx-0">
+  @php $one_category = App\get_videos_from_category($category)
+  @endphp
+  @if($one_category->have_posts())
+    @include('partials/swiper-video-category-row')
+  @endif
+</div>
+<hr />
+@endforeach
 
 
 
