@@ -2,11 +2,8 @@
 
 @section('content')
 {{-- @include('partials.page-header') --}}
-  @php
-    $main_video = App\get_featured_video();
-  @endphp
 
-  @if($main_video->have_posts()) @php $main_video -> the_post() @endphp
+  @if($featured_video->have_posts()) @php $featured_video -> the_post() @endphp
     @php
       wp_safe_redirect( get_permalink() );
       exit;

@@ -149,22 +149,6 @@ use WP_Query;
 use DateTime;
 
 /**
- * helper function to get featured video
- */
-
-function get_featured_video()
-{
-    $args = array(
-    'post_type' => 'krvideo',
-    'posts_per_page' => 1,
-    'meta_key'		=> 'is_featured_video',
-    'meta_value'	=> 1
-  );
-    $main_video = new WP_Query($args);
-    return $main_video;
-}
-
-/**
  * helper function to get all video categories
  * uses get_terms()  https://developer.wordpress.org/reference/functions/get_terms/
  */
