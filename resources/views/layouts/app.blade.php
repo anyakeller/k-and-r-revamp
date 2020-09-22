@@ -6,16 +6,16 @@
   @php do_action('get_header')
   @endphp
   @include('partials.header')
+  @if (App\display_sidebar())
+  <aside class="sidebar" id="sidebar-main" style="position: relative; top: 0; float: right;">
+    @include('partials.sidebar')
+  </aside>
+  @endif
   <div class="wrap container-main" role="document">
     <div class="content">
       <main class="main">
         @yield('content')
       </main>
-      @if (App\display_sidebar())
-      <aside class="sidebar" id="sidebar-main">
-        @include('partials.sidebar')
-      </aside>
-      @endif
     </div>
   </div>
   @php do_action('get_footer')

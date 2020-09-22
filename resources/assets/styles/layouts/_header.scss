@@ -39,11 +39,6 @@
       position: -webkit-sticky;
       position: sticky;
 
-      @include media-breakpoint-up(lg) {
-        padding-bottom: 1rem;
-        top: 1.25rem;
-      }
-
       @include media-breakpoint-up(xl) {
         padding-bottom: 2rem;
         top: 3.25rem;
