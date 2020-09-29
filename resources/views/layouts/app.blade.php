@@ -7,7 +7,7 @@
   @endphp
   @include('partials.header')
   @if (App\display_sidebar())
-  <aside class="sidebar" id="sidebar-main" style="position: relative; top: 0; float: right;">
+  <aside class="sidebar" id="sidebar-main">
     @include('partials.sidebar')
   </aside>
   @endif
