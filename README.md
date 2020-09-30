@@ -84,7 +84,7 @@ A few directories and files not to manually edit ( it could break the things e.g
 
 -   `dist/`
 -   `vendor/`
--   `node_modules/`   -for the most part
+-   `node_modules/`
 -   `composer.lock`
 
 A few directories and files files you can, and probably will, modify:
@@ -107,17 +107,17 @@ WordPress global php functions is usually in resources/functions.php but now the
 This theme is built on a customized version of Bootstrap v4.5
 All customizations to bootstrap are in `assets.sttles/common/_variables.scss`
 
-All easily modifyable styling can be found in resources/assets/styles/ but ultimatly you should incorperate your changes into bootstrap's scss (in node_modules).  All bootstrap scss variables are defined in node_modules/bootstra/scss/\_variables.scss with some modifacations.
+All easily modifyable styling can be found in resources/assets/styles/ but ultimatly you should incorperate your changes into bootstrap's scss by modifying `assets.sttles/common/_variables.scss`.
 
-Working with the scss in resources/assets/styles:
+**Working with the scss in resources/assets/styles:**
 
 **Which file do I write my styling in?**
 
-Because this site requires a lot of styling, it is best to break the code into chunks and import each "chunk" into main.  This simplifies the code a lot and also assaists with debugging.  Luckily, the Roots Sage people set the main.scss file up with imports from a bunch of labeled scss files.
+Because this site requires a lot of styling, it is best to break the code into chunks and import each "chunk" into main.  This simplifies the code a lot and also assists with debugging.  Luckily, the Roots Sage people set the main.scss file up with imports from a bunch of labeled scss files.
 
 **So, how do I know which file to put my styling code in?**
 
-Take a look at the order of imports in main.scss.  There's a reason it's called **cascading** style sheets.  It's best to leave the order of imports alone.  It's organized pretty well.
+Take a look at the order of imports in main.scss.  There's a reason css is called **cascading** style sheets.  It's best to leave the order of imports alone.  It's already organized pretty well.
 
 In the order they are imported in main.scss, here's how I thought of the usage of the style files
 
@@ -125,10 +125,12 @@ In the order they are imported in main.scss, here's how I thought of the usage o
 -   common/\_global.scss - I honestly am just using it for stuff I need everything else to be able to acess (e.g `@mixin`, font stuff...)
 -   components/\_buttons - general button styling.  I also defined the base link styling for `<a>` tags.
 -   layouts/\_header - styling for the big kite and rocket header at the top of every page.  The actual header is imported in the root template for every page on the site.  The actual header partial can be found in : `assets/views/partials/header.blade.php`
+-   layouts/\_sidebar - styling for all the menus
 -   layouts/\_pages.scss - Overall
 -   layouts/\_posts.scss - Overall
 
 To change default Bootstrap variables, you can overwrite the boostrap name in \_variables.scss
+
 You can view the [bootstrap variable default names here](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss)
 You can read more on [theming bootstrap here](https://getbootstrap.com/docs/4.5/getting-started/theming/)
 
@@ -142,6 +144,7 @@ Working with the scripts in resources/assets/scripts:
 
 -   `main.js` - the primary js file and hub for most js imports
 -   `swiperScripts.js` - the code that initializes swiper
+-   `routes/` - directory with all the routes
 
 ### Theme File Structure
 
@@ -150,10 +153,10 @@ Working with the scripts in resources/assets/scripts:
 Roots Sage uses [Laravel's Blade templating engine](https://laravel.com/docs/5.8/blade)
 
 The [template file structure](https://roots.io/docs/sage/9.x/blade-templates/#passing-data-to-templates) follows that of wordpress.
-The main templates are locatd in resources/views
-The partials are locatd in `resources/views/partials`
+The main templates are located in `resources/views`
+The partials are located in `resources/views/partials`
 
-The main file which wraps ever page is `resources/views/layouts/app.blade.php`.  It is best not to modify this one.
+The main file which wraps every page is `resources/views/layouts/app.blade.php`.  It is best not to modify this one.
 
 #### The template files to be aware of:
 
@@ -171,6 +174,13 @@ The main file which wraps ever page is `resources/views/layouts/app.blade.php`. 
 #### The only wordpress PHP file to care about
 
 `functions.php` - contains integral functions for the site at the top with some custom helper functions at the bottom - you can add helper functions that will be globally available across all the templates
+
+### Roots Sage
+
+The directory `app/` has a lot of stuff that goes above and beyond wodpress's functions.php.  While together `filters.php`, `helpers.php`, and `setup.php` are supposed to be used in the place of functions.php, I can't always get it to work.  Try putting your filters and helpers and whatnot in the appropriate php files in app first before resorting to functions.php.
+
+**On controllers**
+`app/Controllers/` is a wonderful directory.  Here's where you can define php funtions to either automatically run once a page runs or define helper functions for pages to use when needed.
 
 ### Blade Tips
 
