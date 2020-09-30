@@ -26,6 +26,10 @@
   @include media-breakpoint-down(lg) {
     display: none;
   }
+
+  @include media-breakpoint-up(xl) {
+    margin-right: calc((100vw - 1200px) / 3);
+  }
 }
 
 #sidebar-mobile {
