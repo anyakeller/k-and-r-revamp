@@ -28,6 +28,10 @@ export default {
         $(this).hasClass('is-active')
       );
     });
+    window.addEventListener('resize', function() {
+      $('.hamburger').removeClass('is-active');
+      $('#sidebar-mobile').removeClass('is-open');
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
