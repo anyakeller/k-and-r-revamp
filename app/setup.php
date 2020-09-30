@@ -17,7 +17,9 @@ add_action('wp_enqueue_scripts', function () {
     // swiper
     wp_enqueue_script('sage/swiperScripts.js', asset_path('scripts/swiperScripts.js'), ['jquery'], null, true);
 
-    if (is_page_template("views/template-static.blade.php")) {
+    if (is_single()) {
+        wp_enqueue_style('sage/posts-page.css', asset_path('styles/posts-page.css'), false, null);
+    } else {
         wp_enqueue_style('sage/static-page.css', asset_path('styles/static-page.css'), false, null);
     }
 

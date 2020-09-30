@@ -4,11 +4,8 @@
 
 @extends('layouts.app')
 
-{{-- Sets up header orange extention on post pages  --}}
+{{-- For some stupid reason if I delete this the spacing on the video category icons flips out  --}}
 <style>
-  .banner::after {
-    content: "";
-  }
 </style>
 
 @section('content')
@@ -31,7 +28,7 @@
   @endphp
   @if($one_category->have_posts())
     @include('partials/swiper-video-category-row')
-  @endif
+    @endif
 </div>
 <hr />
 @endforeach
