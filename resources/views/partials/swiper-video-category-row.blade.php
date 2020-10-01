@@ -1,5 +1,4 @@
-<div class="swiper-col shift-left mt-4 px-0 " style="position: relative;
-    width: 100%; max-width: 100%;">
+<div class="swiper-video-category-row-inner shift-left mt-4 px-0">
   <div class="swiper-container">
     {{-- Additional required wrapper  --}}
     <div class="swiper-wrapper">
