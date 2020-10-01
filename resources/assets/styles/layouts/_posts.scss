@@ -17,7 +17,7 @@
 
 //shifts whole swiper category row left because it looks funny when the previous button isn't visible
 .shift-left {
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     right: 15px;
   }
 }
