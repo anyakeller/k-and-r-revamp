@@ -33,27 +33,27 @@ export default {
       $('#sidebar-mobile').removeClass('is-open');
     });
 
-    // function setModalMaxHeight(element) {
-    //   this.$element = $(element);
-    //   var dialogMargin = $(window).width() > 767 ? 62 : 22;
-    //   var contentHeight = $(window).height() - dialogMargin;
-    //   var headerHeight = this.$element.find('.modal-header').outerHeight() || 2;
-    //   var footerHeight = this.$element.find('.modal-footer').outerHeight() || 2;
-    //   var maxHeight = contentHeight - (headerHeight + footerHeight);
-    //
-    //   this.$element.find('.modal-content').css({
-    //     overflow: 'hidden',
-    //   });
-    //
-    //   this.$element.find('.modal-body').css({
-    //     'max-height': maxHeight,
-    //     'overflow-y': 'auto',
-    //   });
-    // }
-    // $('.footer-modal').on('show.bs.modal', function() {
-    //   $(this).show();
-    //   setModalMaxHeight(this);
-    // });
+    function setModalMaxHeight(element) {
+      var jQueryElement = $(element);
+      console.log(jQueryElement);
+      var dialogMargin = $(window).width() > 767 ? 62 : 22;
+      var contentHeight = $(window).height() - dialogMargin;
+      var headerHeight = jQueryElement.find('.modal-header').outerHeight() || 2;
+      var footerHeight = jQueryElement.find('.modal-footer').outerHeight() || 2;
+      var maxHeight = contentHeight - (headerHeight + footerHeight);
+
+      jQueryElement.find('.modal-content').css({
+        overflow: 'hidden',
+      });
+
+      jQueryElement.find('.modal-body').css({
+        'max-height': maxHeight,
+        'overflow-y': 'auto',
+      });
+    }
+    $('.footer-modal').on('show.bs.modal', function() {
+      setModalMaxHeight(this);
+    });
 
     $('.workWithUsModal').click(function(event) {
       $('#workWithUsModal').modal('show');
