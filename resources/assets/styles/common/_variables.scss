@@ -36,6 +36,10 @@ $theme-colors: (
 // Settings for the `<body>` element.
 $body-color: theme-color("body-color-default");
 
+// hr
+$hr-border-color: rgba(0, 0, 0, 0.2);
+$hr-border-width: 4px;
+
 // LINKS
 // $link-color: theme-color("link-color-default");
 $link-color: lighten(theme-color("kr-orange"), 10%);
