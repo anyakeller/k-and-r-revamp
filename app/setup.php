@@ -143,3 +143,6 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_image_size( 'video-thumbnail', 240, 135 );
+set_post_thumbnail_size(240, 135);
