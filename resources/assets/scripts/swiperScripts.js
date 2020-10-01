@@ -15,7 +15,7 @@ new Swiper('.swiper-container', {
   breakpoints: {
     576: {
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 15,
       // slidesPerColumn: 2,
     },
     768: {
