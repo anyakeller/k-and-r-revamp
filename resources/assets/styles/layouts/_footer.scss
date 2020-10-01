@@ -9,15 +9,6 @@ footer {
   background-color: theme-color("kr-orange");
   color: rgb(255, 255, 255);
 
-  a {
-    color: inherit;
-    padding: 0 0.5rem;
-
-    &:hover {
-      color: rgb(243, 203, 177);
-    }
-  }
-
   p {
     font-weight: 300;
   }
@@ -42,6 +33,107 @@ footer .widget {
 
     li {
       display: inline-block;
+    }
+  }
+
+  a,
+  button {
+    color: inherit;
+    padding: 0 0.5rem;
+
+    &:hover {
+      color: rgb(243, 203, 177);
+    }
+  }
+}
+
+.footer-modal {
+  text-align: center;
+  padding: 0 !important;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+
+    @media (min-width: 768px) {
+      // this is a bootstrap breakpoint 768px <= md < 992px
+      width: 660px;
+    }
+  }
+
+  .modal-content {
+    border: 1px solid rgb(201, 201, 200);
+    border-radius: 30px;
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 0.5);
+    background: rgb(255, 255, 255);
+    border-bottom: 15px solid rgb(255, 102, 0);
+
+    button.close {
+      top: 20px;
+      right: 20px;
+      position: absolute;
+      background: url("../images/close.png") no-repeat;
+      height: 20px;
+      width: 20px;
+      opacity: 1;
+      z-index: 10;
+
+      span {
+        display: none;
+      }
+    }
+
+    .modal-body {
+      padding: 4em 3em;
+
+      h1 {
+        font-weight: 300;
+        color: #706f6f;
+        font-size: 54px;
+        margin-top: 0;
+        margin-bottom: 35px;
+
+        span {
+          color: #f60;
+        }
+      }
+
+      p {
+        font-size: 24px;
+        color: #706f6f;
+        line-height: 32px;
+        margin-bottom: 30px;
+
+        span {
+          color: #f60;
+        }
+      }
+
+      a.button {
+        color: #706f6f;
+        font-size: 24px;
+        display: inline-block;
+        padding: 10px 25px 15px;
+        border: 1px solid #706f6f;
+        border-radius: 50px;
+        line-height: 32px;
+        margin-top: 25px;
+
+        &:focus,
+        &:hover {
+          color: #f60;
+          border-color: #f60;
+        }
+      }
     }
   }
 }

@@ -32,6 +32,44 @@ export default {
       $('.hamburger').removeClass('is-active');
       $('#sidebar-mobile').removeClass('is-open');
     });
+
+    // function setModalMaxHeight(element) {
+    //   this.$element = $(element);
+    //   var dialogMargin = $(window).width() > 767 ? 62 : 22;
+    //   var contentHeight = $(window).height() - dialogMargin;
+    //   var headerHeight = this.$element.find('.modal-header').outerHeight() || 2;
+    //   var footerHeight = this.$element.find('.modal-footer').outerHeight() || 2;
+    //   var maxHeight = contentHeight - (headerHeight + footerHeight);
+    //
+    //   this.$element.find('.modal-content').css({
+    //     overflow: 'hidden',
+    //   });
+    //
+    //   this.$element.find('.modal-body').css({
+    //     'max-height': maxHeight,
+    //     'overflow-y': 'auto',
+    //   });
+    // }
+    // $('.footer-modal').on('show.bs.modal', function() {
+    //   $(this).show();
+    //   setModalMaxHeight(this);
+    // });
+
+    $('.workWithUsModal').click(function(event) {
+      $('#workWithUsModal').modal('show');
+      event.preventDefault();
+      return false;
+    });
+    $('.contactModal').click(function(event) {
+      $('#contactUsModal').modal('show');
+      event.preventDefault();
+      return false;
+    });
+    // $(window).resize(function() {
+    //   if ($('.footer-modal.in').length != 0) {
+    //     setModalMaxHeight($('.footer-modal.in'));
+    //   }
+    // });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
