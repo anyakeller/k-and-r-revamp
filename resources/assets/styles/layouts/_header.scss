@@ -4,8 +4,11 @@ header {
   background-color: rgb(255, 102, 0);
 
   .banner-row {
-    @include make-row();
-
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     height: 4rem;
 
     @include media-breakpoint-down(sm) {

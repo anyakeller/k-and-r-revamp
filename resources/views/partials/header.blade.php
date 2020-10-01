@@ -1,6 +1,6 @@
 <header class="banner container-main">
   <div class="banner-row">
-    <div class="col">
+    <div>
       <div id="sticky-logo">
         <a class="brand" href="{{ home_url('/') }}"><img class="kite-rocket-logo-header" src="@asset('images/kite-and-rocket-research-logo.png')" alt="{{ get_bloginfo('name', 'display') }}"></a>
       </div>
