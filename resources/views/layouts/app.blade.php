@@ -12,7 +12,7 @@
       @include('partials.sidebar')
     </aside>
     @endif
-    <main class="main">
+    <main class="content main">
       @yield('content')
     </main>
   </div>

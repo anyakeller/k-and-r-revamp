@@ -10,14 +10,12 @@
 
 @section('content')
 {{-- main video player --}}
-<div class="row mb-3">
-  <div class="col">
-    @while(have_posts())
-    @php the_post()
-    @endphp
-    @include('partials.content-single-'.get_post_type())
-  </div>
-</div>
+
+@while(have_posts())
+@php the_post()
+@endphp
+@include('partials.content-single-'.get_post_type())
+
 @endwhile
 
 
