@@ -24,21 +24,17 @@
         </div>
         <div class="modal-body">
           <div class="container-fluid">
-            <ul class="nav nav-tabs mb-3" id="video-sharing-tabs" role="tablist">
+            <ul class="nav nav-tabs nav-fill mb-3" id="video-sharing-tabs" role="tablist">
               <li class="nav-item" role="presentation">
                 <a class="nav-link active" id="link-tab" data-toggle="tab" href="#link" role="tab" aria-controls="link" aria-selected="true">Link</a>
               </li>
               <li class="nav-item" role="presentation">
                 <a class="nav-link" id="embed-tab" data-toggle="tab" href="#embed" role="tab" aria-controls="embed" aria-selected="false">Embed Code</a>
               </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="hnork-tab" data-toggle="tab" href="#hnork" role="tab" aria-controls="hnork" aria-selected="false">Hnork</a>
-              </li>
             </ul>
             <div class="tab-content" id="video-sharing-tabs-content">
               <div class="social-tab tab-pane fade show active" id="link" role="tabpanel" aria-labelledby="link-tab"><input class="form-control" type="text" value="{{ get_permalink() }}" readonly /></div>
               <div class="social-tab tab-pane fade" id="embed" role="tabpanel" aria-labelledby="embed-tab"><textarea class="form-control" type="text" value="{{ htmlspecialchars_decode($wistia_embed) }}" rows="6" readonly>{{ htmlspecialchars_decode($wistia_embed) }}</textarea></div>
-              <div class="social-tab tab-pane fade" id="hnork" role="tabpanel" aria-labelledby="hnork-tab"><input class="form-control" type="text" value="hnork!" readonly/></div>
             </div>
           </div>
         </div>

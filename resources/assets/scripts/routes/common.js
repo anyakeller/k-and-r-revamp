@@ -11,6 +11,12 @@ export default {
       activeSocialTabJquery.select();
       document.execCommand('copy');
     });
+    $('#video-sharing-modal').on('shown.bs.modal', function() {
+      var activeSocialTabJquery = $('.social-tab.active').children(
+        '.form-control'
+      );
+      activeSocialTabJquery.select();
+    });
     copySocialBtnJquery.tooltip({
       trigger: 'focus',
       title: 'copied to clipboard',
@@ -33,6 +39,7 @@ export default {
       $('#sidebar-mobile').removeClass('is-open');
     });
 
+    // work with us and contact modal
     function setModalMaxHeight(element) {
       var jQueryElement = $(element);
       console.log(jQueryElement);

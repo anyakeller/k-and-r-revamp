@@ -17,3 +17,9 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+input {
+  &.search-submit {
+    display: none !important;
+  }
+}
