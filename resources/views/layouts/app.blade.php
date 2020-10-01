@@ -12,11 +12,9 @@
       @include('partials.sidebar')
     </aside>
     @endif
-    <div class="content">
-      <main class="main">
-        @yield('content')
-      </main>
-    </div>
+    <main class="main">
+      @yield('content')
+    </main>
   </div>
   @php do_action('get_footer')
   @endphp
