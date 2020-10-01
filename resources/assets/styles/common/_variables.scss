@@ -45,6 +45,17 @@ $link-hover-decoration: none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 40%;
 
+// Grid breakpoints
+// I added the ph breakpoint for phones in portrait
+$grid-breakpoints: (
+  ph: 0,
+  xs: 420px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // FORMS
 $input-padding-y: 0.1rem;
 $input-padding-x: 1rem;

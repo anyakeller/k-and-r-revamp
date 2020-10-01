@@ -16,7 +16,7 @@
         <div class="swiper-slide">
           <a href="{{ get_permalink() }}">
             {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
-            {{the_post_thumbnail(array( 240, 135 )  , array('class' => 'img-fluid' ))}}
+            {{the_post_thumbnail(array( 240, 135 )  , array('class' => 'swiper-slide-video-thumbnail' ))}}
             <div class="entry-title video-slide-text">
               <p>{!! get_the_title() !!}</p>
               <span>{{App\time_elapsed_string(get_the_date())}}</span>
