@@ -11,6 +11,12 @@
 @import "~swiper/components/lazy/lazy.scss";
 @import "~swiper/components/navigation/navigation.scss";
 
+.swiper-video-category-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .swiper-slide {
   text-align: center;
 }

@@ -21,7 +21,7 @@
 
 
 @foreach( $video_categories as $category )
-<div class="row mx-0">
+<div class="swiper-video-category-row mx-0">
   @php $one_category = App\get_videos_from_category($category)
   @endphp
   @if($one_category->have_posts())
