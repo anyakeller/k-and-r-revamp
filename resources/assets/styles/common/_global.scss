@@ -97,6 +97,13 @@ h4 {
 
   @include media-breakpoint-up(lg) {
     padding: inherit {
+      right: 7rem;
+      left: 7rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: inherit {
       right: 8rem;
       left: 8rem;
     }
@@ -109,8 +116,12 @@ h4 {
       max-width: 750px;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       max-width: 800px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 840px;
     }
   }
 }

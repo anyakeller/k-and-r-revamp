@@ -6,12 +6,12 @@
   @php do_action('get_header')
   @endphp
   @include('partials.header')
-  @if (App\display_sidebar())
-  <aside class="sidebar" id="sidebar-main">
-    @include('partials.sidebar')
-  </aside>
-  @endif
   <div class="wrap container-main" role="document">
+    @if (App\display_sidebar())
+    <aside class="sidebar" id="sidebar-main">
+      @include('partials.sidebar')
+    </aside>
+    @endif
     <div class="content">
       <main class="main">
         @yield('content')

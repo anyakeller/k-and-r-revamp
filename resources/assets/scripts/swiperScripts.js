@@ -25,12 +25,12 @@ new Swiper('.swiper-container', {
     },
     992: {
       slidesPerView: 4,
-      spaceBetween: 20,
+      spaceBetween: 15,
       // slidesPerColumn: 2,
     },
     1200: {
       slidesPerView: 4,
-      spaceBetween: 20,
+      spaceBetween: 15,
       // slidesPerColumn: 2,
     },
   },
