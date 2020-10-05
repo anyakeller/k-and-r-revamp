@@ -183,6 +183,23 @@ function get_videos_from_category($video_category)
 }
 
 /**
+ * helper function to get the latest krvideo
+ * (for use when there is no featured video)
+ * @return WP_Query
+ */
+function get_latest_krvideo()
+{
+    $args = array(
+  'post_type' => 'krvideo',
+  'post_status'		=> 'publish',
+  'order'				=> 'DESC',
+  'posts_per_page' => 1,
+  );
+    $latest_krvideo = new WP_Query($args);
+    return $latest_krvideo;
+}
+
+/**
  * helper function to get all krvideos
  * @return WP_Query
  */
