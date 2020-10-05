@@ -23,8 +23,14 @@
   }
 }
 
+// Each slide
 .swiper-slide {
   text-align: center;
+  border: 3px solid theme-color("primary");
+  border-radius: 10px;
+  background: white;
+  background-clip: content-box;
+  overflow: hidden; //to hide thumbnail corners
 }
 
 //shifts whole swiper category row left because it looks funny when the previous button isn't visible
@@ -41,7 +47,7 @@
   justify-content: flex-end;
   flex-direction: column;
   line-height: 1.2em;
-  color: theme-color("kr-orange");
+  color: theme-color("primary");
   width: 6em !important;
 
   @include media-breakpoint-down(ph) {
@@ -93,6 +99,7 @@
   height: auto;
   object-fit: contain;
   width: 100%;
+  // border-radius: 5px;
 }
 
 // USED FOR SWIPER VIDEO DESCRIPTIONS
@@ -143,7 +150,7 @@ $swiper-slide-text-height-xl: 85px;
 .swiper-button-next,
 .swiper-button-prev {
   background-color: white;
-  color: theme-color("kr-orange");
+  color: theme-color("primary");
   -webkit-box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
   box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
 
@@ -219,7 +226,7 @@ $swiper-slide-text-height-xl: 85px;
 
   h4 {
     display: inline-block;
-    color: theme-color("kr-orange");
+    color: theme-color("primary");
   }
 
   span {

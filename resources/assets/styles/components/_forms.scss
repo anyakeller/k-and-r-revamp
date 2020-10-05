@@ -16,10 +16,6 @@
 .search-form .search-submit {
   @extend .btn;
   @extend .btn-secondary;
-}
 
-input {
-  &.search-submit {
-    display: none !important;
-  }
+  display: none !important;
 }

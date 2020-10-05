@@ -12,42 +12,33 @@ $enable-responsive-font-sizes: true;
 $enable-shadows: true;
 // $enable-gradients: true;
 
-/** FONT STUFF   **/
+// Color system
 
-$font-size-base: 0.875rem;
-
-// fonts
-$font-family-sans-serif: Yantramanav, sans-serif, -apple-system,
-  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-// colors
 // K&R orange
-// text colors: body-color-default and link-color-default
+$blue: rgb(102, 175, 233);
+$orange: rgb(250, 102, 0);
+
+$primary: $orange;
 
 $theme-colors: (
-  primary: rgb(250, 102, 0),
-  kr-orange: rgb(250, 102, 0),
-  body-color-default: rgb(112, 111, 111)
+  "body-color-default": #212529
 );
 
 // Body
 //
 // Settings for the `<body>` element.
-$body-color: theme-color("body-color-default");
 
-// hr
-$hr-border-color: rgba(0, 0, 0, 0.2);
-$hr-border-width: 4px;
+// $body-bg: $white;
+// $body-color: $gray-900; //#706f6f
+// $body-text-align: null;
 
 // LINKS
-// $link-color: theme-color("link-color-default");
-$link-color: lighten(theme-color("kr-orange"), 10%);
+// $link-color: lighten($primary, 10%);
 $link-decoration: none;
-$link-hover-color: darken($link-color, 20%);
+// $link-hover-color: darken($link-color, 20%);
 $link-hover-decoration: none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 40%;
+$emphasized-link-hover-darken-percentage: 30%;
 
 // Grid breakpoints
 // I added the ph breakpoint for phones in portrait
@@ -60,7 +51,41 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
-// FORMS
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius: 0.25rem;
+$border-radius-sm: 0.2rem;
+$border-radius-lg: 1rem;
+
+$component-active-bg: $primary;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-size-base: 0.875rem;
+
+// fonts
+$font-family-sans-serif: Yantramanav, sans-serif, -apple-system,
+  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// hr
+$hr-border-color: rgba(0, 0, 0, 0.2);
+$hr-border-width: 4px;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-focus-width: 0.25rem;
+$input-btn-focus-color-opacity: 0.25;
+$input-btn-focus-color: rgba($blue, $input-btn-focus-color-opacity);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+// Forms
 $input-padding-y: 0.1rem;
 $input-padding-x: 1rem;
 $input-font-size: 1em;
@@ -68,15 +93,11 @@ $input-font-weight: 300;
 
 $input-bg: transparent;
 
-$input-border-color: rgba(255, 102, 0, 0.8); //rgba(255, 255, 255, 0.8);
+$input-border-color: lighten($primary, 25%); //rgba(255, 102, 0, 0.8);
 $input-border-width: 2px;
-// $input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+$input-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.2);
 
 $input-border-radius: 1em;
-
-$input-focus-border-color: $input-border-color;
-$input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-  0 0 8px rgba(102, 175, 233, 0.6);
 
 /**
  *
