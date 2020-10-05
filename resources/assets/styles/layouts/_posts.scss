@@ -90,28 +90,63 @@
 }
 
 // Video Thumbnail Swipe Slides
-.swiper-slide-video-inner {
-  box-shadow: 0 0 4px 2px theme-color("primary");
-}
 
+// for some reason stylint didn't like when I pu this after it's parent container of .swiper-slide-video-inner
 .swiper-slide-video-thumbnail-div {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  &::after {
-    transition: background 0.5s ease;
-    position: absolute;
-    content: " ";
-    background: url(../images/play.png) center center no-repeat;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+// the div inside the main .swiper-slide for video thumbnails
+.swiper-slide-video-inner {
+  .swiper-slide-video-thumbnail-div {
+    &::after {
+      transition: background-image 0.5s ease, background-color 0.5s ease,
+        color 0.5s ease, border-color 0.5s ease;
+      position: absolute;
+      z-index: 10;
+      content: "";
+      background: url(../images/play.png) center center no-repeat;
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  &:hover::after {
-    background: rgba($primary, 0.5) url(../images/play-hover.png) center center
-      no-repeat;
+  &:hover {
+    .swiper-slide-video-thumbnail-div {
+      &::after {
+        background: rgba($primary, 0.5) url(../images/play-hover.png) center
+          center no-repeat;
+      }
+    }
+  }
+}
+
+.swiper-slide-video-inner.now-playing {
+  box-shadow: 0 0 3px 3px theme-color("primary");
+
+  .swiper-slide-video-thumbnail-div::after {
+    content: "now playing";
+    font-size: 1.2em;
+    line-height: 1em;
+    font-weight: 500;
+    padding: 0.6em 0.7em;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 3em;
+    width: auto;
+    height: auto;
+    background-color: rgba($primary, 0.7);
+    background-image: none;
+  }
+
+  &:hover {
+    .swiper-slide-video-thumbnail-div::after {
+      background-color: rgba($primary, 0.5);
+      background-image: none;
+    }
   }
 }
 

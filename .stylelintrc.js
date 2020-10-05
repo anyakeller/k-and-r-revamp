@@ -4,8 +4,9 @@ module.exports = {
     'no-empty-source': null,
     'string-quotes': 'double',
     'declaration-colon-newline-after': null,
-    'declaration-block-trailing-semicolon' : null,
+    'declaration-block-trailing-semicolon': null,
     'no-eol-whitespace': null,
+    'value-list-comma-newline-after': null,
     'at-rule-no-unknown': [
       true,
       {
