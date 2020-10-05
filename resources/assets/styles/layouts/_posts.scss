@@ -26,11 +26,7 @@
 // Each slide
 .swiper-slide {
   text-align: center;
-  border: 3px solid theme-color("primary");
-  border-radius: 10px;
-  background: white;
-  background-clip: content-box;
-  overflow: hidden; //to hide thumbnail corners
+  padding: 4px;
 }
 
 //shifts whole swiper category row left because it looks funny when the previous button isn't visible
@@ -42,7 +38,7 @@
 
 // Video Category Siwper Slides
 
-.swiper-slide-video-category {
+.swiper-slide-category {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -94,12 +90,36 @@
 }
 
 // Video Thumbnail Swipe Slides
+.swiper-slide-video-inner {
+  box-shadow: 0 0 4px 2px theme-color("primary");
+}
+
+.swiper-slide-video-thumbnail-div {
+  position: relative;
+
+  &::after {
+    transition: background 0.5s ease;
+    position: absolute;
+    content: " ";
+    background: url(../images/play.png) center center no-repeat;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::after {
+    background: rgba($primary, 0.5) url(../images/play-hover.png) center center
+      no-repeat;
+  }
+}
+
 .swiper-slide-video-thumbnail {
   max-width: 100%;
   height: auto;
   object-fit: contain;
   width: 100%;
-  // border-radius: 5px;
 }
 
 // USED FOR SWIPER VIDEO DESCRIPTIONS
@@ -151,7 +171,6 @@ $swiper-slide-text-height-xl: 85px;
 .swiper-button-prev {
   background-color: white;
   color: theme-color("primary");
-  -webkit-box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
   box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
 
   // To make swiper container full height and center icon
