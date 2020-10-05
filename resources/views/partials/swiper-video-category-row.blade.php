@@ -14,7 +14,7 @@
         @php $one_category-> the_post()
         @endphp
         <div class="swiper-slide">
-          <div class="swiper-slide-video-inner">
+          <div class="swiper-slide-video-inner @if($main_post_id === get_the_ID() ) now-playing @endif">
             <a href="{{ get_permalink() }}">
               {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
               <div class="swiper-slide-video-thumbnail-div">

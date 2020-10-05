@@ -15,10 +15,10 @@
 @php the_post()
 @endphp
 @include('partials.content-single-'.get_post_type())
-
 @endwhile
 
-
+@php $main_post_id = get_the_ID() @endphp
+<h1>{{ $main_post_id }}</h1>
 
 @foreach( $video_categories as $category )
 <div class="swiper-video-category-row mx-0">
