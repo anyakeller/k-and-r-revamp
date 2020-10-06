@@ -317,6 +317,18 @@ $swiper-slide-text-height-xl: 85px;
   }
 }
 
+#copySocialShareValue {
+  font-size: 1rem;
+
+  @include media-breakpoint-up(md) {
+    line-height: initial;
+
+    svg {
+      display: block;
+    }
+  }
+}
+
 .video-sharing-icon {
   color: $link-color;
   padding: 0;

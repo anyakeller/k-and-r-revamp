@@ -20,7 +20,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="mx-1">Select a sharing option and then click the copy button to copy the text</h4> <button class="btn btn-primary" id="copySocialShareValue">Click to Copy to Clipboard <i class="far fa-clipboard"></i></button>
+          <h4 class="mx-auto px-1 text-center">Select a sharing option and then click the copy button to copy the text</h4>
+          {{-- <button class="btn btn-primary" id="copySocialShareValue">Click to Copy to Clipboard <i class="far fa-clipboard"></i></button> --}}
         </div>
         <div class="modal-body">
           <div class="container-fluid">
@@ -32,9 +33,16 @@
                 <a class="nav-link" id="embed-tab" data-toggle="tab" href="#embed" role="tab" aria-controls="embed" aria-selected="false">Embed Code</a>
               </li>
             </ul>
-            <div class="tab-content" id="video-sharing-tabs-content">
-              <div class="social-tab tab-pane fade show active" id="link" role="tabpanel" aria-labelledby="link-tab"><input class="form-control" type="text" value="{{ get_permalink() }}" readonly /></div>
-              <div class="social-tab tab-pane fade" id="embed" role="tabpanel" aria-labelledby="embed-tab"><textarea class="form-control" type="text" value="{{ htmlspecialchars_decode($wistia_embed) }}" rows="6" readonly>{{ htmlspecialchars_decode($wistia_embed) }}</textarea></div>
+            <div class="row">
+              <div class="col-12 col-md-2 mb-3 pr-1">
+                <button class="btn btn-block btn-primary" id="copySocialShareValue"><i class="far fa-clipboard fa-lg mr-2 mx-md-auto my-md-2"></i>Click to Copy</button>
+              </div>
+              <div class="col d-flex flex-column justify-content-center">
+                <div class="tab-content" id="video-sharing-tabs-content">
+                  <div class="social-tab tab-pane fade show active" id="link" role="tabpanel" aria-labelledby="link-tab"><input class="form-control" type="text" value="{{ get_permalink() }}" readonly /></div>
+                  <div class="social-tab tab-pane fade" id="embed" role="tabpanel" aria-labelledby="embed-tab"><textarea class="form-control" type="text" rows="6" readonly>{{ htmlspecialchars_decode($wistia_embed) }}</textarea></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
