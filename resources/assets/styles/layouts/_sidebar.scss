@@ -31,6 +31,8 @@
 }
 
 #sidebar-mobile {
+  @extend .text-light;
+
   padding-left: 2rem;
   overflow: hidden;
   max-height: 0;
@@ -66,10 +68,11 @@
   }
 
   a {
-    color: rgba(255, 255, 255, 0.8);
+    @extend .text-light;
+    // color: rgba(255, 255, 255, 0.8);
 
-    &:hover {
-      color: #ffc197;
-    }
+    // &:hover {
+    //   color: #ffc197;
+    // }
   }
 }

@@ -41,8 +41,6 @@ $theme-colors: (
 // Settings for the `<body>` element.
 
 $body-bg: $white;
-// $body-color: $gray-900; //#706f6f
-// $body-text-align: null;
 
 // LINKS
 // $link-color: lighten($primary, 10%);
@@ -50,7 +48,7 @@ $link-decoration: none;
 // $link-hover-color: darken($link-color, 20%);
 $link-hover-decoration: none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 30%;
+$emphasized-link-hover-darken-percentage: 20%;
 
 // Grid breakpoints
 // I added the ph breakpoint for phones in portrait
