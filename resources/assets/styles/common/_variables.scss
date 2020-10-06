@@ -80,9 +80,9 @@ $hr-border-width: 4px;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-focus-width: 0.25rem;
+$input-btn-focus-width: 0.15rem;
 $input-btn-focus-color-opacity: 0.25;
-$input-btn-focus-color: rgba($blue, $input-btn-focus-color-opacity);
+$input-btn-focus-color: rgba($primary, $input-btn-focus-color-opacity);
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
 // Forms
@@ -93,7 +93,7 @@ $input-font-weight: 300;
 
 $input-bg: transparent;
 
-$input-border-color: lighten($primary, 25%); //rgba(255, 102, 0, 0.8);
+$input-border-color: lighten($primary, 15%); //rgba(255, 102, 0, 0.8);
 $input-border-width: 2px;
 $input-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.2);
 

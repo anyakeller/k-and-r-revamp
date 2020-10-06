@@ -1,6 +1,7 @@
 .sidebar {
   font-size: 1.1rem;
   font-weight: 300;
+  z-index: -1;
 
   .menu-main-navigation-container {
     > ul {
@@ -32,6 +33,7 @@
 
 #sidebar-mobile {
   padding-left: 2rem;
+  overflow: hidden;
   max-height: 0;
   -webkit-transition: max-height 0.3s ease-out 0.1s;
   -o-transition: max-height 0.3s ease-out 0.1s;

@@ -128,23 +128,23 @@
   box-shadow: 0 0 3px 3px theme-color("primary");
 
   .swiper-slide-video-thumbnail-div::after {
-    content: "now playing";
+    content: "Now Playing";
     font-size: 1.2em;
     line-height: 1em;
-    font-weight: 500;
+    font-weight: 400;
     padding: 0.6em 0.7em;
     color: white;
     border: 1px solid #fff;
     border-radius: 3em;
     width: auto;
     height: auto;
-    background-color: rgba($primary, 0.7);
+    background-color: rgba(59, 65, 70, 0.44);
     background-image: none;
   }
 
   &:hover {
     .swiper-slide-video-thumbnail-div::after {
-      background-color: rgba($primary, 0.5);
+      // background-color: rgba($primary, 0.5);
       background-image: none;
     }
   }
@@ -246,7 +246,6 @@ $swiper-slide-text-height-xl: 85px;
 
   &:hover::after {
     transition: all 0.2s ease 0s;
-    filter: drop-shadow(0 0 2px rgba(93, 39, 3, 0.5));
   }
 }
 
@@ -270,6 +269,7 @@ $swiper-slide-text-height-xl: 85px;
 */
 
 .wistia-player {
+  z-index: 2;
   -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   background: #fff;
