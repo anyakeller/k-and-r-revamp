@@ -50,8 +50,12 @@ $skinny-container-xl: 775px;
 }
 
 // H tags
+
+h1,
+h2,
+h3,
 h4 {
-  color: theme-color("kr-orange");
+  color: $primary;
 }
 
 /* LAYOUT
