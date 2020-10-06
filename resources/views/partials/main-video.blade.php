@@ -4,14 +4,19 @@
 
 
 <div class="main-video-details">
-  <h4>{{ the_field('video_details_video_title') }}
-    <span style="display: block;">
-      {{App\time_elapsed_string(get_the_date())}}
-    </span>
-  </h4>
-
-  <div class="float-right video-sharing-button-div">
-    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#video-sharing-modal">Share this video! <i class="fas fa-share-square"></i></button>
+  <div class="d-flex">
+    <div class="flex-grow-1">
+      <h4>
+        {!! get_the_title() !!}
+        {{-- {{ the_field('video_details_video_title') }} --}}
+        <span style="display: block;">
+          {{App\time_elapsed_string(get_the_date())}}
+        </span>
+      </h4>
+    </div>
+    <div class="float-right video-sharing-button-div">
+      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#video-sharing-modal">Share this video! <i class="fas fa-share-square"></i></button>
+    </div>
   </div>
   <p>{{ the_field('video_details_video_description') }}</p>
 </div>
