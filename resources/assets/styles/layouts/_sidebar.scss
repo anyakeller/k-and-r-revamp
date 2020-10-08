@@ -51,6 +51,10 @@
     transition: max-height 0.4s ease-in;
   }
 
+  .search-form::before {
+    color: inherit;
+  }
+
   input {
     color: rgba(255, 255, 255, 0.9);
 
@@ -69,10 +73,5 @@
 
   a {
     @extend .text-light;
-    // color: rgba(255, 255, 255, 0.8);
-
-    // &:hover {
-    //   color: #ffc197;
-    // }
   }
 }

@@ -1,6 +1,23 @@
 /** Search form */
 .search-form {
   @extend .form-inline;
+
+  position: relative;
+
+  &::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    position: absolute;
+    left: 0.5em;
+    color: $primary;
+    content: "\f002";
+  }
 }
 
 .search-form label {
@@ -11,6 +28,8 @@
 
 .search-form .search-field {
   @extend .form-control;
+
+  padding-left: calc(1em + 10px);
 }
 
 .search-form .search-submit {
