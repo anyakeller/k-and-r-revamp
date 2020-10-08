@@ -9,6 +9,8 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import singleKrvideo from './routes/singleKrvideo';
+import ideabank from './routes/ideabank';
 
 // fontawesome
 import '@fortawesome/fontawesome-free/js/all.js';
@@ -21,6 +23,10 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
+  // Single Krvideo page
+  singleKrvideo,
+  // Ideabank
+  ideabank,
 });
 
 // Load Events

@@ -6,9 +6,6 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
-    ],
-    "swiperScripts": [
-      "./scripts/swiperScripts.js"
     ]
   },
   "publicPath": "/wp-content/themes/kite-rocket-reboot-alpha",
