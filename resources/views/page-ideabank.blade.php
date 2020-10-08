@@ -1,8 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.static')
 
 @section('content')
-  @while(have_posts()) @php the_post() @endphp
+  @include('partials.page-header')
+  <h2>test idea</h2>
+  {{-- @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('partials.content-page')
-  @endwhile
+  @endwhile --}}
 @endsection

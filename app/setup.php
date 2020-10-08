@@ -15,12 +15,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
     // swiper
-    wp_enqueue_script('sage/swiperScripts.js', asset_path('scripts/swiperScripts.js'), ['jquery'], null, true);
-
     if (is_single()) {
-        wp_enqueue_style('sage/posts-page.css', asset_path('styles/posts-page.css'), false, null);
-    } else {
-        wp_enqueue_style('sage/static-page.css', asset_path('styles/static-page.css'), false, null);
+        wp_enqueue_script('sage/swiperScripts.js', asset_path('scripts/swiperScripts.js'), ['jquery'], null, true);
     }
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
@@ -96,8 +92,8 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Mobile', 'sage'),
-        'id'            => 'sidebar-mobile'
+        'name'          => __('Static Sidebar', 'sage'),
+        'id'            => 'sidebar-static'
     ] + $config);
     register_sidebar([
         'name'          => __('Footer', 'sage'),
@@ -144,4 +140,4 @@ add_action('after_setup_theme', function () {
     });
 });
 
-add_image_size( 'video-thumbnail', 240, 135 );
+add_image_size('video-thumbnail', 240, 135);

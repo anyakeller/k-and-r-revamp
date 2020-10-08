@@ -9,12 +9,6 @@
     ],
     "swiperScripts": [
       "./scripts/swiperScripts.js"
-    ],
-    "static-page": [
-      "./styles/static-page.scss"
-    ],
-    "posts-page": [
-      "./styles/posts-page.scss"
     ]
   },
   "publicPath": "/wp-content/themes/kite-rocket-reboot-alpha",

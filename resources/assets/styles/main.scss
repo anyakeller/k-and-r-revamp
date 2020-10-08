@@ -26,3 +26,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+/** Import page-specific styles **/
+@import "page-specific/posts-page";
+@import "page-specific/static-page";

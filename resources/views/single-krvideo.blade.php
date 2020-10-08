@@ -1,7 +1,3 @@
-{{--
-  Template Name: Krvideo Front Page
---}}
-
 @extends('layouts.app')
 
 {{-- For some stupid reason if I delete this the spacing on the video category icons flips out  --}}
@@ -18,7 +14,6 @@
 @endwhile
 
 @php $main_post_id = get_the_ID() @endphp
-
 @foreach( $video_categories as $category )
 <div class="swiper-video-category-row mx-0">
   @php $one_category = App\get_videos_from_category($category)
@@ -29,7 +24,5 @@
 </div>
 <hr />
 @endforeach
-
-
 
 @endsection

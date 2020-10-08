@@ -1,0 +1,19 @@
+.single {
+  header::after {
+    content: "";
+  }
+
+  #sidebar-main {
+    margin-right: 1rem;
+    margin-top: 20vh;
+    padding-top: 1em;
+
+    @include media-breakpoint-up(xl) {
+      margin-right: calc((100vw - 1200px) / 5);
+    }
+
+    input.search-field {
+      max-width: calc(((100vw - 840px) / 2) - 2em);
+    }
+  }
+}
