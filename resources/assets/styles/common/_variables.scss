@@ -43,7 +43,7 @@ $theme-colors: (
 $body-bg: $white;
 
 // LINKS
-// $link-color: lighten($primary, 10%);
+$link-color: $gray-600;
 $link-decoration: none;
 // $link-hover-color: darken($link-color, 20%);
 $link-hover-decoration: none;
