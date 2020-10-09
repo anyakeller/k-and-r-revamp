@@ -7,7 +7,7 @@
   @endphp
   @include('partials.header')
   <div class="wrap flex-grow-1 d-flex flex-column" role="document">
-    <main class="content main flex-grow-1 px-5 d-flex">
+    <main class="content main px-5">
       @yield('content')
       @if (App\display_sidebar_static())
       <aside class="sidebar" id="sidebar-static">
@@ -15,11 +15,12 @@
       </aside>
       @endif
     </main>
-    @php do_action('get_footer') @endphp
-    @include('partials.footer')
-    @php wp_footer()
-    @endphp
+
   </div>
+  @php do_action('get_footer') @endphp
+  @include('partials.footer')
+  @php wp_footer()
+  @endphp
 </body>
 
 </html>
