@@ -1,8 +1,7 @@
 @extends('layouts.static')
 
 @section('content')
-@include('partials.page-header')
-<h2>test idea</h2>
+{{-- @include('partials.page-header') --}}
 @php $images = get_field('idea_bank_images') @endphp
 @if ($images)
 

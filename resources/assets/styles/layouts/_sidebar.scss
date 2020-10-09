@@ -16,9 +16,6 @@
 
 #sidebar-main,
 #sidebar-static {
-  position: absolute;
-  right: 0;
-  
   @include media-breakpoint-down(lg) {
     display: none;
   }

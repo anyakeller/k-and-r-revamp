@@ -79,6 +79,15 @@ h4 {
   }
 }
 
+// $limits is a map
+@mixin width-limiter($limits) {
+  @each $size, $limit in $limits {
+    @include media-breakpoint-up($size) {
+      max-width: $limit;
+    }
+  }
+}
+
 .container-main {
   @include make-container(1rem);
 
@@ -114,16 +123,18 @@ h4 {
   .main {
     @extend .mx-auto;
 
-    @include media-breakpoint-up(md) {
-      max-width: 750px;
+    $container-main-limits: (
+      md: 750px,
+      lg: 800px,
+      xl: 840px
+    );
+
+    &:not(.nowidthlimit) {
+      @include width-limiter($container-main-limits);
     }
 
-    @include media-breakpoint-up(lg) {
-      max-width: 800px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      max-width: 840px;
+    &.nowidthlimit {
+      width: 100%;
     }
   }
 }
