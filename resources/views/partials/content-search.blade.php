@@ -1,8 +1,8 @@
 <article @php post_class() @endphp>
-  <div style="position: relative; display: flex;">
+  <div class="video-thumbnail-div my-2">
     {{the_post_thumbnail('video-thumbnail', array('class' => 'swiper-slide-video-thumbnail' ))}}
-    <div style="text-align: end;  position: absolute; display: flex; align-items: flex-end; top: 0;right: 0; height: 100%;">
-      <span style="padding: 0 2px; position: relative; background-color: rgba(38, 38, 38, 0.8); color: white;">
+    <div class="video-thumbnail-length-div">
+      <span class="video-thumbnail-length-span">
         @php $vido_len_field = get_field('video_details_video_length');
         @endphp
         @if ($vido_len_field)
@@ -16,8 +16,8 @@
       </span>
     </div>
   </div>
-  <header>
-    <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
+  <header class="py-1">
+    <h5 class="entry-title text-center"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h5>
     @if (get_post_type() === 'post')
     @include('partials/entry-meta')
     @endif

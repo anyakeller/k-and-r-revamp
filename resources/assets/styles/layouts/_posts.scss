@@ -92,16 +92,14 @@
 // Video Thumbnail Swipe Slides
 
 // for some reason stylint didn't like when I pu this after it's parent container of .swiper-slide-video-inner
-.swiper-slide-video-thumbnail-div {
-  position: relative;
-  display: flex;
+.swiper-slide .video-thumbnail-div {
   align-items: center;
   justify-content: center;
 }
 
 // the div inside the main .swiper-slide for video thumbnails
 .swiper-slide-video-inner {
-  .swiper-slide-video-thumbnail-div {
+  .video-thumbnail-div {
     &::after {
       transition: background-image 0.5s ease, background-color 0.5s ease,
         color 0.5s ease, border-color 0.5s ease;
@@ -115,7 +113,7 @@
   }
 
   &:hover {
-    .swiper-slide-video-thumbnail-div {
+    .video-thumbnail-div {
       &::after {
         background: rgba($primary, 0.5) url(../images/play-hover.png) center
           center no-repeat;
@@ -127,7 +125,7 @@
 .swiper-slide-video-inner.now-playing {
   box-shadow: 0 0 3px 3px theme-color("primary");
 
-  .swiper-slide-video-thumbnail-div::after {
+  .video-thumbnail-div::after {
     content: "Now Playing";
     font-size: 1.2em;
     line-height: 1em;
@@ -155,23 +153,6 @@
   height: auto;
   object-fit: contain;
   width: 100%;
-}
-
-.videoimage-video-length-div {
-  text-align: end;
-  position: absolute;
-  display: flex;
-  align-items: flex-end;
-  top: 0;
-  right: 0;
-  height: 100%;
-}
-
-.videoimage-video-length-div > span {
-  padding: 0 2px;
-  position: relative;
-  background-color: rgba(38, 38, 38, 0.8);
-  color: white;
 }
 
 // USED FOR SWIPER VIDEO DESCRIPTIONS

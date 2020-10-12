@@ -17,10 +17,10 @@
           <div class="swiper-slide-video-inner @if($main_post_id === get_the_ID() ) now-playing @endif">
             <a href="{{ get_permalink() }}">
               {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
-              <div class="swiper-slide-video-thumbnail-div">
+              <div class="swiper-slide-video-thumbnail-div video-thumbnail-div">
                 {{the_post_thumbnail('video-thumbnail', array('class' => 'swiper-slide-video-thumbnail' ))}}
-                <div class="videoimage-video-length-div">
-                  <span>
+                <div class="video-thumbnail-length-div">
+                  <span class="video-thumbnail-length-span">
                     @php $vido_len_field = get_field('video_details_video_length'); @endphp
                     @if ($vido_len_field)
                       {{ the_field('video_details_video_length') }}

@@ -137,3 +137,26 @@ h3 {
     }
   }
 }
+
+// General styling for all video thumbnails
+.video-thumbnail-div {
+  position: relative;
+  display: flex;
+
+  .video-thumbnail-length-div {
+    text-align: end;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+    .video-thumbnail-length-span {
+      padding: 0 2px;
+      position: relative;
+      background-color: rgba(38, 38, 38, 0.8);
+      color: white;
+    }
+  }
+}
