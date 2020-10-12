@@ -7,8 +7,8 @@
     "customizer": [
       "./scripts/customizer.js"
     ],
-    "ideabank": [
-      "./styles/ideabank.scss"
+    "static": [
+      "./styles/static.scss"
     ]
   },
   "publicPath": "/wp-content/themes/kite-rocket-reboot-alpha",

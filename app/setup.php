@@ -17,8 +17,8 @@ add_action('wp_enqueue_scripts', function () {
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-    if (is_page('ideabank') || is_page('labcam')) {
-      wp_enqueue_style('sage/ideabank.css', asset_path('styles/ideabank.css'), false, null);
+    if (!is_single()) {
+      wp_enqueue_style('sage/static.css', asset_path('styles/static.css'), false, null);
     }
 }, 100);
 

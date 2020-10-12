@@ -19,10 +19,15 @@
               {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
               <div class="swiper-slide-video-thumbnail-div">
                 {{the_post_thumbnail('video-thumbnail', array('class' => 'swiper-slide-video-thumbnail' ))}}
+                <div class="videoimage-video-length-div">
+                  <span>
+                    {{ the_field('video_details_video_length') }}
+                  </span>
+                </div>
               </div>
               <div class="entry-title video-slide-text">
                 <p>{!! get_the_title() !!}</p>
-                <span>{{App\time_elapsed_string(get_the_date())}}</span>
+                <span class="text-muted">{{App\time_elapsed_string(get_the_date())}}</span>
               </div>
             </a>
           </div>

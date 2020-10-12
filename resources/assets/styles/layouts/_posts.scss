@@ -157,6 +157,23 @@
   width: 100%;
 }
 
+.videoimage-video-length-div {
+  text-align: end;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.videoimage-video-length-div > span {
+  padding: 0 2px;
+  position: relative;
+  background-color: rgba(38, 38, 38, 0.8);
+  color: white;
+}
+
 // USED FOR SWIPER VIDEO DESCRIPTIONS
 // needed to be moved up because of css rules
 $swiper-slide-text-height: 100px;
@@ -171,8 +188,6 @@ $swiper-slide-text-height-xl: 85px;
 }
 
 .video-slide-text {
-  @extend .h6;
-
   padding-bottom: 0;
   margin-bottom: 0;
   display: flex;

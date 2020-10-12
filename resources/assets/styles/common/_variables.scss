@@ -33,7 +33,7 @@ $orange: rgb(250, 102, 0);
 $primary: $orange;
 
 $theme-colors: (
-  "body-color-default": #212529
+  "body-color-default": $gray-800
 );
 
 // Body
@@ -41,6 +41,7 @@ $theme-colors: (
 // Settings for the `<body>` element.
 
 $body-bg: $white;
+$body-color: $gray-800;
 
 // LINKS
 $link-color: $gray-600;
@@ -76,6 +77,9 @@ $component-active-bg: $primary;
 // Font, line-height, and color for body text, headings, and more.
 
 $font-size-base: 0.875rem;
+
+$line-height-base: 1.25;
+$line-height-sm: 1.1;
 
 // fonts
 $font-family-sans-serif: Yantramanav, sans-serif, -apple-system,
