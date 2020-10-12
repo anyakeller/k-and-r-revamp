@@ -6,15 +6,20 @@
   @php do_action('get_header')
   @endphp
   @include('partials.header')
-  <div class="wrap container-main flex-grow-1 d-flex flex-column" role="document">
-    <main class="content main nowidthlimit px-5">
+  <div class="wrap container-main flex-grow-1 d-flex" role="document">
+    <style>
+      .content.main{
+        max-width: 1000px;
+      }
+    </style>
+    <main class="content main nowidthlimit d-flex flex-column">
       @yield('content')
-      @if (App\display_sidebar_static())
-      <aside class="sidebar" id="sidebar-static">
-        @include('partials.sidebar-static')
-      </aside>
-      @endif
     </main>
+    @if (App\display_sidebar_static())
+    <aside class="sidebar" id="sidebar-static">
+      @include('partials.sidebar-static')
+    </aside>
+    @endif
   </div>
   @php do_action('get_footer') @endphp
   @include('partials.footer')

@@ -18,4 +18,24 @@
       max-width: calc(((100vw - 840px) / 2) - 2em);
     }
   }
+
+  header.banner > .banner-row {
+    @include media-breakpoint-up(lg) {
+      height: 5.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 10rem;
+    }
+
+    #sticky-logo {
+      position: -webkit-sticky;
+      position: sticky;
+
+      @include media-breakpoint-up(xl) {
+        padding-bottom: 2rem;
+        top: 3.25rem;
+      }
+    }
+  }
 }

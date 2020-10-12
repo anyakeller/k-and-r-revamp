@@ -3,7 +3,7 @@ export default {
   init() {
     // JavaScript to be fired on a post page
     new Swiper('.swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
       centeredSlides: true,
       mousewheel: {
