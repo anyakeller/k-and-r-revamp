@@ -1,5 +1,5 @@
 <header class="banner container-main">
-  <div class="banner-row">
+  <div class="banner-row mt-lg-2">
     <div>
       <div id="sticky-logo">
         <a class="brand" href="{{ home_url('/') }}"><img class="kite-rocket-logo-header" src="@asset('images/kite-and-rocket-research-logo.png')" alt="{{ get_bloginfo('name', 'display') }}"></a>
@@ -15,8 +15,8 @@
     @include('partials.sidebar')
   </div>
   @if (App\display_sidebar_static())
-  <aside class="sidebar" id="sidebar-static">
+  <div class="sidebar" id="sidebar-static">
     @include('partials.sidebar-static')
-  </aside>
+  </div>
   @endif
 </header>
