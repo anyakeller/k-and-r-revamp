@@ -14,10 +14,10 @@
         @php $one_category-> the_post()
         @endphp
         <div class="swiper-slide">
-          <div class="swiper-slide-video-inner @if($main_post_id === get_the_ID() ) now-playing @endif">
+          <div class="video-card @if($main_post_id === get_the_ID() ) now-playing @endif">
             <a href="{{ get_permalink() }}">
               {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
-              <div class="swiper-slide-video-thumbnail-div video-thumbnail-div">
+              <div class="video-thumbnail-div">
                 {{the_post_thumbnail('video-thumbnail', array('class' => 'swiper-slide-video-thumbnail' ))}}
                 <div class="video-thumbnail-length-div">
                   <span class="video-thumbnail-length-span">
