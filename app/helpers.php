@@ -149,9 +149,9 @@ function display_sidebar()
  */
 function display_sidebar_static()
 {
-   static $display;
-   isset($display) || $display = apply_filters('sage/display_sidebar_static', false);
-   return $display;
+    static $display;
+    isset($display) || $display = apply_filters('sage/display_sidebar_static', false);
+    return $display;
 }
 
 
@@ -261,4 +261,26 @@ function time_elapsed_string($datetime, $full = false)
         $string = array_slice($string, 0, 1);
     }
     return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
+
+
+/**
+ * Helper to get the video length
+ * The function is convoluted because it has to support the older post
+ * format with the video length in the exceprt (Eeeeew, gross)
+ * @return string
+ */
+
+function get_video_length()
+{
+    $video_len_field = get_field('video_details_video_length');
+    if ($video_len_field) {
+        return $video_len_field;
+    } else {
+        $full_excerpt = get_the_excerpt();
+
+        $video_len__full_location = strrpos($full_excerpt, '<font');
+        $video_len_short=strstr(substr($full_excerpt, $video_len__full_location - 1), "<b>");
+        return $video_len_short;
+    }
 }

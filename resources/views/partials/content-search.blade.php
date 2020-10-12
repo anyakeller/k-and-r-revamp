@@ -5,16 +5,7 @@
         {{the_post_thumbnail('video-thumbnail', array('class' => 'swiper-slide-video-thumbnail' ))}}
         <div class="video-thumbnail-length-div">
           <span class="video-thumbnail-length-span">
-            @php $vido_len_field = get_field('video_details_video_length');
-            @endphp
-            @if ($vido_len_field)
-            {{ the_field('video_details_video_length') }}
-            @else
-            @php
-            $full_excerpt = get_the_excerpt();
-            $video_len__full_location = strrpos($full_excerpt, '
-            <font'); $video_len_short=strstr(substr($full_excerpt, $video_len__full_location - 1), "<b>" ); echo $video_len_short; @endphp
-            @endif
+            {!! App\get_video_length() !!}
           </span>
         </div>
       </div>
