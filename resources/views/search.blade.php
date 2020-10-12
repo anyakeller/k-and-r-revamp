@@ -9,11 +9,17 @@
 </div>
 @endif
 
-@while(have_posts())
-@php the_post()
-@endphp
-@include('partials.content-search')
-@endwhile
+<div class="container">
+  <div class="row row-cols-2 row-cols-md-4">
+  @while(have_posts())
+    <div class="col my-2">
+      @php the_post()
+      @endphp
+      @include('partials.content-search')
+    </div>
+  @endwhile
+</div>
+</div>
 
 {!! get_the_posts_navigation() !!}
 @endsection

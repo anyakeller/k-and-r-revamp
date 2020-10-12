@@ -33,9 +33,6 @@
                       @endphp
                     @endif
                   </span>
-                  {{-- <span>
-                     {{ the_field('video_details_video_length') }}
-                  </span> --}}
                 </div>
               </div>
               <div class="entry-title video-slide-text">
