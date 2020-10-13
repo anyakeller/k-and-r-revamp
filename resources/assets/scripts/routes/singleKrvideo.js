@@ -5,7 +5,7 @@ export default {
     new Swiper('.swiper-container', {
       slidesPerView: 3,
       slidesPerGroup: 2,
-      spaceBetween: 10,
+      spaceBetween: 5,
       // slidesPerColumn: 2,
       freeMode: true,
       // slidesOffsetBefore: 30,
@@ -18,24 +18,20 @@ export default {
       breakpoints: {
         576: {
           slidesPerView: 3,
-          spaceBetween: 15,
-          // slidesPerColumn: 2,
+          spaceBetween: 10,
         },
         768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          // slidesPerColumn: 2,
+          slidesPerView: 4,
+          spaceBetween: 3,
         },
         992: {
           slidesPerView: 4,
           slidesPerGroup: 3,
-          spaceBetween: 15,
-          // slidesPerColumn: 2,
+          spaceBetween: 0,
         },
         1200: {
           slidesPerView: 4,
-          spaceBetween: 15,
-          // slidesPerColumn: 2,
+          spaceBetween: 3,
         },
       },
       mousewheel: {

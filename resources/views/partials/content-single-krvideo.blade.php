@@ -1,6 +1,6 @@
 <article @php post_class() @endphp>
 
-  <div class="main-video mx-auto">
+  <div class="main-video mx-auto mb-4">
 
     @include('partials/main-video')
 

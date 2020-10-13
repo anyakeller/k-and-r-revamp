@@ -42,9 +42,9 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  line-height: 1.2em;
+  // line-height: 1.2em;
   color: theme-color("primary");
-  width: 6em !important;
+  width: 5rem !important;
 
   @include media-breakpoint-down(ph) {
     margin-right: 5px !important;
@@ -52,10 +52,15 @@
 
   @include media-breakpoint-up(sm) {
     margin-left: 25px;
+    width: 6.5rem !important;
   }
 
   @include media-breakpoint-up(md) {
     margin-left: 30px;
+  }
+
+  h6 {
+    margin-bottom: 0;
   }
 }
 
@@ -78,7 +83,7 @@
     max-height: 40px;
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     max-height: 50px;
     max-width: 50px;
   }

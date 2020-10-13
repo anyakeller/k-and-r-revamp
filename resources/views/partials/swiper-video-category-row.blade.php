@@ -1,4 +1,4 @@
-<div class="swiper-video-category-row-inner shift-left mt-4 px-0">
+<div class="swiper-video-category-row-inner shift-left mt-3 px-0">
   <div class="swiper-container">
     {{-- Additional required wrapper  --}}
     <div class="swiper-wrapper">
@@ -6,7 +6,7 @@
       <div class="swiper-slide swiper-slide-category">
         <div class="category-icon-div"><img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" /></div>
         {{-- <img style="background: url('{{ the_field('video_category_icon_main',$category )  }}') no-repeat center;" alt="triangle with all three sides equal"/> --}}
-        <p>{{$category -> name}}</p>
+        <h6>{{$category -> name}}</h6>
         <div class="category-icon-offsetter"></div>
       </div>
       {{-- The videos in the category --}}
@@ -26,7 +26,7 @@
                 </div>
               </div>
               <div class="video-slide-text">
-                <h6 class="entry-title">{!! get_the_title() !!}</h6>
+                <p class="entry-title">{!! get_the_title() !!}</p>
                 <span class="text-muted">{{App\time_elapsed_string(get_the_date())}}</span>
               </div>
             </a>
