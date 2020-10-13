@@ -52,7 +52,7 @@
 
   @include media-breakpoint-up(sm) {
     margin-left: 25px;
-    width: 6.5rem !important;
+    width: 5.5rem !important;
   }
 
   @include media-breakpoint-up(md) {
@@ -61,6 +61,10 @@
 
   h6 {
     margin-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -79,13 +83,9 @@
     max-height: 35px;
   }
 
-  @include media-breakpoint-up(sm) {
-    max-height: 40px;
-  }
-
   @include media-breakpoint-up(lg) {
-    max-height: 50px;
-    max-width: 50px;
+    max-height: 45px;
+    max-width: 45px;
   }
 
   @include media-breakpoint-up(xl) {
