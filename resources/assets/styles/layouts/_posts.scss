@@ -26,7 +26,7 @@
 // Each slide
 .swiper-slide {
   text-align: center;
-  padding: 4px;
+  padding: 5px; // makes room for the box-shadow
 }
 
 //shifts whole swiper category row left because it looks funny when the previous button isn't visible
@@ -91,59 +91,56 @@
 
 // Video Thumbnail Swipe Slides
 
-// for some reason stylint didn't like when I pu this after it's parent container of .swiper-slide-video-inner
-.swiper-slide .video-thumbnail-div {
-  align-items: center;
-  justify-content: center;
-}
-
 // the div inside the main .swiper-slide for video thumbnails
 .video-card {
+  transition: box-shadow 0.4s ease;
+
   .video-thumbnail-div {
     &::after {
-      transition: background-image 0.5s ease, background-color 0.5s ease,
-        color 0.5s ease, border-color 0.5s ease;
+      transition: width 0.3s ease;
       position: absolute;
       z-index: 10;
       content: "";
       background: url(../images/play.png) center center no-repeat;
-      width: 100%;
+      background-size: contain;
+      width: 20%;
       height: 100%;
     }
   }
 
   &:hover {
+    box-shadow: 0 0 3px 2px rgba($primary, 0.6);
+
     .video-thumbnail-div {
       &::after {
-        background: rgba($primary, 0.5) url(../images/play-hover.png) center
-          center no-repeat;
+        width: 24%;
       }
     }
   }
 }
 
 .video-card.now-playing {
-  box-shadow: 0 0 3px 3px theme-color("primary");
+  box-shadow: 0 0 4px 2px rgba($primary, 1);
 
   .video-thumbnail-div::after {
+    transition: font-size 0.3s ease;
     content: "Now Playing";
-    font-size: 1.2em;
-    line-height: 1em;
+    font-size: 1rem;
+    line-height: 1rem;
     font-weight: 400;
-    padding: 0.6em 0.7em;
-    color: white;
-    border: 1px solid #fff;
-    border-radius: 3em;
+    padding: 0.3rem 0.4rem;
     width: auto;
     height: auto;
-    background-color: rgba(59, 65, 70, 0.44);
+    color: white;
+    border: 1px solid white;
+    border-radius: 3rem;
+    background-color: rgba(3, 11, 68, 0.3);
     background-image: none;
   }
 
   &:hover {
-    .swiper-slide-video-thumbnail-div::after {
-      // background-color: rgba($primary, 0.5);
-      background-image: none;
+    .video-thumbnail-div::after {
+      font-size: 1.1rem;
     }
   }
 }
@@ -169,7 +166,7 @@ $swiper-slide-text-height-xl: 85px;
 }
 
 .video-slide-text {
-  padding-bottom: 0;
+  padding: 0 5px;
   margin-bottom: 0;
   display: flex;
   -webkit-box-orient: vertical;
@@ -182,7 +179,7 @@ $swiper-slide-text-height-xl: 85px;
     height: $swiper-slide-text-height-xl;
   }
 
-  > p {
+  > .entry-title {
     flex-grow: 1;
     overflow: hidden;
     padding-top: 0.5em;

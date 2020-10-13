@@ -104,7 +104,7 @@ WordPress global php functions is usually in resources/functions.php but now the
 
 ### Styles
 
-This theme is built on a customized version of Bootstrap v4.5
+This theme is built on a customized version of Bootstrap v4.5.3
 All customizations to bootstrap are in `assets.sttles/common/_variables.scss`
 
 All easily modifyable styling can be found in resources/assets/styles/ but ultimatly you should incorperate your changes into bootstrap's scss by modifying `assets.sttles/common/_variables.scss`.

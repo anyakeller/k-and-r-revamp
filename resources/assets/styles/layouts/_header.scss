@@ -61,17 +61,3 @@ header.banner {
   object-fit: contain;
   width: 100%;
 }
-
-// HAMBURGER
-.hamburger {
-  padding-left: 2rem;
-  outline: none !important;
-
-  @include media-breakpoint-down(sm) {
-    padding-left: 1rem;
-  }
-
-  @include media-breakpoint-up(xl) {
-    display: none;
-  }
-}

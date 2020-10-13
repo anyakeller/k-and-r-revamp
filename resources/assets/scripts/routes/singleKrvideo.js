@@ -4,6 +4,7 @@ export default {
     // JavaScript to be fired on a post page
     new Swiper('.swiper-container', {
       slidesPerView: 3,
+      slidesPerGroup: 2,
       spaceBetween: 10,
       // slidesPerColumn: 2,
       freeMode: true,
@@ -27,6 +28,7 @@ export default {
         },
         992: {
           slidesPerView: 4,
+          slidesPerGroup: 3,
           spaceBetween: 15,
           // slidesPerColumn: 2,
         },

@@ -142,6 +142,8 @@ h3 {
 .video-thumbnail-div {
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   .video-thumbnail-length-div {
     text-align: end;

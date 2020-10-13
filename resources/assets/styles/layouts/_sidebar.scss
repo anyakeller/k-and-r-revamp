@@ -20,6 +20,21 @@
   }
 }
 
+body:not(.single) {
+  @include media-breakpoint-up(md) {
+    .hamburger,
+    #sidebar-mobile {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    #sidebar-static {
+      display: block;
+    }
+  }
+}
+
 #sidebar-mobile,
 #sidebar-static {
   @extend .text-light;
@@ -71,9 +86,25 @@
   }
 }
 
-#sidebar-static {
-  @include media-breakpoint-down(lg) {
+// HAMBURGER
+.hamburger {
+  padding-left: 2rem;
+  outline: none !important;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 1rem;
+  }
+
+  @include media-breakpoint-up(xl) {
     display: none;
+  }
+}
+
+#sidebar-static {
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    display: block;
   }
 
   form {

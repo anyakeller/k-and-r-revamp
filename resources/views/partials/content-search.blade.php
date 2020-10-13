@@ -10,7 +10,7 @@
         </div>
       </div>
       <header class="py-1">
-        <h5 class="entry-title text-center">{!! get_the_title() !!}</h5>
+        <h6 class="entry-title">{!! get_the_title() !!}</h6>
         @if (get_post_type() === 'post')
         @include('partials/entry-meta')
         @endif

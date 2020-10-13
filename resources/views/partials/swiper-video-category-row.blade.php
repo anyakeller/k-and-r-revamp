@@ -25,8 +25,8 @@
                   </span>
                 </div>
               </div>
-              <div class="entry-title video-slide-text">
-                <p>{!! get_the_title() !!}</p>
+              <div class="video-slide-text">
+                <h6 class="entry-title">{!! get_the_title() !!}</h6>
                 <span class="text-muted">{{App\time_elapsed_string(get_the_date())}}</span>
               </div>
             </a>
