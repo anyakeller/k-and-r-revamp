@@ -16,23 +16,13 @@ export default {
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        // 576: {
-        //   slidesPerView: 3,
-        //   spaceBetween: 10,
-        // },
-
         768: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 0,
         },
         992: {
           slidesPerView: 4,
           slidesPerGroup: 3,
-          spaceBetween: 0,
-        },
-        1200: {
-          slidesPerView: 4,
-          spaceBetween: 3,
         },
       },
       mousewheel: {
