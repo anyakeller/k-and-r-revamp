@@ -6,7 +6,7 @@
       <div class="swiper-slide swiper-slide-category">
         <div class="category-icon-div"><img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" /></div>
         {{-- <img style="background: url('{{ the_field('video_category_icon_main',$category )  }}') no-repeat center;" alt="triangle with all three sides equal"/> --}}
-        <h6>{{$category -> name}}</h6>
+        <span>{{$category -> name}}</span>
         <div class="category-icon-offsetter"></div>
       </div>
       {{-- The videos in the category --}}

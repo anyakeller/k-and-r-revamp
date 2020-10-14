@@ -52,19 +52,11 @@
 
   @include media-breakpoint-up(sm) {
     margin-left: 25px;
-    width: 5.5rem !important;
+    width: 120px !important;
   }
 
   @include media-breakpoint-up(md) {
     margin-left: 30px;
-  }
-
-  h6 {
-    margin-bottom: 0;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 0.9rem;
-    }
   }
 }
 
@@ -160,13 +152,13 @@
 // USED FOR SWIPER VIDEO DESCRIPTIONS
 // needed to be moved up because of css rules
 $swiper-slide-text-height: 100px;
-$swiper-slide-text-height-xl: 85px;
+$swiper-slide-text-height-lg: 110px;
 
 .category-icon-offsetter {
   height: $swiper-slide-text-height;
 
-  @include media-breakpoint-up(xl) {
-    height: $swiper-slide-text-height-xl;
+  @include media-breakpoint-up(lg) {
+    height: $swiper-slide-text-height-lg;
   }
 }
 
@@ -180,17 +172,24 @@ $swiper-slide-text-height-xl: 85px;
   flex-direction: column;
   height: $swiper-slide-text-height;
 
-  @include media-breakpoint-up(xl) {
-    height: $swiper-slide-text-height-xl;
+  @include media-breakpoint-up(lg) {
+    height: $swiper-slide-text-height-lg;
   }
 
   > .entry-title {
     flex-grow: 1;
     overflow: hidden;
     padding-top: 0.5em;
+    font-weight: 400;
+    line-height: 1rem;
+    margin-bottom: 0.6rem;
 
-    @include media-breakpoint-up(xl) {
-      margin-bottom: 1em;
+    @include media-breakpoint-up(md) {
+      line-height: 1.1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 1rem;
     }
   }
 
@@ -213,8 +212,8 @@ $swiper-slide-text-height-xl: 85px;
   width: 20px;
   padding-bottom: $swiper-slide-text-height;
 
-  @include media-breakpoint-up(xl) {
-    padding-bottom: $swiper-slide-text-height-xl;
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $swiper-slide-text-height-lg;
   }
 
   @include media-breakpoint-down(sm) {

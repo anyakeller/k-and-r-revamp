@@ -5,7 +5,7 @@ export default {
     new Swiper('.swiper-container', {
       slidesPerView: 3,
       slidesPerGroup: 2,
-      spaceBetween: 5,
+      spaceBetween: 0,
       // slidesPerColumn: 2,
       freeMode: true,
       // slidesOffsetBefore: 30,

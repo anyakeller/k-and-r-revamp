@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('comment-reply');
     }
     if (!is_single()) {
-      wp_enqueue_style('sage/static.css', asset_path('styles/static.css'), false, null);
+        wp_enqueue_style('sage/static.css', asset_path('styles/static.css'), false, null);
     }
 }, 100);
 
@@ -139,3 +139,4 @@ add_action('after_setup_theme', function () {
 });
 
 add_image_size('video-thumbnail', 240, 135);
+add_image_size('video-thumbnail-sm', 192, 108);
