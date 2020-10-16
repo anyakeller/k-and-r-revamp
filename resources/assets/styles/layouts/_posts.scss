@@ -80,7 +80,7 @@
 
 // USED FOR SWIPER VIDEO-CARD TEXT HEIGHT
 // needed to be moved up because of css rules
-// Format:  [line-height] * [number of lines for the video title + ([video-slide-text padding-top + padding-bottom]) +
+// Format:  [line-height] * [number of lines for the video title + ([video-card-text padding-top + padding-bottom]) +
 //    [height of buffer between title and video date span] + [height of video date span]
 $swiper-slide-text-num-lines: 4;
 $video-card-text-height: 1em * $swiper-slide-text-num-lines + (0.3em + 0.1em) +
@@ -112,7 +112,7 @@ $video-card-text-height-md-up: 1em * $swiper-slide-text-num-lines +
   }
 }
 
-.video-slide-text {
+.video-card-text {
   padding: 0.3em 0.1em 0.1em;
   display: flex;
   -webkit-box-orient: vertical;
@@ -303,7 +303,7 @@ $video-card-text-height-md-up: 1em * $swiper-slide-text-num-lines +
   }
 }
 
-.swiper-slide-video-thumbnail {
+.video-card-thumbnail {
   max-width: 100%;
   height: auto;
   object-fit: contain;
