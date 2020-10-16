@@ -1,0 +1,16 @@
+.video-card {
+  text-align: center;
+
+  .video-thumbnail-div {
+    &::after {
+      transition: width 0.3s ease;
+      position: absolute;
+      z-index: 10;
+      content: "";
+      background: url(../images/play.png) center center no-repeat;
+      background-size: contain;
+      width: 20%;
+      height: 100%;
+    }
+  }
+}

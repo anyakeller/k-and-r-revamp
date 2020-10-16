@@ -78,6 +78,16 @@
   *
 */
 
+// USED FOR SWIPER VIDEO-CARD TEXT HEIGHT
+// needed to be moved up because of css rules
+// Format:  [line-height] * [number of lines for the video title + ([video-slide-text padding-top + padding-bottom]) +
+//    [height of buffer between title and video date span] + [height of video date span]
+$swiper-slide-text-num-lines: 4;
+$video-card-text-height: 1em * $swiper-slide-text-num-lines + (0.3em + 0.1em) +
+  1em + 1em;
+$video-card-text-height-md-up: 1em * $swiper-slide-text-num-lines +
+  (0.5em + 0.1em) + 1em + 1em;
+
 .swiper-video-category-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +104,33 @@
 .swiper-slide {
   text-align: center;
   padding: 5px; // makes room for the box-shadow
+  font-size: 0.875rem;
+  line-height: 1em;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 0.95rem;
+  }
+}
+
+.video-slide-text {
+  padding: 0.3em 0.1em 0.1em;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: $video-card-text-height;
+
+  > .entry-title {
+    flex-grow: 1;
+    overflow: hidden;
+    font-weight: 400;
+  }
+
+  > .text-muted {
+    line-height: inherit;
+    margin-top: 1em;
+  }
 }
 
 //shifts whole swiper category row left because it looks funny when the previous button isn't visible
@@ -104,7 +141,6 @@
 }
 
 // Video Category Siwper Slides
-
 .swiper-slide-category {
   display: flex;
   justify-content: flex-end;
@@ -159,118 +195,13 @@
   }
 }
 
-// Video Thumbnail Swipe Slides
-
-// the div inside the main .swiper-slide for video thumbnails
-.video-card {
-  font-size: 0.875rem;
-  line-height: 0.875rem;
-  transition: box-shadow 0.4s ease;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 0.95rem;
-    line-height: 1.1rem;
-  }
-
-  .video-thumbnail-div {
-    &::after {
-      transition: width 0.3s ease;
-      position: absolute;
-      z-index: 10;
-      content: "";
-      background: url(../images/play.png) center center no-repeat;
-      background-size: contain;
-      width: 20%;
-      height: 100%;
-    }
-  }
-
-  &:hover {
-    box-shadow: 0 0 3px 2px rgba($primary, 0.6);
-
-    .video-thumbnail-div {
-      &::after {
-        width: 24%;
-      }
-    }
-  }
-}
-
-.video-card.now-playing {
-  box-shadow: 0 0 4px 2px rgba($primary, 1);
-
-  .video-thumbnail-div::after {
-    content: "Now Playing";
-    font-size: 1em;
-    font-weight: 400;
-    padding: 0.3rem 0.4rem;
-    width: auto;
-    height: auto;
-    color: white;
-    border: 1px solid white;
-    border-radius: 3rem;
-    background-color: rgba(3, 11, 68, 0.3);
-    background-image: none;
-    transition: font-size 0.3s ease;
-  }
-
-  &:hover {
-    .video-thumbnail-div::after {
-      font-size: 1.1em;
-    }
-  }
-}
-
-.swiper-slide-video-thumbnail {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  width: 100%;
-}
-
-// USED FOR SWIPER VIDEO DESCRIPTIONS
-// needed to be moved up because of css rules
-$swiper-slide-text-height: 92px;
-$swiper-slide-text-height-lg: 110px;
-
 .category-icon-offsetter {
-  height: $swiper-slide-text-height;
-
-  @include media-breakpoint-up(lg) {
-    height: $swiper-slide-text-height-lg;
-  }
+  height: $video-card-text-height;
 }
 
-.video-slide-text {
-  padding: 0 2px;
-  margin-bottom: 0;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: $swiper-slide-text-height;
-
-  @include media-breakpoint-up(sm) {
-    padding: 0 10px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    height: $swiper-slide-text-height-lg;
-  }
-
-  > .entry-title {
-    flex-grow: 1;
-    overflow: hidden;
-    padding-top: 0.5em;
-    font-weight: 400;
-
-    @include media-breakpoint-up(md) {
-      margin-bottom: 1em;
-    }
-  }
-}
-
+/**
+ *  SWIPER VIDEO CATEGORY
+ */
 .swiper-button-next,
 .swiper-button-prev {
   background-color: white;
@@ -282,11 +213,7 @@ $swiper-slide-text-height-lg: 110px;
   height: 100%;
   margin-top: 0;
   width: 20px;
-  padding-bottom: $swiper-slide-text-height;
-
-  @include media-breakpoint-up(lg) {
-    padding-bottom: $swiper-slide-text-height-lg;
-  }
+  padding-bottom: $video-card-text-height;
 
   @include media-breakpoint-down(sm) {
     width: 20px;
@@ -330,4 +257,55 @@ $swiper-slide-text-height-lg: 110px;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+}
+
+// Video Thumbnail Swipe Slides
+
+// the div inside the main .swiper-slide for video thumbnails
+.video-card {
+  font-size: inherit;
+  line-height: inherit;
+  transition: box-shadow 0.4s ease;
+
+  &:hover {
+    box-shadow: 0 0 3px 2px rgba($primary, 0.6);
+
+    .video-thumbnail-div {
+      &::after {
+        width: 24%;
+      }
+    }
+  }
+}
+
+.video-card.now-playing {
+  box-shadow: 0 0 4px 2px rgba($primary, 1);
+
+  .video-thumbnail-div::after {
+    content: "Now Playing";
+    font-size: 1em;
+    font-weight: 400;
+    padding: 0.3rem 0.4rem;
+    width: auto;
+    height: auto;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3rem;
+    background-color: rgba(3, 11, 68, 0.3);
+    background-image: none;
+    transition: font-size 0.3s ease;
+  }
+
+  &:hover {
+    .video-thumbnail-div::after {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.swiper-slide-video-thumbnail {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
 }
