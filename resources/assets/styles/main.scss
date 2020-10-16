@@ -3,7 +3,7 @@
 /** Import everything from autoload */
 @import "./autoload/**/*";
 
-@debug $rfs-base-font-size;
+// @debug $rfs-base-font-size;
 
 /**
  * Import npm dependencies
@@ -15,6 +15,9 @@
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~swiper/swiper.scss";
+@import "~swiper/components/lazy/lazy.scss";
+@import "~swiper/components/navigation/navigation.scss";
 
 /** Import theme styles */
 @import "common/global";
@@ -22,6 +25,7 @@
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/video-cards";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

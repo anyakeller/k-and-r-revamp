@@ -1,15 +1,82 @@
 /**
-  * Layout
+  * Main Video
   *
 */
 
+.wistia-player {
+  z-index: 2;
+  -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
+  box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
+  background: #fff;
+}
+
+.main-video-details {
+  padding: 1rem 0 0.2rem;
+
+  h4 {
+    display: inline-block;
+    color: theme-color("primary");
+  }
+
+  span {
+    color: theme-color-level("body-color-default", -4);
+    font-size: 1rem;
+    // reduce level of main theme color to get a muted one
+  }
+
+  p {
+    line-height: 1.2em;
+    margin-bottom: 0;
+  }
+}
+
+.video-sharing-button-div {
+  -webkit-transition: width 0.2s ease 0s;
+  -o-transition: width 0.2s ease 0s;
+  transition: width 0.2s ease 0s;
+
+  h5 {
+    @extend .my-auto;
+
+    font-size: 1.1rem;
+  }
+}
+
+#video-sharing-modal {
+  top: 10vh;
+
+  > .modal-dialog {
+    @include media-breakpoint-up(md) {
+      max-width: 700px;
+    }
+  }
+}
+
+#copySocialShareValue {
+  font-size: 1rem;
+
+  @include media-breakpoint-up(md) {
+    line-height: initial;
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+.video-sharing-icon {
+  color: $link-color;
+  padding: 0;
+
+  &:hover {
+    color: darken($link-color, 20%);
+  }
+}
+
 /**
-  * Swiper
+  * Front Page Video Category Swiper
   *
 */
-@import "~swiper/swiper.scss";
-@import "~swiper/components/lazy/lazy.scss";
-@import "~swiper/components/navigation/navigation.scss";
 
 .swiper-video-category-row {
   display: -webkit-box;
@@ -96,7 +163,14 @@
 
 // the div inside the main .swiper-slide for video thumbnails
 .video-card {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   transition: box-shadow 0.4s ease;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 0.95rem;
+    line-height: 1.1rem;
+  }
 
   .video-thumbnail-div {
     &::after {
@@ -126,10 +200,8 @@
   box-shadow: 0 0 4px 2px rgba($primary, 1);
 
   .video-thumbnail-div::after {
-    transition: font-size 0.3s ease;
     content: "Now Playing";
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 1em;
     font-weight: 400;
     padding: 0.3rem 0.4rem;
     width: auto;
@@ -139,11 +211,12 @@
     border-radius: 3rem;
     background-color: rgba(3, 11, 68, 0.3);
     background-image: none;
+    transition: font-size 0.3s ease;
   }
 
   &:hover {
     .video-thumbnail-div::after {
-      font-size: 1.1rem;
+      font-size: 1.1em;
     }
   }
 }
@@ -157,7 +230,7 @@
 
 // USED FOR SWIPER VIDEO DESCRIPTIONS
 // needed to be moved up because of css rules
-$swiper-slide-text-height: 100px;
+$swiper-slide-text-height: 92px;
 $swiper-slide-text-height-lg: 110px;
 
 .category-icon-offsetter {
@@ -169,7 +242,7 @@ $swiper-slide-text-height-lg: 110px;
 }
 
 .video-slide-text {
-  padding: 0 5px;
+  padding: 0 2px;
   margin-bottom: 0;
   display: flex;
   -webkit-box-orient: vertical;
@@ -177,6 +250,10 @@ $swiper-slide-text-height-lg: 110px;
   -ms-flex-direction: column;
   flex-direction: column;
   height: $swiper-slide-text-height;
+
+  @include media-breakpoint-up(sm) {
+    padding: 0 10px;
+  }
 
   @include media-breakpoint-up(lg) {
     height: $swiper-slide-text-height-lg;
@@ -187,21 +264,10 @@ $swiper-slide-text-height-lg: 110px;
     overflow: hidden;
     padding-top: 0.5em;
     font-weight: 400;
-    line-height: 1rem;
-    margin-bottom: 0.6rem;
 
     @include media-breakpoint-up(md) {
-      line-height: 1.1rem;
+      margin-bottom: 1em;
     }
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 1rem;
-    }
-  }
-
-  span {
-    font-weight: 300;
-    color: theme-color("body-color-default");
   }
 }
 
@@ -264,79 +330,4 @@ $swiper-slide-text-height-lg: 110px;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
-
-/**
-  * Main Video
-  *
-*/
-
-.wistia-player {
-  z-index: 2;
-  -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
-  box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
-  background: #fff;
-}
-
-.main-video-details {
-  padding: 1rem 0 0.2rem;
-
-  h4 {
-    display: inline-block;
-    color: theme-color("primary");
-  }
-
-  span {
-    color: theme-color-level("body-color-default", -4);
-    font-size: 1rem;
-    // reduce level of main theme color to get a muted one
-  }
-
-  p {
-    line-height: 1.2em;
-    margin-bottom: 0;
-  }
-}
-
-.video-sharing-button-div {
-  -webkit-transition: width 0.2s ease 0s;
-  -o-transition: width 0.2s ease 0s;
-  transition: width 0.2s ease 0s;
-
-  h5 {
-    @extend .my-auto;
-
-    font-size: 1.1rem;
-  }
-}
-
-#video-sharing-modal {
-  top: 10vh;
-
-  > .modal-dialog {
-    @include media-breakpoint-up(md) {
-      max-width: 700px;
-    }
-  }
-}
-
-#copySocialShareValue {
-  font-size: 1rem;
-
-  @include media-breakpoint-up(md) {
-    line-height: initial;
-
-    svg {
-      display: block;
-    }
-  }
-}
-
-.video-sharing-icon {
-  color: $link-color;
-  padding: 0;
-
-  &:hover {
-    color: darken($link-color, 20%);
-  }
 }

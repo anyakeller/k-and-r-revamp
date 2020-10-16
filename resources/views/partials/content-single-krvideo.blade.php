@@ -2,7 +2,7 @@
 
   <div class="main-video mx-auto mb-4">
 
-    @include('partials/main-video')
+    @include('components/main-video')
 
     {{-- <p>{{ the_field('video_details_video_length') }}</p> --}}
 

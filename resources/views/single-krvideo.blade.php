@@ -19,7 +19,7 @@
   @php $one_category = App\get_videos_from_category($category)
   @endphp
   @if($one_category->have_posts())
-    @include('partials/swiper-video-category-row')
+    @include('components/swiper-video-category-row')
     @endif
 </div>
 <hr />
