@@ -31,7 +31,7 @@ WordPress Info
 Template Information
 
 -   Roots Sage 9
--   Larvel Blade 5.something
+-   Laravel Blade 5.something
 
 * * *
 
@@ -139,26 +139,26 @@ In the order they are imported in main.scss, here's how I thought of the usage o
 -   `layouts/_posts.scss` - Just for the single-view posts/home page
 -   `components/_global_swiper` - swiper styling for all swipers (since theres one for the video post page and one on the ideabank page)
 
-To change default Bootstrap variables, you can overwrite the boostrap name in `_variables.scss`
-
-You can view the [bootstrap variable default names here](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss)
+You can view the [bootstrap variable defaults here](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss)
 You can read more on [theming bootstrap here](https://getbootstrap.com/docs/4.5/getting-started/theming/)
 
 To lint styles, run `yarn run lint:styles` or my custom pet name for it, `yarn run lies`
 
 ### Javascript files
 
-Working with the scripts in resources/assets/scripts:
+Working with the scripts in `resources/assets/scripts`:
 
 #### The script files to be aware of:
 
--   `main.js` - the primary js file and hub for most js imports
--   `swiperScripts.js` - the code that initializes swiper
+-   `main.js` - the primary js file and hub for most js imports and route setup
 -   `routes/` - directory with all the routes
+    -   `routes/common.js` - the code that runs on every page that enables the share button
+    -   `routes/ideabank.js` - the code that runs on ideabank that initializes swiper
+    -   `routes/singleKrvideo.js` - the code that runs on a krvideo post page that initializes swiper and
 
 ### Theme File Structure
 
-#### Larvel Blade Templating
+#### Laravel Blade Templating
 
 Roots Sage uses [Laravel's Blade templating engine](https://laravel.com/docs/5.8/blade)
 
@@ -166,31 +166,39 @@ The [template file structure](https://roots.io/docs/sage/9.x/blade-templates/#pa
 The main templates are located in `resources/views`
 The partials are located in `resources/views/partials`
 
-The main file which wraps every page is `resources/views/layouts/app.blade.php`.  It is best not to modify this one.
+The main file which wraps every post page is `resources/views/layouts/app.blade.php`.  It is best not to modify this one.
 
-#### The template files to be aware of:
+I created a second custom version of app.blade.php for all static pages `resources/views/layouts/static.blade.php`.  It is also best not to modify this one.
 
-##### Files in BOLD are _relatively safe to edit_
+#### Some (but not all) template files to be aware of which aren't exactly self-explanitory:
 
-##### The other files should be modified with CARE and CAUTION
+##### All file modifications should me made with with CARE and CAUTION as they are all linked to one another
 
--   **`header.blade.php`** - the page header for all views - currently the "KITE AND ROCKET RESEARCH" text
 -   `front-page.blade.php` - page view for the main landing/home page; - redirects to featured video, otherwise uses latest video
 -   `single-krvideo.blade.php` - page for a singluar video-post page - main video at top, the rest of the video posts in their categroies below
-    -   **`partials/content-single-video.blade.php`** - the partial for displaying a specific video post on its own page - uses main-video
-        -   **`partials/main-video.blade.php`** - the partial for displaying the main video player and description
-    -   **`partials/swiper-video-category-row.blade.php`** - the partial for displaying the video category swiper rows
+    -   `partials/content-single-video.blade.php` - the partial for displaying a specific video post on its own page - uses main-video
+        -   `components/main-video.blade.php` - the partial for displaying the main video player and description
+    -   `components/swiper-video-category-row.blade.php` - the partial for displaying the video category swiper rows
+        -   `components/video-card.blade.php` - individual video card (for use with swiper slides or not)
+-   `search.blade.php` - the search results page
+-   `page-ideabank.blade.php` - the ideabank page
+-   `page-labcam.blade.php` - the labcam page
 
 #### The only wordpress PHP file to care about
 
-`functions.php` - contains integral functions for the site at the top with some custom helper functions at the bottom - you can add helper functions that will be globally available across all the templates
+`functions.php` - contains integral functions for the site at the top with some custom helper functions at the bottom - you can add helper functions that will be globally available across all the templates but it's best to stick them in one of the files in `app/`
 
 ### Roots Sage
 
-The directory `app/` has a lot of stuff that goes above and beyond wodpress's functions.php.  While together `filters.php`, `helpers.php`, and `setup.php` are supposed to be used in the place of functions.php, I can't always get it to work.  Try putting your filters and helpers and whatnot in the appropriate php files in app first before resorting to functions.php.
+The directory `app/` has a lot of stuff that goes above and beyond wodpress's functions.php.  While `filters.php`, `helpers.php`, and `setup.php` are supposed to be used in the place of functions.php, I can't always get it to work.  Try putting your filters and helpers and whatnot in the appropriate php files in app first before resorting to functions.php.
 
 **On controllers**
 `app/Controllers/` is a wonderful directory.  Here's where you can define php funtions to either automatically run once a page runs or define helper functions for pages to use when needed.
+
+**On helper functions**
+Global functions are not always acessible from all files, use `\` (e.g. `\WP_Query($args);`) to acess them.  Other functions need to be referenced by their namespace, e.g. `App\get_latest_krvideo()`
+
+You can read more about [namespaces here](https://roots.io/upping-php-requirements-in-your-wordpress-themes-and-plugins/).
 
 ### Blade Tips
 
