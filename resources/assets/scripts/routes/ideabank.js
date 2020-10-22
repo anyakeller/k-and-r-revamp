@@ -6,10 +6,13 @@ export default {
       slidesPerView: 1,
       spaceBetween: 10,
       centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
       mousewheel: {
         forceToAxis: true,
       },
-
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
