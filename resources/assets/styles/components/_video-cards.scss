@@ -29,7 +29,7 @@
 }
 
 .video-card.now-playing {
-  box-shadow: 0 0 4px 2px rgba($primary, 1);
+  box-shadow: 0 0 3px 2px rgba($primary, 0.8);
 
   .video-thumbnail-div::after {
     content: "Now Playing";

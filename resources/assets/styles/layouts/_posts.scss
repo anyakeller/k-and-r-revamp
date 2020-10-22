@@ -103,7 +103,7 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
 // Each slide
 .swiper-slide {
   text-align: center;
-  padding: 5px; // makes room for the box-shadow
+  padding: 5px 3px; // makes room for the box-shadow
   font-size: 0.875rem;
   line-height: 1em;
 
