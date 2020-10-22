@@ -138,8 +138,6 @@ In the order they are imported in main.scss, here's how I thought of the usage o
 -   `layouts/_pages.scss` - STATIC PAGES (basically everything but the post pages)
 -   `layouts/_posts.scss` - Just for the single-view posts/home page
 -   `components/_global_swiper` - swiper styling for all swipers (since theres one for the video post page and one on the ideabank page)
--   `page-specific/posts-page`
-    @import "page-specific/static-page";
 
 To change default Bootstrap variables, you can overwrite the boostrap name in `_variables.scss`
 
