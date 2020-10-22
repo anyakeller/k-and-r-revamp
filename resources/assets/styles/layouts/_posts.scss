@@ -240,8 +240,14 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     display: none;
   }
 
+  &::after {
+    transition: all 0.1s ease 0s;
+    padding: 0 2px;
+  }
+
   &:hover::after {
     transition: all 0.2s ease 0s;
+    filter: drop-shadow(0 0 2px rgba(93, 39, 3, 0.5));
   }
 }
 
