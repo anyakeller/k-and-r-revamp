@@ -6,7 +6,9 @@ $navbar-light-toggler-icon-bg: none;
 
 // Color system
 // Boostrap greys are build on a cool scale
-// This custom one is built on kite and rocket orange => rgb(250, 102, 0) or #FA6400
+
+/*
+// This custom greyscale is built on kite and rocket orange => rgb(250, 102, 0) or #FA6400
 
 $white: #fff;
 $gray-100: #f0f0ef;
@@ -19,9 +21,24 @@ $gray-700: #453f3b;
 $gray-800: #2c2520;
 $gray-900: #110903;
 $black: #090501; // not actually black
+*/
+
+// This custom greyscale is built on wistia blue => rgb(84, 187, 255)
+
+$white: #fff;
+$gray-100: #fcfeff;
+$gray-200: #e0e2e4;
+$gray-300: #c4c7c9;
+$gray-400: #a8abad;
+$gray-500: #8c9092;
+$gray-600: #707477;
+$gray-700: #54595c;
+$gray-800: #383d40;
+$gray-900: #1c2225;
+$black: #00060a; // not actually black
 
 // K&R orange
-$blue: rgb(102, 175, 233);
+$blue: rgb(84, 187, 255); // wistia blue
 $orange: rgb(250, 102, 0); //  #FA6400
 //rgb(255 192 151) // light orange for white
 $primary: $orange;
@@ -35,7 +52,6 @@ $theme-colors: (
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-shadows: true;
 $enable-responsive-font-sizes: true;
-// $enable-gradients: true;
 
 // Body
 //
@@ -47,11 +63,12 @@ $body-color: $gray-800;
 // Links
 //
 // Style anchor elements.
+
 // $link-color: $gray-600;
 $link-decoration: none;
-// $link-shade-percentage:  20%;
-// $link-hover-color: scale-color($link-color, $link-shade-percentage);
 $link-hover-decoration: none;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15%;
 
 // Grid breakpoints
 // I added the ph breakpoint for phones in portrait
