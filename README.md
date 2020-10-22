@@ -49,6 +49,7 @@ Table of Contents
     -   [Styles](#styles)
     -   [Javascript files](#javascript-files)
     -   [Theme File Structure](#theme-file-structure)
+    -   [Roots Sage](#roots-sage)
     -   [Blade Tips](#blade-tips)
 
 <!-- /TOC -->
@@ -80,7 +81,7 @@ See the sage README.md for
 
 General Summary
 
-A few directories and files not to manually edit ( it could break the things e.g. build errors that never go away...):
+A few directories and files not to manually edit ( edits could break the things, e.g. build errors that never go away...):
 
 -   `dist/`
 -   `vendor/`
@@ -95,19 +96,24 @@ A few directories and files files you can, and probably will, modify:
     -   `resources/assets/scripts`
     -   `resources/assets/styles`
 -   almost all of `resources/views` but probably not `resources/views/app.blade.php`
+-   be careful with  `app/`
 
-Route Configuration: `resources/assets/scripts/main.js`
+JS route configuration and routes: `resources/assets/scripts/main.js` and `resources/assets/scripts/routes`
 
-WordPress global php functions is usually in resources/functions.php but now the filters, helpers, and setup stuff should be broken into the corresponding php files in `app/` such as `filters.php`, `helpers.php`, and `setup .php`
+WordPress global php functions are usually in resources/functions.php but now the filters, helpers, and setup stuff should be broken into the corresponding php files in `app/` such as `filters.php`, `helpers.php`, and `setup .php`
+
+Route-specific (controllers) PHP functions can be found in `app/Controllers`
 
 ## Customization Cheat Sheet
 
 ### Styles
 
 This theme is built on a customized version of Bootstrap v4.5.3
-All customizations to bootstrap are in `assets.sttles/common/_variables.scss`
+All customizations to bootstrap are in `assets/styles/common/_variables.scss`
 
-All easily modifyable styling can be found in resources/assets/styles/ but ultimatly you should incorperate your changes into bootstrap's scss by modifying `assets.sttles/common/_variables.scss`.
+Non-boostrap-related styles are broken into corresponding scss files which are imported into main.scss.
+
+All scss modules in `node_modules` are also imported into `main.scss`
 
 **Working with the scss in resources/assets/styles:**
 
@@ -121,15 +127,21 @@ Take a look at the order of imports in main.scss.  There's a reason css is calle
 
 In the order they are imported in main.scss, here's how I thought of the usage of the style files
 
--   common/\_variables.scss - scss variables for customizing bootstrap
--   common/\_global.scss - I honestly am just using it for stuff I need everything else to be able to acess (e.g `@mixin`, font stuff...)
--   components/\_buttons - general button styling.  I also defined the base link styling for `<a>` tags.
--   layouts/\_header - styling for the big kite and rocket header at the top of every page.  The actual header is imported in the root template for every page on the site.  The actual header partial can be found in : `assets/views/partials/header.blade.php`
--   layouts/\_sidebar - styling for all the menus
--   layouts/\_pages.scss - STATIC PAGES (basically everything but the post pages)
--   layouts/\_posts.scss - Just for the single-view posts/home page
+-   `common/_variables.scss` - scss variables for customizing bootstrap
+-   `common/_global.scss` - I honestly am just using it for stuff I need everything else to be able to acess (e.g `@mixin`, font stuff...)
+-   `components/_buttons` - general button styling.  I also defined the base link styling for `<a>` tags.
+-   `components/_forms` - the sidebar search form is the only current form
+-   `components/_video-cards` - because the `.video-card` class is used in both the video post pages and the search results, the styling here is not used in the scss file for posts
+-   `layouts/_header` - styling for the big kite and rocket header at the top of every page.  The actual header is imported in the root template for every page on the site.  The actual header partial can be found in : `assets/views/partials/header.blade.php`
+-   `layouts/_sidebar` - styling for all the nav menus
+-   `layouts/footer` - footer styling
+-   `layouts/_pages.scss` - STATIC PAGES (basically everything but the post pages)
+-   `layouts/_posts.scss` - Just for the single-view posts/home page
+-   `components/_global_swiper` - swiper styling for all swipers (since theres one for the video post page and one on the ideabank page)
+-   `page-specific/posts-page`
+    @import "page-specific/static-page";
 
-To change default Bootstrap variables, you can overwrite the boostrap name in \_variables.scss
+To change default Bootstrap variables, you can overwrite the boostrap name in `_variables.scss`
 
 You can view the [bootstrap variable default names here](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss)
 You can read more on [theming bootstrap here](https://getbootstrap.com/docs/4.5/getting-started/theming/)
