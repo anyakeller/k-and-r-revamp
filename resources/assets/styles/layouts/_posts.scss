@@ -98,17 +98,56 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     width: 100%;
     max-width: 100%;
   }
-}
 
-// Each slide
-.swiper-slide {
-  text-align: center;
-  padding: 5px 3px; // makes room for the box-shadow
-  font-size: 0.875rem;
-  line-height: 1em;
+  // SWIPER NAV BUTTONS
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: white;
+    box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
 
-  @include media-breakpoint-up(sm) {
-    font-size: 0.95rem;
+    // To make swiper container full height and center icon
+    top: 0;
+    height: 100%;
+    margin-top: 0;
+    padding-bottom: $video-card-text-height;
+
+    @include media-breakpoint-down(ph) {
+      box-shadow: 0 0 7px 3px rgba(255, 255, 255, 1);
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    right: 0;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  // Each slide
+  .swiper-slide {
+    text-align: center;
+    padding: 5px 3px; // makes room for the box-shadow
+    font-size: 0.875rem;
+    line-height: 1em;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 0.95rem;
+    }
   }
 }
 
@@ -201,70 +240,4 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
 
 .category-icon-offsetter {
   height: $video-card-text-height;
-}
-
-/**
- *  SWIPER VIDEO CATEGORY
- */
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: white;
-  color: theme-color("primary");
-  box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
-
-  // To make swiper container full height and center icon
-  top: 0;
-  height: 100%;
-  margin-top: 0;
-  width: 20px;
-  padding-bottom: $video-card-text-height;
-
-  @include media-breakpoint-down(sm) {
-    width: 20px;
-
-    &::after {
-      font-size: 40px;
-    }
-  }
-
-  @include media-breakpoint-down(xs) {
-    width: 0;
-
-    &::after {
-      display: none;
-    }
-  }
-
-  @include media-breakpoint-down(ph) {
-    -webkit-box-shadow: 0 0 7px 3px rgba(255, 255, 255, 1);
-    box-shadow: 0 0 7px 3px rgba(255, 255, 255, 1);
-  }
-
-  &.swiper-button-disabled {
-    display: none;
-  }
-
-  &::after {
-    transition: all 0.1s ease 0s;
-    padding: 0 2px;
-  }
-
-  &:hover::after {
-    transition: all 0.2s ease 0s;
-    filter: drop-shadow(0 0 2px rgba(93, 39, 3, 0.5));
-  }
-}
-
-.swiper-button-next {
-  right: 0;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.swiper-button-prev {
-  left: 0;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }

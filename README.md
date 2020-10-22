@@ -126,8 +126,8 @@ In the order they are imported in main.scss, here's how I thought of the usage o
 -   components/\_buttons - general button styling.  I also defined the base link styling for `<a>` tags.
 -   layouts/\_header - styling for the big kite and rocket header at the top of every page.  The actual header is imported in the root template for every page on the site.  The actual header partial can be found in : `assets/views/partials/header.blade.php`
 -   layouts/\_sidebar - styling for all the menus
--   layouts/\_pages.scss - Overall
--   layouts/\_posts.scss - Overall
+-   layouts/\_pages.scss - STATIC PAGES (basically everything but the post pages)
+-   layouts/\_posts.scss - Just for the single-view posts/home page
 
 To change default Bootstrap variables, you can overwrite the boostrap name in \_variables.scss
 

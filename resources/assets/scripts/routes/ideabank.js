@@ -10,9 +10,6 @@ export default {
         el: '.swiper-pagination',
         dynamicBullets: true,
       },
-      mousewheel: {
-        forceToAxis: true,
-      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

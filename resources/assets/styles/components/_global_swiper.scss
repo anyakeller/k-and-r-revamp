@@ -1,0 +1,27 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: theme-color("primary");
+  width: 20px;
+
+  &.swiper-button-disabled {
+    display: none;
+  }
+
+  &::after {
+    transition: all 0.1s ease 0s;
+    padding: 0 2px;
+  }
+
+  &:hover::after {
+    transition: all 0.2s ease 0s;
+    filter: drop-shadow(0 0 2px rgba(93, 39, 3, 0.5));
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 20px;
+
+    &::after {
+      font-size: 40px;
+    }
+  }
+}

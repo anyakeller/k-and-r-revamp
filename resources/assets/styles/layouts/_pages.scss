@@ -1,10 +1,17 @@
 .ideabank {
+  .wrap.container-main {
+    background-color: $gray-200;
+  }
+
   #ideabank-swiper-div {
     width: 100%;
+    position: relative;
   }
 
   .swiper-container {
+    position: static;
     max-width: 750px;
+    box-shadow: 0 0 7px 3px $gray-300;
 
     @include media-breakpoint-up(xl) {
       max-width: 800px;
