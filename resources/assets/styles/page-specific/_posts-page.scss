@@ -11,11 +11,11 @@
     padding-top: 1em;
 
     @include media-breakpoint-up(xl) {
-      margin-right: calc((100vw - 1200px) / 5);
+      margin-right: calc((100vw - 1200px) / 4);
     }
 
     input.search-field {
-      max-width: calc(((100vw - 825px) / 2) - 2em);
+      max-width: 12rem;
     }
   }
 
