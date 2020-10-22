@@ -7,27 +7,25 @@
 @if ($images)
 
 <!-- Slider main container -->
-<style>
-  .swiper-container {
-    width: 100%;
-  }
-</style>
-<div class="swiper-container">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    @foreach ($images as $image)
-    <!-- Slides -->
-    <div class="swiper-slide">
-      <img class="img-fluid" src="{{ $image['url'] }}" />
+
+<div id="ideabank-swiper-div" class="my-4 my-lg-2">
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      @foreach ($images as $image)
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img class="img-fluid" src="{{ $image['url'] }}" />
+      </div>
+      @endforeach
     </div>
-    @endforeach
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
   </div>
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
 </div>
 @endif
 

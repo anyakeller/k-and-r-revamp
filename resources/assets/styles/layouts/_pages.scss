@@ -1,1 +1,13 @@
+.ideabank {
+  #ideabank-swiper-div {
+    width: 100%;
+  }
 
+  .swiper-container {
+    max-width: 750px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 800px;
+    }
+  }
+}
