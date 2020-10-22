@@ -184,9 +184,13 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     max-height: 35px;
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(sm) {
     max-height: 45px;
     max-width: 45px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-height: 50px;
   }
 
   @include media-breakpoint-up(xl) {
