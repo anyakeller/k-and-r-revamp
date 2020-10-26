@@ -34,8 +34,8 @@
 }
 
 .search-form .search-submit {
-  @extend .btn;
-  @extend .btn-secondary;
-
+  // @extend .btn;
+  // @extend .btn-secondary;
+  // text-indent: -9999px;
   display: none !important;
 }

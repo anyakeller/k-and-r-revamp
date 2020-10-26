@@ -9,7 +9,7 @@ header.banner {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    height: 4.5rem;
+    height: 4rem;
 
     > div {
       display: flex;
@@ -32,11 +32,15 @@ header.banner {
     }
   }
 
+  #sticky-logo {
+    margin-right: 8vw;
+  }
+
   &::after {
     height: 20vh;
 
-    @include media-breakpoint-down(sm) {
-      height: 10vh;
+    @include media-breakpoint-down(md) {
+      height: 11vh;
     }
 
     width: 100%;
