@@ -21,15 +21,16 @@
   @endphp
   @foreach( $video_categories as $category )
   <li style="position: relative">
-    <div class="swiper-video-category-row pt-3 mx-0">
+    <div class="swiper-video-category-row mx-0">
       @php $one_category = App\get_videos_from_category($category)
       @endphp
       @if($one_category->have_posts())
         @include('components/swiper-video-category-row')
         @endif
     </div>
-    <hr />
+
   </li>
+  <hr class="mb-3" />
   @endforeach
 </ul>
 @endsection

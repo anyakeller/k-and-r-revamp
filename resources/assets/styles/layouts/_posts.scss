@@ -150,15 +150,11 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   display: -ms-flexbox;
   display: flex;
 
-  & > div.swiper-video-category-row-inner {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    margin-top: -6px; // for countering the video-card hover outline fuzz padding
-  }
-
   .swiper-container {
     padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: -6px;
+    margin-bottom: -6px;
   }
 
   // SWIPER NAV BUTTONS
