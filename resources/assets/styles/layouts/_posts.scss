@@ -150,10 +150,15 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   display: -ms-flexbox;
   display: flex;
 
-  & > div {
+  & > div.swiper-video-category-row-inner {
     position: relative;
     width: 100%;
     max-width: 100%;
+    margin-top: -6px; // for countering the video-card hover outline fuzz padding
+  }
+
+  .swiper-container {
+    padding-top: 6px;
   }
 
   // SWIPER NAV BUTTONS
@@ -198,13 +203,10 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   // Each slide
   .swiper-slide {
     text-align: center;
-    padding: 5px 3px; // makes room for the box-shadow
-    font-size: 0.875rem;
+    // padding: 5px 3px; // makes room for the box-shadow
+    padding-left: 3px;
+    padding-right: 3px;
     line-height: 1em;
-
-    @include media-breakpoint-up(sm) {
-      font-size: 0.95rem;
-    }
   }
 }
 
@@ -250,13 +252,13 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     width: 6rem !important;
   }
 
-  @include media-breakpoint-up(sm) {
-    margin-left: 25px;
-  }
+  // @include media-breakpoint-up(sm) {
+  //   margin-left: 25px;
+  // }
 
   @include media-breakpoint-up(md) {
     font-size: 1rem;
-    margin-left: 30px;
+    // margin-left: 30px;
     width: 8rem !important;
   }
 
