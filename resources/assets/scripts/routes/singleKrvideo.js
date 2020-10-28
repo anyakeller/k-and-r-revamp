@@ -9,7 +9,7 @@ export default {
       // slidesPerColumn: 2,
       freeMode: true,
       // slidesOffsetBefore: 30,
-      // slidesOffsetAfter: 40,
+      slidesOffsetAfter: 40,
 
       navigation: {
         nextEl: '.swiper-button-next',
