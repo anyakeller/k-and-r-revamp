@@ -12,15 +12,11 @@
 @endphp
 @include('partials.content-single-'.get_post_type())
 @endwhile
-<ul style="list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    margin-bottom: 25px;">
+<ul class="swiper-video-category-ul">
   @php $main_post_id = get_the_ID()
   @endphp
   @foreach( $video_categories as $category )
-  <li style="position: relative">
+  <li>
     <div class="swiper-video-category-row mx-0">
       @php $one_category = App\get_videos_from_category($category)
       @endphp

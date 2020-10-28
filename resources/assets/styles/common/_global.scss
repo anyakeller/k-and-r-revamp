@@ -88,7 +88,7 @@ span:last-child {
 .container-main {
   @include make-container(1rem);
 
-  @include media-breakpoint-up(ph) {
+  @include media-breakpoint-up(xs) {
     padding: inherit {
       right: 1rem;
       left: 1rem;

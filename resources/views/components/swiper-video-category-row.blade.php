@@ -6,7 +6,7 @@
   </div>
 </div>
 {{-- <div class="swiper-video-category-row-inner px-0"> --}}
-<div class="swiper-container" style="position: static;">
+<div class="swiper-container">
   {{-- Additional required wrapper  --}}
   <div class="swiper-wrapper" style="height: auto;">
 

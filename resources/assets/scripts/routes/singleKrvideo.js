@@ -3,11 +3,11 @@ export default {
   init() {
     // JavaScript to be fired on a post page
     new Swiper('.swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 3,
       slidesPerGroup: 1,
-      spaceBetween: 0,
+      spaceBetween: 6,
       freeMode: true,
-      // slidesOffsetBefore: 30,
+      slidesOffsetBefore: 3,
       slidesOffsetAfter: 40,
 
       navigation: {
@@ -15,9 +15,11 @@ export default {
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
+        420: {
+          slidesPerView: 3,
+        },
         768: {
           slidesPerView: 3,
-          spaceBetween: 0,
         },
         992: {
           slidesPerView: 4,

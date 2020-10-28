@@ -134,6 +134,23 @@
   * Front Page Video Category Swiper
   *
 */
+.swiper-video-category-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 25px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(sm) {
+    overflow: visible;
+  }
+
+  > li {
+    position: relative;
+    margin-right: -40px;
+  }
+}
 
 // USED FOR SWIPER VIDEO-CARD TEXT HEIGHT
 // needed to be moved up because of css rules
@@ -153,11 +170,16 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   .swiper-container {
     padding-top: 6px;
     padding-bottom: 6px;
-    margin-top: -6px;
     margin-bottom: -6px;
+    position: static;
+
+    @include media-breakpoint-down(xs) {
+      position: relative;
+    }
   }
 
   // SWIPER NAV BUTTONS
+
   .swiper-button-next,
   .swiper-button-prev {
     // background-color: white;
@@ -170,7 +192,7 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     padding-bottom: $video-card-text-height;
 
     @include media-breakpoint-down(ph) {
-      box-shadow: 0 0 7px 3px rgba(255, 255, 255, 1);
+      box-shadow: 0 0 4px 3px rgba(255, 255, 255, 1);
     }
 
     @include media-breakpoint-down(xs) {
@@ -183,25 +205,24 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   }
 
   .swiper-button-next {
-    right: -20px;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    right: 0;
+
+    @include media-breakpoint-down(xs) {
+      right: -20px;
+    }
   }
 
   .swiper-button-prev {
-    left: -20px;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    left: 0;
+
+    @include media-breakpoint-down(xs) {
+      left: -20px;
+    }
   }
 
   // Each slide
   .swiper-slide {
     text-align: center;
-    // padding: 5px 3px; // makes room for the box-shadow
-    padding-left: 3px;
-    padding-right: 3px;
     line-height: 1em;
   }
 }
@@ -209,9 +230,9 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
 .video-card-text {
   padding: 0.3em 0.1em 0.1em;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+  // -webkit-box-orient: vertical;
+  // -webkit-box-direction: normal;
+  // -ms-flex-direction: column;
   flex-direction: column;
   height: $video-card-text-height;
 
