@@ -240,26 +240,20 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   justify-content: flex-end;
   flex-direction: column;
   height: 100%;
+  font-size: inherit;
   color: theme-color("primary");
-  width: 5rem;
+  width: 80px;
 
   @include media-breakpoint-up(xs) {
-    font-size: 0.9rem;
-    width: 6rem;
+    width: 90px;
   }
-
-  // @include media-breakpoint-up(sm) {
-  //   margin-left: 25px;
-  // }
 
   @include media-breakpoint-up(md) {
-    font-size: 1rem;
-    // margin-left: 30px;
-    width: 8rem;
+    width: 100px;
   }
 
-  @include media-breakpoint-up(lg) {
-    width: 6.5rem;
+  span {
+    font-size: 0.9em;
   }
 }
 
