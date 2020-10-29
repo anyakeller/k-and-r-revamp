@@ -87,8 +87,6 @@
 }
 
 .video-sharing-button-div {
-  -webkit-transition: width 0.2s ease 0s;
-  -o-transition: width 0.2s ease 0s;
   transition: width 0.2s ease 0s;
 
   h5 {
@@ -141,32 +139,13 @@
   margin-bottom: 25px;
   overflow: hidden;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     overflow: visible;
   }
 
   > li {
-    overflow: hidden;
     position: relative;
     margin-right: -40px;
-
-    // &::before {
-    //   content: "";
-    //   height: 100%;
-    //   z-index: 2;
-    //   left: 0;
-    //   position: absolute;
-    //   box-shadow: 0 0 11px 7px rgba(105, 25, 25, 1);
-    // }
-    //
-    // &::after {
-    //   content: "";
-    //   height: 100%;
-    //   z-index: 2;
-    //   right: 0;
-    //   position: absolute;
-    //   box-shadow: 0 0 11px 7px rgba(105, 25, 25, 1);
-    // }
   }
 }
 
@@ -188,7 +167,7 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     padding-bottom: 6px;
     position: static;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       position: relative;
     }
   }
@@ -210,7 +189,7 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
       box-shadow: 0 0 4px 3px rgba(255, 255, 255, 1);
     }
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       width: 0;
 
       &::after {
@@ -222,7 +201,7 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   .swiper-button-next {
     right: 0;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       right: 40px;
     }
   }
@@ -241,9 +220,6 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
 .video-card-text {
   padding: 0.3em 0.1em 0.1em;
   display: flex;
-  // -webkit-box-orient: vertical;
-  // -webkit-box-direction: normal;
-  // -ms-flex-direction: column;
   flex-direction: column;
   height: $video-card-text-height;
 
@@ -284,10 +260,6 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   @include media-breakpoint-up(md) {
     width: 100px;
   }
-
-  // @include media-breakpoint-down(sm) {
-  //   box-shadow: 0 0 11px 7px rgb(105, 25, 25);
-  // }
 
   span {
     font-size: 0.9em;

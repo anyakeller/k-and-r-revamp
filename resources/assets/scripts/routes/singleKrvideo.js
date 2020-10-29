@@ -8,7 +8,7 @@ export default {
       spaceBetween: 6,
       freeMode: true,
       slidesOffsetBefore: 3,
-      slidesOffsetAfter: 40,
+      slidesOffsetAfter: 46,
 
       navigation: {
         nextEl: '.swiper-button-next',
