@@ -24,7 +24,6 @@
         @include('components/swiper-video-category-row')
         @endif
     </div>
-
   </li>
   <hr class="mb-3" />
   @endforeach

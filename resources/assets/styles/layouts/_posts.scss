@@ -62,7 +62,6 @@
 
 .wistia-player {
   z-index: 2;
-  -webkit-box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   background: #fff;
 }
@@ -147,8 +146,27 @@
   }
 
   > li {
+    overflow: hidden;
     position: relative;
     margin-right: -40px;
+
+    // &::before {
+    //   content: "";
+    //   height: 100%;
+    //   z-index: 2;
+    //   left: 0;
+    //   position: absolute;
+    //   box-shadow: 0 0 11px 7px rgba(105, 25, 25, 1);
+    // }
+    //
+    // &::after {
+    //   content: "";
+    //   height: 100%;
+    //   z-index: 2;
+    //   right: 0;
+    //   position: absolute;
+    //   box-shadow: 0 0 11px 7px rgba(105, 25, 25, 1);
+    // }
   }
 }
 
@@ -163,14 +181,11 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   (0.5em + 0.1em) + 1em + 1em;
 
 .swiper-video-category-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 
   .swiper-container {
     padding-top: 6px;
     padding-bottom: 6px;
-    margin-bottom: -6px;
     position: static;
 
     @include media-breakpoint-down(xs) {
@@ -191,7 +206,7 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     margin-top: 0;
     padding-bottom: $video-card-text-height;
 
-    @include media-breakpoint-down(ph) {
+    @include media-breakpoint-down(xs) {
       box-shadow: 0 0 4px 3px rgba(255, 255, 255, 1);
     }
 
@@ -208,16 +223,12 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     right: 0;
 
     @include media-breakpoint-down(xs) {
-      right: -20px;
+      right: 40px;
     }
   }
 
   .swiper-button-prev {
     left: 0;
-
-    @include media-breakpoint-down(xs) {
-      left: -20px;
-    }
   }
 
   // Each slide
@@ -264,6 +275,7 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   font-size: inherit;
   color: theme-color("primary");
   width: 80px;
+  padding: 6px 0;
 
   @include media-breakpoint-up(xs) {
     width: 90px;
@@ -272,6 +284,10 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   @include media-breakpoint-up(md) {
     width: 100px;
   }
+
+  // @include media-breakpoint-down(sm) {
+  //   box-shadow: 0 0 11px 7px rgb(105, 25, 25);
+  // }
 
   span {
     font-size: 0.9em;
