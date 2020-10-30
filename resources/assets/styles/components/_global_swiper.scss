@@ -1,19 +1,32 @@
-.swiper-button-next,
-.swiper-button-prev {
-  transition: all 1s ease 0s;
-  color: theme-color("primary");
-  width: 20px;
-
-  &.swiper-button-disabled {
-    display: none;
-  }
+.swiper-button-next {
+  justify-content: end;
 
   &::after {
-    transition: all 0.1s ease 0s;
+    padding-left: 5px;
+  }
+}
+
+.swiper-button-prev {
+  flex-direction: row-reverse;
+  justify-content: start;
+
+  &::after {
+    padding-right: 5px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  transition: opacity 0.2s ease 0s;
+  color: theme-color("primary");
+  width: 27px;
+
+  &::after {
+    transition: filter 0.1s ease 0s;
   }
 
   &:hover::after {
-    transition: all 0.2s ease 0s;
+    transition: filter 0.2s ease 0s;
     filter: drop-shadow(0 0 2px rgba(93, 39, 3, 0.5));
   }
 

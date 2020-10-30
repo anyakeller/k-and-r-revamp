@@ -145,7 +145,10 @@
 
   > li {
     position: relative;
-    margin-right: -40px;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: -40px;
+    }
   }
 }
 
@@ -185,8 +188,8 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     margin-top: 0;
     padding-bottom: $video-card-text-height;
 
-    @include media-breakpoint-down(xs) {
-      box-shadow: 0 0 4px 3px rgba(255, 255, 255, 1);
+    @include media-breakpoint-down(sm) {
+      box-shadow: 0 0 14px 12px rgba(255, 255, 255, 0.9);
     }
 
     @include media-breakpoint-down(sm) {
@@ -199,15 +202,19 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   }
 
   .swiper-button-next {
-    right: 0;
+    right: 40px;
 
-    @include media-breakpoint-down(sm) {
-      right: 40px;
+    @include media-breakpoint-up(md) {
+      right: -27px;
     }
   }
 
   .swiper-button-prev {
     left: 0;
+
+    @include media-breakpoint-up(md) {
+      left: 100px;
+    }
   }
 
   // Each slide
@@ -250,14 +257,15 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   height: 100%;
   font-size: inherit;
   color: theme-color("primary");
-  width: 80px;
   padding: 6px 0;
+  width: 80px;
 
   @include media-breakpoint-up(xs) {
     width: 90px;
   }
 
   @include media-breakpoint-up(md) {
+    margin-right: 27px;
     width: 100px;
   }
 
