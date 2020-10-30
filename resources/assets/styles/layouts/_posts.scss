@@ -179,7 +179,6 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
 
   .swiper-button-next,
   .swiper-button-prev {
-    // background-color: white;
     box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
 
     // To make swiper container full height and center icon
@@ -187,6 +186,17 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
     height: 100%;
     margin-top: 0;
     padding-bottom: $video-card-text-height;
+
+    // to cover up the swiper slides passing behind
+    &::before {
+      content: "";
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      background: white;
+    }
 
     @include media-breakpoint-down(sm) {
       box-shadow: 0 0 14px 12px rgba(255, 255, 255, 0.9);
@@ -198,6 +208,15 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
       &::after {
         display: none;
       }
+    }
+  }
+
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: initial;
+
+    &::after {
+      opacity: 0.35;
     }
   }
 
@@ -265,7 +284,6 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
   }
 
   @include media-breakpoint-up(md) {
-    margin-right: 27px;
     width: 100px;
   }
 

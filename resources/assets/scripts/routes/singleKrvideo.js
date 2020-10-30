@@ -16,14 +16,17 @@ export default {
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        420: {
+        // breakpoint sm
+        576: {
           slidesPerView: 3,
         },
+        // breakpoint md
         768: {
           slidesPerView: 3,
-          slidesOffsetAfter: 6,
-          // slidesOffsetBefore: 40,
+          slidesOffsetBefore: 33,
+          slidesOffsetAfter: 10,
         },
+        // breakpoint lg
         992: {
           slidesPerView: 4,
           slidesPerGroup: 2,
