@@ -24,7 +24,7 @@ export default {
         768: {
           slidesPerView: 3,
           slidesOffsetBefore: 33,
-          slidesOffsetAfter: 10,
+          slidesOffsetAfter: 33,
         },
         // breakpoint lg
         992: {

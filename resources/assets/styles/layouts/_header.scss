@@ -16,6 +16,12 @@ header.banner {
       align-items: center;
     }
 
+    @include media-breakpoint-down(xs) {
+      #sticky-logo {
+        margin-right: 8vw;
+      }
+    }
+
     @include media-breakpoint-down(sm) {
       > div {
         padding-right: 5px;
@@ -30,10 +36,6 @@ header.banner {
         justify-content: center;
       }
     }
-  }
-
-  #sticky-logo {
-    margin-right: 8vw;
   }
 
   &::after {
