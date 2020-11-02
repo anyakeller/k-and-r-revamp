@@ -30,6 +30,7 @@ export default {
         992: {
           slidesPerView: 4,
           slidesPerGroup: 2,
+          slidesOffsetBefore: 33,
         },
       },
 
