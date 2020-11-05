@@ -111,8 +111,6 @@ body:not(.single) {
   padding-left: 2rem;
   overflow: hidden;
   max-height: 0;
-  -webkit-transition: max-height 0.3s ease-out 0.1s;
-  -o-transition: max-height 0.3s ease-out 0.1s;
   transition: max-height 0.3s ease-out 0.1s;
 
   @include media-breakpoint-down(xs) {
@@ -121,8 +119,6 @@ body:not(.single) {
 
   &.is-open {
     max-height: 15rem;
-    -webkit-transition: max-height 0.4s ease-in;
-    -o-transition: max-height 0.4s ease-in;
     transition: max-height 0.4s ease-in;
   }
 

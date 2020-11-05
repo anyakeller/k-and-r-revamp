@@ -11,7 +11,7 @@
     </div>
     <p class="video-card-text">
       <span class="entry-title">{!! get_the_title() !!}</span>
-      <span class="text-muted">{{App\time_elapsed_string(get_the_date())}}</span>
+      <span class="text-muted mt-auto">{{App\time_elapsed_string(get_the_date())}}</span>
     </p>
   </a>
 </div>

@@ -87,6 +87,12 @@
   }
 }
 
+#copy-link,
+#copy-embed {
+  border-width: 2px;
+  border-radius: 1em;
+}
+
 #video-sharing-modal {
   top: 10vh;
 
@@ -95,17 +101,11 @@
       max-width: 700px;
     }
   }
-}
 
-#copySocialShareValue {
-  font-size: 1rem;
-
-  @include media-breakpoint-up(md) {
-    line-height: initial;
-
-    svg {
-      display: block;
-    }
+  input,
+  textarea {
+    padding: 0.375rem 0.5rem;
+    height: auto;
   }
 }
 
@@ -146,12 +146,15 @@
 // USED FOR SWIPER VIDEO-CARD TEXT HEIGHT
 // needed to be moved up because of css rules
 // Format:  [line-height] * [number of lines for the video title + ([video-card-text padding-top + padding-bottom]) +
-//    [height of buffer between title and video date span] + [height of video date span]
-$video-card-text-num-lines: 4;
-$video-card-text-height: 1em * $video-card-text-num-lines + (0.3em + 0.1em) +
-  1em + 1em;
-$video-card-text-height-md-up: 1em * $video-card-text-num-lines +
-  (0.5em + 0.1em) + 1em + 1em;
+//  + [height of video date span]
+$video-card-text-num-lines-ph: 4;
+$video-card-text-num-lines-sm: 2;
+$video-card-text-padding-top: 0.4em;
+$video-card-text-padding-bottom: 0.1em;
+$video-card-text-height: 1em * $video-card-text-num-lines-ph +
+  $video-card-text-padding-top + $video-card-text-padding-bottom + 1em;
+$video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
+  $video-card-text-padding-top + $video-card-text-padding-bottom + 1em;
 
 .swiper-video-category-row {
   display: flex;
@@ -236,20 +239,32 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
 }
 
 .video-card-text {
-  padding: 0.3em 0.1em 0.1em;
+  // padding: $video-card-text-padding-top 0.1em $video-card-text-padding-bottom;
+  padding: $video-card-text-padding-top 0.1em $video-card-text-padding-bottom;
   display: flex;
   flex-direction: column;
   height: $video-card-text-height;
+  overflow: hidden;
+
+  @include media-breakpoint-up(sm) {
+    height: $video-card-text-height-sm-up;
+  }
 
   > .entry-title {
-    flex-grow: 1;
     overflow: hidden;
+    flex-grow: 1;
     font-weight: 400;
+
+    // weird scroll thing
+    // overflow-y: scroll;
+    // background: linear-gradient(#fff0 0%, #fff 90%, #fff 100%) 0 100%, linear-gradient(#fff0 90%, #000000e6 98%, #000 100%) 0 100%;
+    // background-size: 100% 100%;
+    // background-attachment: local, scroll;
+    // background-repeat: no-repeat;
   }
 
   > .text-muted {
     line-height: inherit;
-    margin-top: 1em;
   }
 }
 
@@ -316,4 +331,8 @@ $video-card-text-height-md-up: 1em * $video-card-text-num-lines +
 
 .category-icon-offsetter {
   height: $video-card-text-height;
+
+  @include media-breakpoint-up(sm) {
+    height: $video-card-text-height-sm-up;
+  }
 }

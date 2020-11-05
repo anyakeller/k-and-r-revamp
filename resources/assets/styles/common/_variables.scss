@@ -40,6 +40,7 @@ $black: #00060a; // not actually black
 // K&R orange
 $blue: rgb(84, 187, 255); // wistia blue
 $orange: rgb(250, 102, 0); //  #FA6400
+$green: rgb(85, 187, 0);
 //rgb(255 192 151) // light orange for white
 $primary: $orange;
 
@@ -99,7 +100,8 @@ $font-family-sans-serif: Yantramanav, sans-serif, -apple-system,
   BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-$font-size-base: 1rem; // 16px is usually the default root
+$font-size-base: 1rem; // 16px is usually the default browser root
+// $font-size-base: 0.98rem; // 16px is usually the default browser root
 $font-size-lg: $font-size-base * 1.25;
 $font-size-sm: $font-size-base * 0.875;
 
@@ -149,8 +151,11 @@ $nav-tabs-link-hover-border-color: $gray-300 $gray-300 $nav-tabs-border-color;
 $nav-tabs-link-active-bg: $body-bg;
 $nav-tabs-link-active-border-color: $gray-400 $gray-400 $nav-tabs-link-active-bg;
 
-// _RFS
-// $rfs-base-font-size: $font-size-base;
+// _RFS.scss
+// Base font size
+$rfs-base-font-size: 0.95rem;
+// Factor of decrease
+$rfs-factor: 80; // default 10
 
 /**
  *

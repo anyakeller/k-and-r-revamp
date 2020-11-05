@@ -27,7 +27,7 @@ export default {
           slidesOffsetAfter: 33,
         },
         // breakpoint lg
-        992: {
+        1200: {
           slidesPerView: 4,
           slidesPerGroup: 2,
           slidesOffsetBefore: 33,

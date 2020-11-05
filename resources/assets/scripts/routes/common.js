@@ -3,26 +3,36 @@ export default {
     // JavaScript to be fired on all pages
 
     //enable video sharing modal
-    var copySocialBtnJquery = $('#copySocialShareValue');
-    copySocialBtnJquery.click(() => {
-      var activeSocialTabJquery = $('.social-tab.active').children(
-        '.form-control'
-      );
-      activeSocialTabJquery.select();
+    var copyLink = $('#copy-link');
+    var linkText = $('#link-text');
+    var copyEmbed = $('#copy-embed');
+    var embedText = $('#embed-text');
+    copyLink.click(() => {
+      linkText.select();
       document.execCommand('copy');
     });
-    $('#video-sharing-modal').on('shown.bs.modal', function() {
-      var activeSocialTabJquery = $('.social-tab.active').children(
-        '.form-control'
-      );
-      activeSocialTabJquery.select();
+    copyEmbed.click(() => {
+      embedText.select();
+      document.execCommand('copy');
     });
-    copySocialBtnJquery.tooltip({
+    // $('#video-sharing-modal').on('shown.bs.modal', function() {
+    //   linkText.select();
+    // });
+
+    copyLink.tooltip({
       trigger: 'focus',
-      title: 'copied to clipboard',
+      title: 'link copied to clipboard',
       delay: {
         show: 0,
-        hide: 5000,
+        hide: 1000,
+      },
+    });
+    copyEmbed.tooltip({
+      trigger: 'focus',
+      title: 'embed code copied to clipboard',
+      delay: {
+        show: 0,
+        hide: 1000,
       },
     });
 
