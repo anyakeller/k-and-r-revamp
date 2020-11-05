@@ -25,7 +25,7 @@
         @endif
     </div>
   </li>
-  <hr class="mb-3" />
+  <hr />
   @endforeach
 </ul>
 @endsection

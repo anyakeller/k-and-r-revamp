@@ -95,6 +95,7 @@
 
 #video-sharing-modal {
   top: 10vh;
+  border-radius: 1em;
 
   > .modal-dialog {
     @include media-breakpoint-up(md) {
@@ -140,6 +141,12 @@
     @include media-breakpoint-down(sm) {
       margin-right: -40px;
     }
+  }
+
+  > hr {
+    border-top: 2px solid rgba(0, 0, 0, 0.09);
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -256,7 +263,7 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
   > .entry-title {
     overflow: hidden;
     flex-grow: 1;
-    font-weight: 400;
+    // font-weight: 400;
 
     // weird scroll thing
     // overflow-y: scroll;
@@ -287,7 +294,7 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
   font-size: inherit;
   color: theme-color("primary");
   padding: 6px 0;
-  width: 80px;
+  width: 85px;
 
   @include media-breakpoint-up(xs) {
     width: 90px;
@@ -298,7 +305,11 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
   }
 
   span {
-    font-size: 0.9em;
+    font-weight: 400;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 0.9em;
+    }
   }
 }
 
