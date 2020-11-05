@@ -181,6 +181,9 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
     margin-top: 0;
     padding-bottom: $video-card-text-height;
 
+    @include media-breakpoint-up(sm) {
+      padding-bottom: $video-card-text-height-sm-up;
+    }
     // to cover up the swiper slides passing behind
     &::before {
       content: "";
