@@ -2,6 +2,10 @@ import Swiper from 'swiper/bundle';
 export default {
   init() {
     // JavaScript to be fired on a post page
+  },
+  finalize() {
+    // JavaScript to be fired on a post page, after the init JS
+
     new Swiper('.swiper-container', {
       slidesPerView: 3,
       // slidesPerView: 'auto',
@@ -38,8 +42,5 @@ export default {
         forceToAxis: true,
       },
     });
-  },
-  finalize() {
-    // JavaScript to be fired on a post page, after the init JS
   },
 };
