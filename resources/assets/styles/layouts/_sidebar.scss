@@ -1,16 +1,67 @@
+#sidebar-static {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
+  ul {
+    @extend .nav;
+  }
+}
+
 .sidebar {
   font-size: 1.1rem;
   font-weight: 300;
 
-  .menu-main-navigation-container {
-    > ul {
-      list-style: none;
-      padding-inline-start: 1em;
+  input.search-field {
+    width: 100%;
+  }
+
+  &:not(#sidebar-static) {
+    .search-form {
+      margin-block-end: 1em;
+    }
+
+    ul {
+      @extend .navbar-nav;
     }
   }
 
-  .search-form {
-    margin-block-end: 1em;
+  ul li {
+    @extend .nav-item;
+  }
+
+  &:not(#sidebar-main) {
+    @extend .text-light;
+
+    input {
+      color: rgba(255, 255, 255, 0.9);
+
+      &.search-field {
+        border-color: rgba(255, 255, 255, 0.8);
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    .search-form::before {
+      color: inherit;
+    }
+
+    ul li a {
+      @extend .text-light;
+    }
+  }
+}
+
+.sidebar-mobile {
+  padding-left: 2rem;
+}
+
+.sidebar.collapse {
+  @include media-breakpoint-up(sm) {
+    display: none !important;
   }
 }
 
@@ -58,92 +109,9 @@
   .search-form > label {
     width: 100%;
   }
-
-  input.search-field {
-    width: 100%;
-  }
-}
-
-#sidebar-mobile,
-#sidebar-static {
-  @extend .text-light;
-
-  input {
-    color: rgba(255, 255, 255, 0.9);
-
-    &.search-field {
-      border-color: rgba(255, 255, 255, 0.8);
-
-      &::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-      }
-    }
-  }
-
-  .search-form::before {
-    color: inherit;
-  }
-
-  a {
-    @extend .text-light;
-  }
-}
-
-#sidebar-mobile {
-  @extend .text-light;
-
-  display: none;
-  padding-left: 2rem;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease-out 0.1s;
-
-  @include media-breakpoint-down(xs) {
-    display: block;
-  }
-
-  &.is-open {
-    max-height: 15rem;
-    transition: max-height 0.4s ease-in;
-  }
-
-  ul {
-    padding-bottom: 2rem;
-  }
 }
 
 // HAMBURGER
 .hamburger {
   outline: none !important;
-  // display: none;
-  // position: absolute;
-  // right: 2vw;
-  //
-  // @include media-breakpoint-down(xs) {
-  //   display: block;
-  // }
-}
-
-#sidebar-static {
-  @include media-breakpoint-down(xs) {
-    display: none;
-  }
-
-  form {
-    @extend .form-inline;
-
-    margin: 0;
-  }
-
-  ul {
-    @extend .nav;
-
-    li {
-      @extend .nav-item;
-
-      a {
-        @extend .nav-link;
-      }
-    }
-  }
 }

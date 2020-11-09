@@ -44,17 +44,8 @@ export default {
       console.log('close');
       $('.hamburger').removeClass('is-active');
     });
-    // //init hamburger
-    // $('.hamburger').click(function() {
-    //   $(this).toggleClass('is-active');
-    //   $('#sidebar-mobile').toggleClass(
-    //     'is-open',
-    //     $(this).hasClass('is-active')
-    //   );
-    // });
     // window.addEventListener('resize', function() {
-    //   $('.hamburger').removeClass('is-active');
-    //   $('#sidebar-mobile').removeClass('is-open');
+    //   $('#navToggle').collapse('hide');
     // });
 
     // work with us and contact modal
