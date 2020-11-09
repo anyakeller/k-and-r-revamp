@@ -1,7 +1,3 @@
-nav.navbar {
-  padding: 0.5rem;
-}
-
 #sidebar-static {
   @include media-breakpoint-down(xs) {
     display: none;

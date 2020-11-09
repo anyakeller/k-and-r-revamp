@@ -80,22 +80,18 @@
 .video-sharing-button-div {
   transition: width 0.2s ease 0s;
 
-  h5 {
-    @extend .my-auto;
-
-    font-size: 1.1rem;
+  button {
+    border-radius: 0.8em;
   }
 }
 
 #copy-link,
 #copy-embed {
   border-width: 2px;
-  border-radius: 1em;
 }
 
 #video-sharing-modal {
   top: 10vh;
-  border-radius: 1em;
 
   > .modal-dialog {
     @include media-breakpoint-up(md) {

@@ -1,28 +1,14 @@
 // Aug 27, 2020
-
 header.banner {
   background-color: rgb(255, 102, 0);
-
-  .nav a {
-    @extend .nav-link;
-  }
 
   #kite-rocket-logo-img {
     width: 100%;
   }
 
-  .navbar-brand.brand {
-    width: calc(100vw - 5rem - 30px);
-
-    @include media-breakpoint-up(sm) {
-      width: 100%;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-  }
-
   &::after {
     height: 20vh;
+    border-bottom-left-radius: 1.5em;
 
     @include media-breakpoint-down(md) {
       height: 11vh;
@@ -35,5 +21,23 @@ header.banner {
     position: absolute;
     left: 0;
     z-index: -1;
+  }
+}
+
+nav.navbar {
+  padding: 0.5rem;
+
+  .navbar-brand.brand {
+    width: calc(100vw - 5rem - 30px);
+
+    @include media-breakpoint-up(sm) {
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  .nav a {
+    @extend .nav-link;
   }
 }
