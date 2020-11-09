@@ -36,18 +36,26 @@ export default {
       },
     });
 
-    //init hamburger
-    $('.hamburger').click(function() {
-      $(this).toggleClass('is-active');
-      $('#sidebar-mobile').toggleClass(
-        'is-open',
-        $(this).hasClass('is-active')
-      );
+    $('#navToggle').on('show.bs.collapse', function() {
+      console.log('yeet');
+      $('.hamburger').addClass('is-active');
     });
-    window.addEventListener('resize', function() {
+    $('#navToggle').on('hide.bs.collapse', function() {
+      console.log('close');
       $('.hamburger').removeClass('is-active');
-      $('#sidebar-mobile').removeClass('is-open');
     });
+    // //init hamburger
+    // $('.hamburger').click(function() {
+    //   $(this).toggleClass('is-active');
+    //   $('#sidebar-mobile').toggleClass(
+    //     'is-open',
+    //     $(this).hasClass('is-active')
+    //   );
+    // });
+    // window.addEventListener('resize', function() {
+    //   $('.hamburger').removeClass('is-active');
+    //   $('#sidebar-mobile').removeClass('is-open');
+    // });
 
     // work with us and contact modal
     function setModalMaxHeight(element) {

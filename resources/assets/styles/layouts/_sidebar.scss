@@ -115,13 +115,13 @@
 // HAMBURGER
 .hamburger {
   outline: none !important;
-  display: none;
-  position: absolute;
-  right: 2vw;
-
-  @include media-breakpoint-down(xs) {
-    display: block;
-  }
+  // display: none;
+  // position: absolute;
+  // right: 2vw;
+  //
+  // @include media-breakpoint-down(xs) {
+  //   display: block;
+  // }
 }
 
 #sidebar-static {
