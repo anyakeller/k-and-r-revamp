@@ -1,3 +1,7 @@
+nav.navbar {
+  padding: 0.5rem;
+}
+
 #sidebar-static {
   @include media-breakpoint-down(xs) {
     display: none;
@@ -9,7 +13,9 @@
 }
 
 .sidebar {
-  font-size: 1.1rem;
+  // font-size: 1.1rem;
+  @include font-size(1.1rem);
+
   font-weight: 300;
 
   input.search-field {
@@ -28,6 +34,8 @@
 
   ul li {
     @extend .nav-item;
+
+    margin-left: 1em;
   }
 
   &:not(#sidebar-main) {
@@ -55,9 +63,9 @@
   }
 }
 
-.sidebar-mobile {
-  padding-left: 2rem;
-}
+// .sidebar-mobile {
+//   padding-left: 2rem;
+// }
 
 .sidebar.collapse {
   @include media-breakpoint-up(sm) {
