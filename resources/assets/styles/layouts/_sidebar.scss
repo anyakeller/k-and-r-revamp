@@ -1,10 +1,46 @@
-#sidebar-static {
-  @include media-breakpoint-down(xs) {
-    display: none;
-  }
+.navbar-collapse,
+#sidebar-main {
+  ul {
+    @extend .navbar-nav;
 
+    margin-left: 1em;
+  }
+}
+
+#sidebar-static {
   ul {
     @extend .nav;
+  }
+}
+
+.navbar-collapse a {
+  @extend .nav-link;
+
+  padding: 0.1rem 1rem;
+}
+
+.navbar-static {
+  .search-form {
+    margin-block-end: 1em;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-flow: wrap;
+
+    .search-form {
+      margin-block-end: 0;
+    }
+
+    .navbar-collapse {
+      justify-content: space-between;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  #sidebar-static,
+  #sidebar-main {
+    display: none;
   }
 }
 
@@ -14,24 +50,8 @@
 
   font-weight: 300;
 
-  input.search-field {
+  .search-form .search-field {
     width: 100%;
-  }
-
-  &:not(#sidebar-static) {
-    .search-form {
-      margin-block-end: 1em;
-    }
-
-    ul {
-      @extend .navbar-nav;
-    }
-  }
-
-  ul li {
-    @extend .nav-item;
-
-    margin-left: 1em;
   }
 
   &:not(#sidebar-main) {
@@ -62,26 +82,20 @@
 // .sidebar-mobile {
 //   padding-left: 2rem;
 // }
-
-.sidebar.collapse {
-  @include media-breakpoint-up(sm) {
-    display: none !important;
-  }
-}
-
 #sidebar-main {
   position: absolute;
   right: 0;
   margin-right: 1em;
   margin-top: 11vh;
   padding-top: 1em;
+
+  .search-form > label {
+    width: 100%;
+  }
+
   width: calc(
     100vw - 68vw - 2em - 1em
   ); // [the viewport] - [video div] - [.container-main padding] - [buffer between video and sidebar]
-
-  @include media-breakpoint-down(xs) {
-    display: none;
-  }
 
   @include media-breakpoint-up(md) {
     max-width: 170px;
@@ -109,9 +123,15 @@
   @media (min-width: 1500px) {
     left: calc(50vw + (840px / 2) + 2rem);
   }
+}
 
-  .search-form > label {
-    width: 100%;
+.navbar {
+  @extend .navbar-expand-sm;
+
+  @include media-breakpoint-up(sm) {
+    .sidebar-mobile-only {
+      display: none !important;
+    }
   }
 }
 
