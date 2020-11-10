@@ -13,11 +13,4 @@
     </div>
 
   </nav>
-  {{-- @if (App\display_sidebar_static())
-  <div class="sidebar" id="sidebar-static">
-    <nav class="navbar">
-    @include('partials.sidebar-static')
-    </nav>
-  </div>
-  @endif --}}
 </header>

@@ -7,9 +7,7 @@
       </span>
     </button>
     <div class="collapse navbar-collapse my-2 sidebar sidebar-mobile-only" id="navToggle">
-      {{-- <div class=" sidebar-mobile"> --}}
       @include('partials.sidebar')
-      {{-- </div> --}}
     </div>
   </nav>
 </header>
