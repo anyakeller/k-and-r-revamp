@@ -6,7 +6,7 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <div class="collapse navbar-collapse my-2 sidebar sidebar-mobile-only" id="navToggle">
+    <div class="collapse navbar-collapse mt-4 mb-2 sidebar sidebar-mobile-only" id="navToggle">
       @include('partials.sidebar')
     </div>
   </nav>

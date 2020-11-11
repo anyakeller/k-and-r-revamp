@@ -8,8 +8,9 @@
 </div>
 @endif
 
-{!! get_search_form(false) !!}
-
+<div style="font-size: 1.2em">
+  {!! get_search_form(false) !!}
+</div>
 
 <div class="container my-3">
   <div class="row row-cols-2 row-cols-md-3">

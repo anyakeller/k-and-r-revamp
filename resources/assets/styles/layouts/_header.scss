@@ -8,7 +8,7 @@ header.banner {
 
   &::after {
     height: 20vh;
-    border-bottom-left-radius: 1.5em;
+    border-bottom-left-radius: 1em;
 
     @include media-breakpoint-down(md) {
       height: 11vh;
@@ -25,15 +25,16 @@ header.banner {
 }
 
 nav.navbar {
-  padding: 0.5rem;
+  padding: 0.7em 0.2em;
 
   .navbar-brand.brand {
-    width: calc(100vw - 5rem - 30px);
+    // width: calc(100vw - 5rem - 30px);
+    padding: 0;
+    width: calc(90vw - 3rem - 35px);
 
     @include media-breakpoint-up(sm) {
       width: 100%;
-      padding-left: 1em;
-      padding-right: 1em;
+      padding: 0.5em 0;
     }
   }
 }
