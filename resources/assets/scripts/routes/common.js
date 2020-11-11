@@ -11,10 +11,22 @@ export default {
       linkText.select();
       document.execCommand('copy');
     });
+    copyLink.hover(
+      function() {
+        linkText.select();
+      },
+      function() {}
+    );
     copyEmbed.click(() => {
       embedText.select();
       document.execCommand('copy');
     });
+    copyEmbed.hover(
+      function() {
+        embedText.select();
+      },
+      function() {}
+    );
     // $('#video-sharing-modal').on('shown.bs.modal', function() {
     //   linkText.select();
     // });
