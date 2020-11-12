@@ -7,11 +7,6 @@
   @endphp
   @include('partials.header')
   <div class="wrap container-main" role="document">
-    @if (App\display_sidebar())
-    <aside class="sidebar" id="sidebar-main">
-      @include('partials.sidebar')
-    </aside>
-    @endif
     <main class="content main">
       @yield('content')
     </main>

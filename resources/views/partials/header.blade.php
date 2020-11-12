@@ -10,4 +10,9 @@
       @include('partials.sidebar')
     </div>
   </nav>
+  @if (App\display_sidebar())
+  <nav class="sidebar" id="sidebar-main">
+    @include('partials.sidebar')
+  </nav>
+  @endif
 </header>
