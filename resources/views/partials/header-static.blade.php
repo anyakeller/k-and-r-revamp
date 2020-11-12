@@ -6,8 +6,10 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
+    @if (App\display_sidebar())
     <div class="collapse navbar-collapse mt-3 mb-0 sidebar" id="navToggle">
       @include('partials.sidebar')
     </div>
+    @endif  
   </nav>
 </header>
