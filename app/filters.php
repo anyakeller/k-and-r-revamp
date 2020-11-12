@@ -18,11 +18,6 @@ add_filter('body_class', function (array $classes) {
         $classes[] = 'sidebar-primary';
     }
 
-    /** Add class if sidebar-static is active */
-    if (display_sidebar_static()) {
-        $classes[] = 'sidebar-static';
-    }
-
     /** Clean up class names for custom templates */
     $classes = array_map(function ($class) {
         return preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
@@ -58,23 +53,6 @@ add_filter('sage/display_sidebar', function ($display) {
 
     return $display;
 });
-
-/**
- * ANYA STATIC PAGE-SPECIFIC SIDEBAR FILTER
- */
-add_filter('sage/display_sidebar_static', function ($display) {
-    static $display;
-
-    isset($display) || $display = in_array(true, [
-      // The sidebar will be displayed if any of the following return true
-      is_page(),
-      is_404(),
-      is_search()
-    ]);
-
-    return $display;
-});
-
 
 /**
  * Render page using Blade
