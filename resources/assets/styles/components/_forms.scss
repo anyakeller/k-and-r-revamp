@@ -21,7 +21,7 @@
 }
 
 .search-form label {
-  @extend .form-group;
+  // @extend .form-group;
 
   margin-bottom: 0;
   font-weight: normal;
@@ -34,8 +34,5 @@
 }
 
 .search-form .search-submit {
-  // @extend .btn;
-  // @extend .btn-secondary;
-  // text-indent: -9999px;
   display: none !important;
 }

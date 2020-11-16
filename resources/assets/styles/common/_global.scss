@@ -66,15 +66,15 @@ span:last-child {
  */
 
 // Phones in landscape
-@mixin aspect-ratio-phones-landscape($devcolor: false) {
-  @media (min-aspect-ratio: 4/3) {
-    @if $devcolor {
-      background-color: rgba(28, 16, 128, 0.6); // blurple
-    }
-
-    @content;
-  }
-}
+// @mixin aspect-ratio-phones-landscape($devcolor: false) {
+//   @media (min-aspect-ratio: 4/3) {
+//     @if $devcolor {
+//       background-color: rgba(28, 16, 128, 0.6); // blurple
+//     }
+//
+//     @content;
+//   }
+// }
 
 // $limits is a map
 @mixin width-limiter($limits) {
