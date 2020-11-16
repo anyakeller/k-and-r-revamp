@@ -125,11 +125,11 @@ span:last-child {
       xl: 840px
     );
 
-    &:not(.nowidthlimit) {
+    &:not(.customwidthlimit) {
       @include width-limiter($container-main-limits);
     }
 
-    &.nowidthlimit {
+    &.customwidthlimit {
       width: 100%;
     }
   }

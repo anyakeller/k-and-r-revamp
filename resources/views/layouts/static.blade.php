@@ -12,7 +12,7 @@
         max-width: 1000px;
       }
     </style>
-    <main class="content main nowidthlimit px-1 px-md-4">
+    <main class="content main customwidthlimit px-1 px-md-4">
       @yield('content')
     </main>
   </div>

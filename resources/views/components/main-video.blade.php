@@ -2,13 +2,11 @@
   {{ the_field('wistia_related_wistia_embed_code') }}
 </div>
 
-
 <div class="main-video-details">
   <div class="d-flex">
     <div class="flex-grow-1">
       <h3>
         {!! get_the_title() !!}
-        {{-- {{ the_field('video_details_video_title') }} --}}
         <span style="display: block;">
           {{App\time_elapsed_string(get_the_date())}}
         </span>

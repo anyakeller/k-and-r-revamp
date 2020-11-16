@@ -4,8 +4,6 @@
 
     @include('components/main-video')
 
-    {{-- <p>{{ the_field('video_details_video_length') }}</p> --}}
-
     @php the_content()
     @endphp
   </div>
