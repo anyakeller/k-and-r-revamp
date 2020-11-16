@@ -9,9 +9,6 @@
     ],
     "static": [
       "./styles/static.scss"
-    ],
-    "labcam": [
-      "./styles/labcam.scss"
     ]
   },
   "publicPath": "/wp-content/themes/kite-rocket-reboot-alpha",

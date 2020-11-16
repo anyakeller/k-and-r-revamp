@@ -12,9 +12,15 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+
+// fontawesome
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
+
+// Hamburgers
 @import "~hamburgers/_sass/hamburgers/hamburgers";
+
+// Swiper API
 @import "~swiper/swiper.scss";
 @import "~swiper/components/lazy/lazy.scss";
 @import "~swiper/components/pagination/pagination.scss";

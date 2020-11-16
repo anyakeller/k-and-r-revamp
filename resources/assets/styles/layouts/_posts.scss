@@ -1,32 +1,6 @@
 // VIDEO-POST-SPECIFIC STYLING
-.single {
-  header::after {
-    content: "";
-  }
-
-  header.banner > .banner-row {
-    @include media-breakpoint-up(md) {
-      height: 6rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-      height: 6.5rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-      height: 10rem;
-    }
-
-    #sticky-logo {
-      position: -webkit-sticky;
-      position: sticky;
-
-      @include media-breakpoint-up(xl) {
-        padding-bottom: 2rem;
-        top: 3.25rem;
-      }
-    }
-  }
+.single header::after {
+  content: "";
 }
 
 /**
@@ -200,11 +174,8 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
     top: 0;
     height: 100%;
     margin-top: 0;
-    padding-bottom: $video-card-text-height;
+    padding-bottom: $video-card-text-height-sm-up;
 
-    @include media-breakpoint-up(sm) {
-      padding-bottom: $video-card-text-height-sm-up;
-    }
     // to cover up the swiper slides passing behind
     &::before {
       content: "";
@@ -217,10 +188,8 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
     }
 
     @include media-breakpoint-down(sm) {
+      padding-bottom: $video-card-text-height;
       box-shadow: 0 0 14px 12px rgba(255, 255, 255, 0.9);
-    }
-
-    @include media-breakpoint-down(sm) {
       width: 0;
 
       &::after {
@@ -337,23 +306,14 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
   max-height: 30px;
   max-width: 40px;
   align-self: center;
+  object-fit: contain;
 
   @include media-breakpoint-up(xs) {
     max-height: 35px;
   }
 
   @include media-breakpoint-up(sm) {
-    max-height: 45px;
-    max-width: 45px;
-  }
-
-  @include media-breakpoint-up(sm) {
     max-height: 50px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    max-height: 60px;
-    max-width: 50px;
   }
 }
 

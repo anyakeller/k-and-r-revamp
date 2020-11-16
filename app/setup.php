@@ -17,9 +17,6 @@ add_action('wp_enqueue_scripts', function () {
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-    if (is_page('LabCam')) {
-        wp_enqueue_style('sage/labcam.css', asset_path('styles/labcam.css'), false, null);
-    }
     if (!is_single()) {
         wp_enqueue_style('sage/static.css', asset_path('styles/static.css'), false, null);
     }

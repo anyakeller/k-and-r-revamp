@@ -90,11 +90,11 @@ A few directories and files not to manually edit ( edits could break the things,
 
 A few directories and files files you can, and probably will, modify:
 
--   asset stuff
-    -   `resources/assets/fonts`
-    -   `resources/assets/images`
-    -   `resources/assets/scripts`
-    -   `resources/assets/styles`
+-   asset stuff: `resources/assets/`
+    -   `fonts/`
+    -   `images/`
+    -   `scripts/`
+    -   `styles/`
 -   almost all of `resources/views` but probably not `resources/views/app.blade.php`
 -   be careful with  `app/`
 
