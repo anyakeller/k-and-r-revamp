@@ -25,6 +25,10 @@
   z-index: 2;
   box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
   background: #fff;
+
+  .wistia_responsive_padding {
+    padding-bottom: 0 !important;
+  }
 }
 
 .main-video-details {
