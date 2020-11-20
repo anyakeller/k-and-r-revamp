@@ -1,4 +1,4 @@
-<div>
+<div style="display:flex;">
   <div class="swiper-slide-category">
     <div class="category-icon-div"><img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" /></div>
     <span>{{$category -> name}}</span>

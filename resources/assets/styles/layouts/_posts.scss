@@ -266,7 +266,9 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  height: 100%;
+  // height: 100%;
+  background-color: white;
+  z-index: 2;
   font-size: inherit;
   color: theme-color("primary");
   padding: 6px 0;
