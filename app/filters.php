@@ -111,4 +111,4 @@ add_filter('comments_template', function ($comments_template) {
 */
 
 // disable admin bar (for dev testing)
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');

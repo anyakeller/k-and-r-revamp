@@ -76,6 +76,17 @@ span:last-child {
 //   }
 // }
 
+// Phones in portrait
+@mixin aspect-ratio-phones-portrait($devcolor: false) {
+  @media screen and (max-width: 480px) and (min-aspect-ratio: 3/4) {
+    @if $devcolor {
+      background-color: rgba(28, 16, 128, 0.6); // blurple
+    }
+
+    @content;
+  }
+}
+
 // $limits is a map
 @mixin width-limiter($limits) {
   @each $size, $limit in $limits {
