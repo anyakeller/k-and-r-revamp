@@ -51,7 +51,8 @@ add_filter('sage/display_sidebar', function ($display) {
       is_single(),
       is_page(),
       is_404(),
-      is_search()
+      is_search(),
+      is_tax()
     ]);
 
     return $display;

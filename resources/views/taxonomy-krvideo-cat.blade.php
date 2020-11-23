@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.static')
+{{-- KR-Video Category Page --}}
 
 @section('content')
   @include('partials.page-header')
@@ -9,7 +10,7 @@
     </div>
     {!! get_search_form(false) !!}
   @endif
-  <h1>asdf</h1>
+  <h1>YEET</h1>
   @while (have_posts()) @php the_post() @endphp
     @include('partials.content-'.get_post_type())
   @endwhile
