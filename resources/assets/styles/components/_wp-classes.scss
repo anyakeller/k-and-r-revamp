@@ -54,3 +54,13 @@
   @extend .sr-only;
   @extend .sr-only-focusable;
 }
+
+.nav-links {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+
+  & > div {
+    display: inline-block;
+  }
+}

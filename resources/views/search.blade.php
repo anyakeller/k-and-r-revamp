@@ -12,7 +12,7 @@
   {!! get_search_form(false) !!}
 </div>
 
-<div class="container my-3">
+<div class="video-grid container my-3">
   <div class="row row-cols-2 row-cols-md-3">
     @while(have_posts())
     <div class="col my-2">
