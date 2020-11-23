@@ -2,7 +2,7 @@
 
 @section('content')
   <!-- @include('partials.page-header') -->
-  @php
+  {{-- @php
     $args = array(
       'post_type' => 'krvideo',
       'posts_per_page' => 1,
@@ -23,6 +23,6 @@
       @include('partials.content-'.get_post_type())
       @include('partials.content-page')
     @endwhile
-  @endif
+  @endif --}}
 
 @endsection

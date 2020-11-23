@@ -7,4 +7,7 @@
   </a>
 </p>
 --}}
-<a href="{{ the_field('wistia_related_video_wistia_link') }}">wistia link</a>
+<article @php post_class() @endphp>
+  @include('components/video-card')
+</article>
+{{-- <span>Posted: {{App\time_elapsed_string(get_the_date())}}</span> --}}
