@@ -168,7 +168,9 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
 
   .swiper-button-next,
   .swiper-button-prev {
-    box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
+    transition: box-shadow 0.2s ease 0s;
+    // box-shadow: 0 0 11px 7px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px 17px rgba(255, 255, 255, 0.99);
 
     // To make swiper container full height and center icon
     top: 0;
@@ -189,7 +191,8 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
 
     @include media-breakpoint-down(sm) {
       padding-bottom: $video-card-text-height;
-      box-shadow: 0 0 14px 12px rgba(255, 255, 255, 0.9);
+      // box-shadow: 0 0 14px 12px rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 14px 18px rgba(255, 255, 255, 0.99);
       width: 0;
 
       &::after {
@@ -199,7 +202,8 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
 
     &.swiper-button-disabled {
       opacity: initial;
-      box-shadow: none;
+      // box-shadow: none;
+      box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.99);
 
       &::after {
         opacity: 0.35;
