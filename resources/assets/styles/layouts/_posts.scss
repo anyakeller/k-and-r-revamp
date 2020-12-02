@@ -124,6 +124,7 @@
 
   > li {
     position: relative;
+    overflow: hidden;
 
     @include media-breakpoint-down(sm) {
       margin-right: -40px;
