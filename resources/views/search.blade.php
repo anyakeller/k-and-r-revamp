@@ -9,7 +9,10 @@
 @endif
 
 <div style="font-size: 1.2em">
-  {!! get_search_form(false) !!}
+  {!! get_search_form( array(
+  'echo' => false,
+  'aria_label' => 'searchpage-search'
+  )) !!}
 </div>
 
 <div class="video-grid container my-3">

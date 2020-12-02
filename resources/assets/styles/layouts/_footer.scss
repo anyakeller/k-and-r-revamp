@@ -16,16 +16,16 @@ footer {
 
 footer .widget {
   // Give the footers bootstrap column behavior
-  @include make-col-ready();
-  @include make-col(12);
+  // @include make-col-ready();
+  // @include make-col(12);
 
   @extend .text-center;
   @extend .py-1;
 
   // each widget takes up equal width on medium screens and up
-  @include media-breakpoint-up(lg) {
-    @include make-col(4);
-  }
+  // @include media-breakpoint-up(lg) {
+  //   @include make-col(4);
+  // }
 
   ul {
     list-style: none;
