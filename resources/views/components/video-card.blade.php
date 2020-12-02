@@ -1,4 +1,4 @@
-<div class="video-card @if($main_post_id === get_the_ID() ) now-playing @endif">
+<article class="video-card @if($main_post_id === get_the_ID() ) now-playing @endif">
   <a href="{{ get_permalink() }}">
     {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
     <div class="video-thumbnail-div">
@@ -14,4 +14,4 @@
       <span class="text-muted mt-auto">{{App\time_elapsed_string(get_the_date())}}</span>
     </p>
   </a>
-</div>
+</article>
