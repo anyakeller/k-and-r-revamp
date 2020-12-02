@@ -84,3 +84,25 @@
   object-fit: contain;
   width: 100%;
 }
+
+.video-card-text {
+  // padding: $video-card-text-padding-top 0.1em $video-card-text-padding-bottom;
+  padding: $video-card-text-padding-top 0.1em $video-card-text-padding-bottom;
+  display: flex;
+  flex-direction: column;
+  height: $video-card-text-height;
+  overflow: hidden;
+
+  @include media-breakpoint-up(sm) {
+    height: $video-card-text-height-sm-up;
+  }
+
+  > .entry-title {
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+  > .text-muted {
+    line-height: inherit;
+  }
+}
