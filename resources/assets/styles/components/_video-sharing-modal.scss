@@ -1,0 +1,54 @@
+.video-sharing-button-div {
+  transition: width 0.2s ease 0s;
+
+  button {
+    border-radius: 0.8em;
+  }
+}
+
+#copy-link,
+#copy-embed {
+  border-width: 2px;
+}
+
+#video-sharing-modal {
+  top: 10vh;
+
+  > .modal-dialog {
+    @include media-breakpoint-up(md) {
+      max-width: 700px;
+    }
+  }
+
+  button.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+    padding: revert;
+  }
+
+  .modal-header {
+    border-bottom: none;
+  }
+
+  .modal-body {
+    padding-bottom: 1.5rem;
+    padding-top: 0;
+  }
+
+  input,
+  textarea {
+    padding: 0.375rem 0.5rem;
+    height: auto;
+  }
+}
+
+.video-sharing-icon {
+  color: $link-color;
+  padding: 0;
+
+  &:hover {
+    color: darken($link-color, 20%);
+  }
+}

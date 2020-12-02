@@ -3,54 +3,6 @@
   content: "";
 }
 
-/**
-  * Main Video
-  *
-*/
-.main-video {
-  @include media-breakpoint-up(sm) {
-    max-width: 68vw;
-  }
-
-  @include media-breakpoint-up(lg) {
-    max-width: 60vw;
-  }
-
-  @include media-breakpoint-up(lg) {
-    max-width: initial;
-  }
-}
-
-.wistia-player {
-  z-index: 2;
-  box-shadow: 5px 8px 15px 0 rgba(58, 46, 46, 0.69);
-  background: #fff;
-
-  .wistia_responsive_padding {
-    padding-bottom: 0 !important;
-  }
-}
-
-.main-video-details {
-  padding: 1rem 0 0.2rem;
-
-  h4 {
-    display: inline-block;
-    color: theme-color("primary");
-  }
-
-  span {
-    color: theme-color-level("body-color-default", -4);
-    font-size: 1rem;
-    // reduce level of main theme color to get a muted one
-  }
-
-  p {
-    line-height: 1.2em;
-    margin-bottom: 0;
-  }
-}
-
 .video-sharing-button-div {
   transition: width 0.2s ease 0s;
 
