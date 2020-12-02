@@ -65,17 +65,6 @@ span:last-child {
  *
  */
 
-// Phones in landscape
-// @mixin aspect-ratio-phones-landscape($devcolor: false) {
-//   @media (min-aspect-ratio: 4/3) {
-//     @if $devcolor {
-//       background-color: rgba(28, 16, 128, 0.6); // blurple
-//     }
-//
-//     @content;
-//   }
-// }
-
 // Phones in portrait
 @mixin aspect-ratio-phones-portrait($devcolor: false) {
   @media screen and (max-width: 480px) and (min-aspect-ratio: 3/4) {
@@ -87,7 +76,11 @@ span:last-child {
   }
 }
 
-// $limits is a map
+/*
+ * Mixin to set max width given a map with a width and
+ * the corresponding bootstrap size
+ * $limits is a map {$size: $limit}
+*/
 @mixin width-limiter($limits) {
   @each $size, $limit in $limits {
     @include media-breakpoint-up($size) {
@@ -147,26 +140,26 @@ span:last-child {
 }
 
 // General styling for all video thumbnails
-.video-thumbnail-div {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .video-thumbnail-length-div {
-    text-align: end;
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    top: 0;
-    right: 0;
-    height: 100%;
-
-    .video-thumbnail-length-span {
-      padding: 0 2px;
-      position: relative;
-      background-color: rgba(38, 38, 38, 0.8);
-      color: white;
-    }
-  }
-}
+// .video-thumbnail-div {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//
+//   .video-thumbnail-length-div {
+//     text-align: end;
+//     position: absolute;
+//     display: flex;
+//     align-items: flex-end;
+//     top: 0;
+//     right: 0;
+//     height: 100%;
+//
+//     .video-thumbnail-length-span {
+//       padding: 0 2px;
+//       position: relative;
+//       background-color: rgba(38, 38, 38, 0.8);
+//       color: white;
+//     }
+//   }
+// }

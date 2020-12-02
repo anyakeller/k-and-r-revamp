@@ -8,6 +8,28 @@
   // box-shadow: inset 0 0 0 0.3px rgba(250, 102, 0, 0.8);
 
   .video-thumbnail-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .video-thumbnail-length {
+      position: absolute;
+      display: flex;
+      align-items: flex-end;
+      top: 0;
+      right: 0;
+      height: 100%;
+
+      .video-thumbnail-length-span {
+        padding: 0 2px;
+        border-radius: 0.2em;
+        position: relative;
+        background-color: rgba(38, 38, 38, 0.8);
+        color: white;
+      }
+    }
+
     &::after {
       transition: width 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95);
       position: absolute;

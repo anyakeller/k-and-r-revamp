@@ -3,7 +3,7 @@
     {{-- <img class="img-fluid" src="{{ the_field('wistia_related_video_thumbnail')  }}"> --}}
     <div class="video-thumbnail-div">
       {{the_post_thumbnail('video-thumbnail', array('class' => 'video-card-thumbnail' ))}}
-      <div class="video-thumbnail-length-div">
+      <div class="video-thumbnail-length">
         <span class="video-thumbnail-length-span">
           {!! App\get_video_length() !!}
         </span>
