@@ -1,11 +1,11 @@
 .video-card {
+  transition: box-shadow 0.3s ease-in-out;
   text-align: center;
   font-size: inherit;
   line-height: inherit;
-  // border-radius: 1em;
+  border: 1px rgba(250, 102, 0, 0.8) solid;
   overflow: hidden;
-  box-shadow: inset 0 0 0 0.3px rgba(250, 102, 0, 0.8);
-  transition: box-shadow 0.3s ease-in-out;
+  // box-shadow: inset 0 0 0 0.3px rgba(250, 102, 0, 0.8);
 
   .video-thumbnail-div {
     &::after {
