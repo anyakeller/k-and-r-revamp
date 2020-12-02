@@ -1,30 +1,11 @@
-@import "common/variables";
+@import "common/bootstrap-variables";
+@import "common/general-variables";
 
-/** Import everything from autoload */
-@import "./autoload/**/*";
-
-// @debug $rfs-base-font-size;
-
-/**
- * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
- */
+/** Import everything from autoload
+ * includes npm dependencies
+*/
 // @import "~some-node-module";
-
-// fontawesome
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-
-// Hamburgers
-@import "~hamburgers/_sass/hamburgers/hamburgers";
-
-// Swiper API
-@import "~swiper/swiper.scss";
-@import "~swiper/components/lazy/lazy.scss";
-@import "~swiper/components/pagination/pagination.scss";
-@import "~swiper/components/navigation/navigation.scss";
+@import "./autoload/**/*";
 
 /** Import theme styles */
 @import "common/global";
@@ -33,8 +14,8 @@
 @import "components/forms";
 @import "components/wp-classes";
 @import "components/main-video";
-// @import "components/swiper-video-category";
 @import "components/video-cards";
+@import "components/video-sharing-modal";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
