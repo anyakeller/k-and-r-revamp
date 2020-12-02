@@ -206,9 +206,9 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
       // box-shadow: none;
       box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.99);
 
-      &::after {
-        opacity: 0.35;
-      }
+      // &::after {
+      //   opacity: 0.35;
+      // }
     }
   }
 
