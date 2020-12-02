@@ -7,17 +7,13 @@
   * Front Page Video Category Swiper
   *
 */
-.swiper-video-category-ul {
+.swiper-video-category-gallery {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
   margin-bottom: 25px;
   overflow: hidden;
-
-  // @include media-breakpoint-up(md) {
-  //   overflow: visible;
-  // }
 
   > li {
     position: relative;
@@ -50,6 +46,7 @@ $video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
 
 .swiper-video-category-row {
   display: flex;
+  height: fit-content;
 
   .swiper-container {
     width: 100%;

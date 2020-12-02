@@ -1,13 +1,13 @@
 <div style="display:flex;">
   <div class="swiper-slide-category">
-    <div class="category-icon-div"><img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" /></div>
+    <div class="category-icon-div">
+      <img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" />
+    </div>
     <span>{{$category -> name}}</span>
     <div class="category-icon-offsetter"></div>
   </div>
 </div>
-{{-- <div class="swiper-video-category-row-inner px-0"> --}}
-
-<div class="swiper-container">
+<section class="swiper-container">
 
   {{-- Additional required wrapper  --}}
   <div class="swiper-wrapper" style="height: auto;">
@@ -24,5 +24,4 @@
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
-</div>
-{{-- </div> --}}
+</section>

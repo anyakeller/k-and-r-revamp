@@ -5,5 +5,5 @@
       @endphp
     </div>
   </div>
-  @include('partials.footer-modals')
+  @include('components.footer-modals')
 </footer>

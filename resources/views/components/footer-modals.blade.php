@@ -1,4 +1,4 @@
-<div>
+<section>
   <div class="modal footer-modal fade" id="workWithUsModal" tabindex="-1" role="dialog" aria-labelledby="">
     <div class="modal-dialog" role="document">
       <div class="modal-content text-center">
@@ -32,4 +32,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
