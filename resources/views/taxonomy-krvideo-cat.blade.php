@@ -1,4 +1,4 @@
-@extends('layouts.static')
+@extends('layouts.app')
 {{-- KR-Video Category Page --}}
 
 @section('content')

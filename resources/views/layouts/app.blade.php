@@ -11,7 +11,7 @@
     @include('partials.header-static')
   @endif
   <div class="wrap container-main flex-grow-1" role="document">
-    <main class="content main">
+    <main class="content main @if (!is_single()) pt-4 @endif">
       @yield('content')
     </main>
   </div>

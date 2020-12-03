@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="mt-4">
+<div>
   @include('partials.page-header')
   @php $images = get_field('idea_bank_images')
   @endphp

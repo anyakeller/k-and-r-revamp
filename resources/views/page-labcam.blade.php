@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="mt-4">
+<div>
   @include('partials.page-header')
   <div class="text-center">
     <i class="fas fa-hard-hat display-3"></i>
