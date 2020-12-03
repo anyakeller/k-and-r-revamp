@@ -143,18 +143,6 @@ function display_sidebar()
  *
  */
 
-/**
- * Determine whether to show the sidebar for static pages
- * @return bool
- */
-function display_sidebar_static()
-{
-    static $display;
-    isset($display) || $display = apply_filters('sage/display_sidebar_static', false);
-    return $display;
-}
-
-
 // Global modules
 use WP_Query;
 use DateTime;

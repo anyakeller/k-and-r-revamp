@@ -2,7 +2,7 @@
 <html {!! get_language_attributes() !!}>
 @include('partials.head')
 
-<body @php body_class('d-flex flex-column') @endphp>
+<body @php body_class('d-flex flex-column min-vh-100') @endphp>
   @php do_action('get_header')
   @endphp
   @if (is_single())
