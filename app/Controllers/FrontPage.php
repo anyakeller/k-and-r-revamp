@@ -12,11 +12,11 @@ class FrontPage extends Controller
     public function featuredVideo()
     {
         $args = array(
-     'post_type' => 'krvideo',
-     'posts_per_page' => 1,
-     'meta_key'		=> 'is_featured_video',
-     'meta_value'	=> 1
-   );
+         'post_type' => 'krvideo',
+         'posts_per_page' => 1,
+         'meta_key'		=> 'is_featured_video',
+         'meta_value'	=> 1
+       );
         return new \WP_Query($args);
     }
 }

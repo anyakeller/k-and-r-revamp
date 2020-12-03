@@ -2,11 +2,15 @@
 <html {!! get_language_attributes() !!}>
 @include('partials.head')
 
-<body @php body_class() @endphp>
+<body @php body_class('d-flex flex-column') @endphp>
   @php do_action('get_header')
   @endphp
-  @include('partials.header')
-  <div class="wrap container-main" role="document">
+  @if (is_single())
+    @include('partials.header')
+  @else
+    @include('partials.header-static')
+  @endif
+  <div class="wrap container-main flex-grow-1" role="document">
     <main class="content main">
       @yield('content')
     </main>

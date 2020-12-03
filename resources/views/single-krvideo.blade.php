@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-{{-- For some stupid reason if I delete this the spacing on the video category icons flips out  --}}
-<style>
-</style>
-
 @section('content')
 {{-- main video player --}}
 

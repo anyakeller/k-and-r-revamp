@@ -1,32 +1,33 @@
-@extends('layouts.static')
+@extends('layouts.app')
 
 @section('content')
-@include('partials.page-header')
-@php $images = get_field('idea_bank_images')
-@endphp
-@if ($images)
+<div class="mt-4">
+  @include('partials.page-header')
+  @php $images = get_field('idea_bank_images')
+  @endphp
+  @if ($images)
 
-<!-- Slider main container -->
+  <!-- Slider main container -->
 
-<div id="ideabank-swiper-div" class="my-4 my-lg-2">
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      @foreach ($images as $image)
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <img class="img-fluid" src="{{ $image['url'] }}" />
+  <div id="ideabank-swiper-div" class="my-4 my-lg-2">
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        @foreach ($images as $image)
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img class="img-fluid" src="{{ $image['url'] }}" />
+        </div>
+        @endforeach
       </div>
-      @endforeach
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
     </div>
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
   </div>
+  @endif
 </div>
-@endif
-
 @endsection
