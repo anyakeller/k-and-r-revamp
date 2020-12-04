@@ -134,6 +134,9 @@ add_action('after_setup_theme', function () {
 
 /* custom stuff */
 
+/*
+  Redirect from homepage to the featured or latest krvideo
+*/
 add_action('template_redirect', function(){
   if (is_front_page()) {
       $args = array(
@@ -148,7 +151,7 @@ add_action('template_redirect', function(){
           wp_safe_redirect(get_permalink());
           die;
       } else {
-          $latest_krvideo = App\get_latest_krvideo();
+          $latest_krvideo = get_latest_krvideo();
           if ($latest_krvideo->have_posts()) {
               $latest_krvideo->the_post();
               wp_safe_redirect(get_permalink());
