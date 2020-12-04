@@ -2,6 +2,7 @@
 .search-form {
   @extend .form-inline;
 
+  margin-block-end: 1em;
   position: relative;
 
   &::before {
