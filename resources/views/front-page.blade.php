@@ -3,7 +3,7 @@
 @section('content')
 {{-- @include('partials.page-header') --}}
 
-  @if($featured_video->have_posts()) @php $featured_video -> the_post() @endphp
+  {{-- @if($featured_video->have_posts()) @php $featured_video -> the_post() @endphp
     @php
       wp_safe_redirect( get_permalink() );
       exit;
@@ -16,6 +16,6 @@
         exit;
       @endphp
     @endif
-  @endif
+  @endif --}}
 
 @endsection

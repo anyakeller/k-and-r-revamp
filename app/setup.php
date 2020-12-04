@@ -132,5 +132,31 @@ add_action('after_setup_theme', function () {
     });
 });
 
+/* custom stuff */
+
+add_action('template_redirect', function(){
+  if (is_front_page()) {
+      $args = array(
+           'post_type' => 'krvideo',
+           'posts_per_page' => 1,
+           'meta_key'		=> 'is_featured_video',
+           'meta_value'	=> 1
+         );
+      $featured_video = new \WP_Query($args);
+      if ($featured_video->have_posts()) {
+          $featured_video -> the_post();
+          wp_safe_redirect(get_permalink());
+          die;
+      } else {
+          $latest_krvideo = App\get_latest_krvideo();
+          if ($latest_krvideo->have_posts()) {
+              $latest_krvideo->the_post();
+              wp_safe_redirect(get_permalink());
+              die;
+          }
+      }
+  }
+});
+
 add_image_size('video-thumbnail', 240, 135);
 add_image_size('video-thumbnail-sm', 192, 108);
