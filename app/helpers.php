@@ -148,20 +148,6 @@ use WP_Query;
 use DateTime;
 
 /**
- * helper function to get all video categories
- * uses get_terms()  https://developer.wordpress.org/reference/functions/get_terms/
- */
-function get_video_categories()
-{
-    $args = array(
-    'taxonomy' => 'krvideo-cat',
-    'hide_empty' => true
-  );
-    $video_category_terms = get_terms($args);
-    return $video_category_terms;
-}
-
-/**
  * helper function to get all videos in a video category
  * @param WP_Term[]|WP_Error $video_category_terms
  * @return WP_Query
