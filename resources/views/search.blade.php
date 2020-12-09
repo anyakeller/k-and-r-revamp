@@ -9,10 +9,11 @@
 @endif
 
 <div style="font-size: 1.2em">
-  {!! get_search_form( array(
+  {{-- {!! get_search_form( array(
   'echo' => false,
   'aria_label' => 'searchpage-search'
-  )) !!}
+  )) !!} --}}
+  @include('partials.krvideo-searchform')
 </div>
 
 <div class="video-grid container my-3">
