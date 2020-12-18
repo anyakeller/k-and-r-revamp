@@ -4,7 +4,7 @@
 
 **THIS IS AN UNOFFICIAL TEST THEME**
 
-This theme built on [Roots Sage](https://roots.io/sage/) which uses [Laravel's Blade](https://laravel.com/docs/5.8/blade) templating engine
+This theme built on [Roots Sage v9.0.9](https://roots.io/sage/) which uses [Laravel's Blade](https://laravel.com/docs/5.8/blade) templating engine
 
 If you are comfortable working with Roots Sage, just jump to the [theme usage](#theme-usage) section
 
@@ -35,7 +35,7 @@ WordPress Info
 
 Template Information
 
--   Roots Sage 9
+-   Roots Sage v9.0.9
 -   Laravel Blade 5.something
 
 * * *
