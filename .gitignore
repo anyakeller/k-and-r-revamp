@@ -7,3 +7,6 @@ npm-debug.log
 yarn-error.log
 /vendor
 resources/assets/config-local.json
+
+# mac os stuff
+.DS_Store
