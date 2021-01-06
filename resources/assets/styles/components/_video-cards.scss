@@ -67,7 +67,7 @@
     content: "Now Playing";
     font-size: 1em;
     font-weight: 400;
-    padding: 0.3rem 0.4rem;
+    padding: 0.05rem 0.4rem;
     width: auto;
     height: auto;
     color: white;
@@ -76,11 +76,19 @@
     background-color: rgba(3, 11, 68, 0.3);
     background-image: none;
     transition: font-size 0.3s ease;
+
+    @include media-breakpoint-up(xs) {
+      padding: 0.3rem 0.4rem;
+    }
   }
 
   &:hover {
     .video-thumbnail-div::after {
-      font-size: 1.1em;
+      font-size: 1.05em;
+
+      @include media-breakpoint-up(xs) {
+        font-size: 1.1em;
+      }
     }
   }
 }

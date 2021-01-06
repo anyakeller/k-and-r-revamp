@@ -14,7 +14,7 @@ $wistia_embed = htmlspecialchars(get_field('wistia_related_wistia_embed_code'), 
         <div class="container-fluid">
           <div class="row align-items-center mt-2">
             <div class="col-2 p-0">
-              <button class="btn btn-block btn-outline-success" id="copy-link">Copy Link</button>
+              <button class="btn btn-block btn-outline-success px-0 px-xs-2" id="copy-link">Copy Link</button>
             </div>
             <div class="col">
               <input id="link-text" class="form-control" tpe="text" value="{{ get_permalink() }}" readonly />
@@ -22,7 +22,7 @@ $wistia_embed = htmlspecialchars(get_field('wistia_related_wistia_embed_code'), 
           </div>
           <div class="row align-items-center mt-4">
             <div class="col-2 p-0">
-              <button class="btn btn-block btn-outline-success" id="copy-embed">Copy Embed</button>
+              <button class="btn btn-block btn-outline-success px-0 px-xs-2" id="copy-embed">Copy Embed</button>
             </div>
             <div class="col">
               <textarea id="embed-text" class="form-control"  type="text" rows="6" readonly>{{ htmlspecialchars_decode($wistia_embed) }}</textarea>
