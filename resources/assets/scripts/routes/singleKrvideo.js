@@ -7,7 +7,7 @@ export default {
     // JavaScript to be fired on a post page, after the init JS
 
     new Swiper('.swiper-container', {
-      slidesPerView: 3,
+      slidesPerView: 2,
       // slidesPerView: 'auto',
       slidesPerGroup: 1,
       spaceBetween: 6,
