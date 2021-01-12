@@ -15,6 +15,10 @@
   margin-bottom: 25px;
   overflow: hidden;
 
+  @include media-breakpoint-down(ph) {
+    overflow: visible;
+  }
+
   > li {
     position: relative;
     overflow: hidden;

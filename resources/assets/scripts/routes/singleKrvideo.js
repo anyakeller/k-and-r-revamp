@@ -10,7 +10,7 @@ export default {
       slidesPerView: 2,
       // slidesPerView: 'auto',
       slidesPerGroup: 1,
-      spaceBetween: 6,
+      spaceBetween: 10,
       freeMode: true,
       slidesOffsetBefore: 3,
       slidesOffsetAfter: 46,

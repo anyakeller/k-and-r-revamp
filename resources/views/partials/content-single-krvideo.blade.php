@@ -15,7 +15,7 @@
         </h3>
       </div>
       <div class="float-right video-sharing-button-div">
-        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#video-sharing-modal">Share Video <i class="fas fa-share-square fa-xs"></i></button>
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#video-sharing-modal">Share <i class="fas fa-share-square fa-xs"></i></button>
       </div>
     </div>
     <p>{{ the_field('video_details_video_description') }}</p>

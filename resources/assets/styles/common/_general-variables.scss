@@ -17,7 +17,7 @@ $hamburger-types: (minus);
 // needed to be moved up because of css rules
 // Format:  [line-height] * [number of lines for the video title + ([video-card-text padding-top + padding-bottom]) +
 //  + [height of video date span]
-$video-card-text-num-lines-ph: 4;
+$video-card-text-num-lines-ph: 3;
 $video-card-text-num-lines-sm: 2;
 $video-card-text-padding-top: 0.4em;
 $video-card-text-padding-bottom: 0.2em;
