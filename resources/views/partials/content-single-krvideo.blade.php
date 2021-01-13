@@ -18,7 +18,7 @@
         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#video-sharing-modal">Share <i class="fas fa-share-square fa-xs"></i></button>
       </div>
     </div>
-    <p>{{ the_field('video_details_video_description') }}</p>
+    <p class="text-center text-sm-left">{{ the_field('video_details_video_description') }}</p>
   </div>
 
   @include('components/video-sharing-modal')

@@ -62,7 +62,8 @@
     }
 
     @include media-breakpoint-down(ph) {
-      box-shadow: none;
+      // box-shadow: none;
+      box-shadow: 0 0 8px 10px rgba(255, 255, 255, 0.99);
     }
 
     &.swiper-button-disabled {
@@ -115,10 +116,6 @@
   width: 85px;
 
   @include media-breakpoint-up(xs) {
-    width: 90px;
-  }
-
-  @include media-breakpoint-up(md) {
     width: 100px;
   }
 
