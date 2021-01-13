@@ -1,6 +1,8 @@
-<div class="swiper-slide-category">
-  <img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" />
-  <span>{{$category -> name}}</span>
+<div style="display: flex;">
+  <div class="swiper-slide-category">
+    <img class="category-svg-icon" src="{{ the_field('video_category_icon_main',$category )  }}" alt="triangle with all three sides equal" />
+    <span>{{$category -> name}}</span>
+  </div>
 </div>
 <section class="swiper-container">
 
