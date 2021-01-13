@@ -5,7 +5,11 @@
   line-height: inherit;
   border: 1px rgba(250, 102, 0, 0.8) solid;
   overflow: hidden;
+  border-radius: 0.4rem;
   // box-shadow: inset 0 0 0 0.3px rgba(250, 102, 0, 0.8);
+  @include media-breakpoint-up(xs) {
+    border-radius: 0;
+  }
 
   .video-thumbnail-div {
     position: relative;

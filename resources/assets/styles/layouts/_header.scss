@@ -34,7 +34,8 @@ nav.navbar {
   .navbar-brand.brand {
     // width: calc(100vw - 5rem - 30px);
     padding: 0;
-    width: calc(90vw - 3rem - 35px);
+    margin: 0;
+    width: calc(90vw - 1rem - 35px);
 
     @include media-breakpoint-up(sm) {
       width: 100%;
