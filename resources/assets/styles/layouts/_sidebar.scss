@@ -1,3 +1,4 @@
+// Bootstrap mobile navbar and special posts page sidebar
 .navbar-collapse,
 #sidebar-main {
   ul {
@@ -7,12 +8,14 @@
   }
 }
 
+// responsive navbar links
 .navbar-collapse a {
   @extend .nav-link;
 
   padding: 0.1rem 1rem;
 }
 
+// Fully mobile responsive navbar
 .navbar-static {
   .search-form {
     margin-block-end: 0.6em;
@@ -42,6 +45,7 @@
   }
 }
 
+// Special sidebar for posts page
 #sidebar-main {
   position: absolute;
   right: 0;
@@ -89,6 +93,7 @@
   }
 }
 
+// All sidebars in header
 .navbar {
   @extend .navbar-expand-sm;
 
@@ -105,6 +110,7 @@
 
     &.search-field {
       border-color: rgba(255, 255, 255, 0.8);
+      color: #e6f0f7;
 
       &::placeholder {
         color: rgba(255, 255, 255, 0.5);

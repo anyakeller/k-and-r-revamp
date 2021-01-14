@@ -35,11 +35,14 @@
   }
 
   span {
-    color: theme-color-level("body-color-default", -4);
+    color: theme-color-level(
+      "body-color-default",
+      -4
+    ); // reduce level of main theme color to get a muted one
+
     font-size: 0.9rem;
     font-family: sans-serif;
     font-style: italic;
-    // reduce level of main theme color to get a muted one
   }
 
   p {

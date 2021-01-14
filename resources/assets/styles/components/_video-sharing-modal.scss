@@ -2,12 +2,12 @@
   VIDEO SHARING BTN AND MODAL
 */
 
-.video-sharing-button-div {
-  transition: width 0.2s ease 0s;
-
-  button {
-    border-radius: 0.8em;
-  }
+.share-btn {
+  border-radius: 0.8em;
+  padding: 0 0.4rem;
+  font-size: 0.9em;
+  line-height: 1.2;
+  min-width: 65px;
 }
 
 #copy-link,
