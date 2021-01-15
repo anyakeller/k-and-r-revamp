@@ -47,8 +47,7 @@ footer .widget {
     text-align: left;
     vertical-align: middle;
 
-    @media (min-width: 768px) {
-      // this is a bootstrap breakpoint 768px <= md < 992px
+    @include media-breakpoint-up(md) {
       width: 660px;
       max-width: 660px;
     }
@@ -78,6 +77,10 @@ footer .widget {
 
     .modal-body {
       padding: 4em 3em;
+
+      @include media-breakpoint-down(xs) {
+        padding: 3em 2em;
+      }
 
       h1 {
         font-weight: 300;
