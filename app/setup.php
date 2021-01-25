@@ -132,7 +132,28 @@ add_action('after_setup_theme', function () {
     });
 });
 
-/* custom stuff */
+/*
+*
+* custom stuff
+*
+*
+*/
+
+// redirect on login
+add_filter( 'login_redirect', function ( $redirect_to, $request, $user ) {
+    //is there a user to check?
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+        //check for admins
+        if ( $user->has_cap( 'edit_posts' ) ) {
+            // redirect them to the default place
+            return $redirect_to;
+        } else {
+            return home_url();
+        }
+    } else {
+        return $redirect_to;
+    }
+}, 10, 3 );
 
 /*
   Redirect from homepage to the featured or latest krvideo
@@ -165,27 +186,35 @@ add_action('template_redirect', function () {
   Redirect from labcam to login if not logged in
 */
 add_action(
-  'template_redirect',
-  function () {
-    global $wp_query;
+    'template_redirect',
+    function () {
+      global $wp_query;
 
-    $queried_object = get_queried_object();
-    $permalink = get_permalink($queried_object->ID);
-    $find = array( 'http://', 'https://' );
-    $replace = 'http://';
-    $http_url = str_replace($find, $replace, $permalink);
-    //echo '<p>' . $http_url . '</p>';
-    if ($queried_object -> post_name == "labcam"){
-      if ($queried_object->post_status == "private" && !is_user_logged_in()) {
-        wp_redirect(wp_login_url($http_url));
-        exit;
-      } elseif (is_user_logged_in() && substr_count($permalink,'https') > 0){
-        wp_redirect($http_url);
-        exit;
+      $queried_object = get_queried_object();
+      $permalink = get_permalink($queried_object->ID);
+      $find = array( 'http://', 'https://' );
+      $replace = 'http://';
+      $http_url = str_replace($find, $replace, $permalink);
+
+      if ($queried_object -> post_name == "labcam") {
+        if (is_user_logged_in() && substr_count($permalink, 'https') > 0) {
+          wp_redirect($http_url);
+          exit;
+        } elseif ($queried_object->post_status == "private" && !is_user_logged_in()) {
+          wp_redirect(wp_login_url($http_url));
+          echo '<p>' . $http_url . '</p>';
+          exit;
+        }
       }
-    }
   }
 );
+
+/*
+  Make labcam page visible to subscribers
+*/
+$subRole = get_role( 'subscriber' );
+$subRole->add_cap( 'read_private_posts' );
+$subRole->add_cap( 'read_private_pages' );
 
 
 // thumbnail sizes
