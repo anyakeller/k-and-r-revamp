@@ -155,6 +155,13 @@ add_filter( 'login_redirect', function ( $redirect_to, $request, $user ) {
     }
 }, 10, 3 );
 
+// redirect on logout
+add_action('wp_logout', function(){
+  wp_redirect( get_home_url() );
+  exit();
+});
+
+
 /*
   Redirect from homepage to the featured or latest krvideo
 */
