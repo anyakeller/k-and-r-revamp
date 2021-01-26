@@ -77,7 +77,8 @@ export default class CameraControllerThing {
 
   // kill everything AHHHHHHH
   panic() {
-    this.killAction('camera_walk');
+    this.killAction('camera_walk','forward');
+    this.killAction('camera_walk','backward');
     this.killAction('camera_look');
     this.killAction('continuous_zoom');
   }
