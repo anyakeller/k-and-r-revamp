@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import singleKrvideo from './routes/singleKrvideo';
 import ideabank from './routes/ideabank';
+import labcam from './routes/labcam';
 
 // fontawesome
 import '@fortawesome/fontawesome-free/js/all.js';
@@ -27,6 +28,8 @@ const routes = new Router({
   singleKrvideo,
   // Ideabank
   ideabank,
+  // LabCam
+  labcam,
 });
 
 // Load Events
