@@ -11,7 +11,7 @@ export default {
       })
       .mouseup(function() {
         console.log('Zoom in up');
-        camCtrlThing.sendCommand('continuous_zoom','stop');
+        camCtrlThing.killAction('continuous_zoom');
         // fnOnZoomStop();
       });
     $('#zoomOutBtn')
@@ -21,7 +21,7 @@ export default {
       })
       .mouseup(function() {
         console.log('Zoom out mouseup');
-        camCtrlThing.sendCommand('continuous_zoom','stop');
+        camCtrlThing.killAction('continuous_zoom');
       });
     $('.lookBtns')
       .mousedown(function(e) {
@@ -31,7 +31,7 @@ export default {
       })
       .mouseup(function() {
         console.log('look mouseup');
-        camCtrlThing.sendCommand('camera_look','stop');
+        camCtrlThing.killAction('camera_look');
       });
   },
   finalize() {

@@ -60,10 +60,21 @@ export default class CameraControllerThing {
   constructor() {
     console.log('CameraControllerThing initialized');
     this.formUrl = formUrl;
+    this.timeOut = null; // safety precaution so the camera doesn't smash into things
+  }
+
+  killAction(action) {
+    console.log(`${action} killed`);
+    this.sendCommand(action, 'stop');
+    clearTimeout(this.timeOut);
   }
 
   sendCommand(action, command = 'stop') {
-    console.log('poof');
+    console.log(`Command ${action} sent to ${command}`);
+    if (command !== 'stop') {
+      let secondsToGo = 5;
+      this.timeOut = setTimeout(this.killAction.bind(this, action), 1000 * secondsToGo);
+    }
     switch (action) {
       case 'continuous_zoom':
         $.post(
@@ -90,7 +101,7 @@ export default class CameraControllerThing {
         );
         break;
       default:
-        console.log('');
+        console.log(`Action ${action} is invalid`);
     }
   }
 }
