@@ -5,6 +5,11 @@ export default {
     const camCtrlThing = new CameraControllerThing();
     // JavaScript to be fired
     // Get control of looking buttons
+    $('#panicBtn')
+      .mousedown(function() {
+        console.log('PANIC PANIC PANIC');
+        camCtrlThing.panic();
+      });
     $('.zoomBtns')
       .mousedown(function(e) {
         console.log('Zoom in mousedown');
