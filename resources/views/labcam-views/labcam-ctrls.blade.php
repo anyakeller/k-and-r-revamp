@@ -1,3 +1,37 @@
+<div class="d-flex mb-4">
+  <style>
+    .zoomPng img {
+      user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .zoomPng:hover {
+      background-color: orange;
+    }
+  </style>
+  <div id="zoomPngs">
+    <div>
+      <div style="background-image:url(@asset('images/labcam-imgs/1_left_zoom_in_transparent.png'))"></div>
+      <div style="background-image:url(@asset('images/labcam-imgs/2_left_zoom_out_transparent.png'))"></div>
+    </div>
+    <div>
+      <img draggable="false" (dragstart)="false;" class="zoomPng" style="display: block;" src="@asset('images/labcam-imgs/1_left_zoom_in_transparent.png')" />
+      <img draggable="false" (dragstart)="false;" class="zoomPng" style="display: block;" src="@asset('images/labcam-imgs/2_left_zoom_out_transparent.png')" />
+    </div>
+  </div>
+  <script>
+    let zoomPngs = document.querySelector('#zoomPngs');
+    zoomPngs.addEventListener('click', function(event) {
+      console.log(event);
+    })
+  </script>
+</div>
+
+
 <div class="mb-3">
   <button id="panicBtn" class="btn btn-danger" style="border: solid 1px rgba(0, 6, 10, 0.075); font-size: 2em;">PANIC</button>
 </div>
@@ -18,6 +52,3 @@
   <button id="walkForwardBtn" class="btn btn-warning" value="forward" style="border: solid 1px rgba(0, 6, 10, 0.075);">walkForwardBtn</button>
   <button id="walkBackwardBtn" class="btn btn-warning" value="backward" style="border: solid 1px rgba(0, 6, 10, 0.075);">walkBackwardBtn</button>
 </div>
-
-<script>
-</script>

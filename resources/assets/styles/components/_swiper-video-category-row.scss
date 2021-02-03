@@ -78,11 +78,18 @@
   }
 
   .swiper-button-next {
-    right: 40px;
+    right: 30px;
   }
 
   .swiper-button-prev {
-    left: 0;
+    left: -1px;
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-up(xs) {
+    .swiper-button-next {
+      right: 40px;
+    }
   }
 
   @include media-breakpoint-up(md) {

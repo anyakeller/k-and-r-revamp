@@ -2,7 +2,7 @@
   justify-content: end;
 
   &::after {
-    padding-left: 3px;
+    padding-right: 3px;
   }
 }
 
@@ -11,7 +11,7 @@
   justify-content: start;
 
   &::after {
-    padding-right: 3px;
+    padding-left: 3px;
   }
 }
 
