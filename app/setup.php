@@ -132,7 +132,34 @@ add_action('after_setup_theme', function () {
     });
 });
 
-/* custom stuff */
+/*
+*
+* custom stuff
+*
+*/
+
+// redirect on login
+add_filter('login_redirect', function ($redirect_to, $request, $user) {
+    //is there a user to check?
+    if (isset($user->roles) && is_array($user->roles)) {
+        //check for admins
+        if ($user->has_cap('edit_posts')) {
+            // redirect them to the default place
+            return $redirect_to;
+        } else {
+            return home_url();
+        }
+    } else {
+        return $redirect_to;
+    }
+}, 10, 3);
+
+// redirect on logout
+add_action('wp_logout', function () {
+    wp_redirect(get_home_url());
+    exit();
+});
+
 
 /*
   Redirect from homepage to the featured or latest krvideo
