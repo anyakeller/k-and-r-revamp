@@ -1,5 +1,5 @@
 <div class="d-flex mb-4">
-  <style>
+  {{-- <style>
     .zoomPng img {
       user-drag: none;
       user-select: none;
@@ -22,7 +22,7 @@
       <img draggable="false" (dragstart)="false;" class="zoomPng" style="display: block;" src="@asset('images/labcam-imgs/1_left_zoom_in_transparent.png')" />
       <img draggable="false" (dragstart)="false;" class="zoomPng" style="display: block;" src="@asset('images/labcam-imgs/2_left_zoom_out_transparent.png')" />
     </div>
-  </div>
+  </div> --}}
   <script>
     let zoomPngs = document.querySelector('#zoomPngs');
     zoomPngs.addEventListener('click', function(event) {

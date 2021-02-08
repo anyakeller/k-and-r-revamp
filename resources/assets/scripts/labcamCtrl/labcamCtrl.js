@@ -1,4 +1,3 @@
-const formUrl = 'https://rebootalpha.local/wp-admin/admin-ajax.php';
 /*
 function CameraControl() {
   this.pan = 0;
@@ -37,21 +36,24 @@ function loadSettings() {
 export default class CameraControllerThing {
   constructor() {
     console.log('CameraControllerThing initialized');
-    this.formUrl = formUrl;
+    this.formUrl = 'http://rebootalpha.local/wp-admin/admin-ajax.php';
     this.timeOut = null; // safety precaution so the camera doesn't smash into things
     this.activeAction = null;
     this.activeCommand = null;
   }
 
-
   // direct command sender
   sendCommand(action, actionKey, command) {
     let commandQuerey = {
-      action: action,
-      [actionKey]: command,
+      url: this.formUrl,
+      method: 'POST',
+      data: {
+        'action': action,
+        [actionKey]: command,
+      },
     };
-    $.post(
-      this.formUrl, commandQuerey
+    $.ajax(
+      commandQuerey
     );
   }
 
@@ -77,8 +79,8 @@ export default class CameraControllerThing {
 
   // kill everything AHHHHHHH
   panic() {
-    this.killAction('camera_walk','forward');
-    this.killAction('camera_walk','backward');
+    this.killAction('camera_walk', 'forward');
+    this.killAction('camera_walk', 'backward');
     this.killAction('camera_look');
     this.killAction('continuous_zoom');
   }
