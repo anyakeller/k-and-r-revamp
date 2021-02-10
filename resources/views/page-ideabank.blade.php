@@ -8,7 +8,6 @@
   @if ($images)
 
   <!-- Slider main container -->
-
   <div id="ideabank-swiper-div" class="my-4 my-lg-2">
     <div class="swiper-container">
       <!-- Additional required wrapper -->
