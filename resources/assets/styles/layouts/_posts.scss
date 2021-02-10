@@ -19,6 +19,11 @@
     overflow: visible;
   }
 
+  @include media-breakpoint-up(md) {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
   > li {
     position: relative;
     overflow: hidden;
