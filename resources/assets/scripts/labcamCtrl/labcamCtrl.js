@@ -44,17 +44,15 @@ export default class CameraControllerThing {
 
   // direct command sender
   sendCommand(action, actionKey, command) {
-    let commandQuerey = {
+    let commandQuery = {
       url: this.formUrl,
       method: 'POST',
       data: {
-        'action': action,
+        action: action,
         [actionKey]: command,
       },
     };
-    $.ajax(
-      commandQuerey
-    );
+    $.ajax(commandQuery);
   }
 
   // helper to get stop command
@@ -97,11 +95,12 @@ export default class CameraControllerThing {
     console.log(`${actionToKill} ${commandToKill} killed`);
   }
 
-  // universal helper to controll camera
+  // universal helper to control camera
   doCommand(action, command) {
     console.log(`Command ${action} sent to ${command}`);
     // kill and clear last action
-    if (this.activeAction && this.timeOut) this.killAction(this.activeAction, this.activeCommand);
+    if (this.activeAction && this.timeOut)
+      this.killAction(this.activeAction, this.activeCommand);
     // set the active action
     this.activeAction = action;
     this.activeCommand = command;
@@ -110,7 +109,10 @@ export default class CameraControllerThing {
     //run command
     if (command !== stopCommand) {
       let secondsToGo = 5;
-      this.timeOut = setTimeout(this.killAction.bind(this, action, command), 1000 * secondsToGo);
+      this.timeOut = setTimeout(
+        this.killAction.bind(this, action, command),
+        1000 * secondsToGo
+      );
     }
     let actionKey = this.getActionKey(action);
     this.sendCommand(action, actionKey, command);

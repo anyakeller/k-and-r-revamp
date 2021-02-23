@@ -3,12 +3,12 @@
 @section('content')
 @include('partials.page-header')
 <div class="d-flex">
-  @if (!have_posts())
-  <div class="alert alert-warning">
-    {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
-  </div>
+    @if (!have_posts())
+    <div class="alert alert-warning">
+        {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
+    </div>
 
-  {{-- {!! get_search_form(false) !!} --}}
-  @endif
+    {{-- {!!  get_search_form(false) !!} --}}
+    @endif
 </div>
 @endsection
