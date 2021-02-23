@@ -17,11 +17,13 @@ $hamburger-types: (minus);
 // needed to be moved up because of css rules
 // Format:  [line-height] * [number of lines for the video title + ([video-card-text padding-top + padding-bottom]) +
 //  + [height of video date span]
-$video-card-text-num-lines-ph: 3;
+$video-card-text-num-lines-ph: 2;
 $video-card-text-num-lines-sm: 2;
-$video-card-text-padding-top: 0.4em;
-$video-card-text-padding-bottom: 0.2em;
-$video-card-text-height: 1em * $video-card-text-num-lines-ph +
-  $video-card-text-padding-top + $video-card-text-padding-bottom + 1em;
-$video-card-text-height-sm-up: 1em * $video-card-text-num-lines-sm +
-  $video-card-text-padding-top + $video-card-text-padding-bottom + 1em;
+$video-card-text-font-size: 1rem;
+$video-card-text-line-height-multiplier: 1.2;
+$video-card-text-padding-top: 0.3 * $video-card-text-font-size;
+$video-card-text-padding-bottom: 0.2 * $video-card-text-font-size;
+$video-card-text-height: ($video-card-text-line-height-multiplier * $video-card-text-font-size * $video-card-text-num-lines-ph) +
+  $video-card-text-padding-top + $video-card-text-padding-bottom + ($video-card-text-line-height-multiplier * $video-card-text-font-size);
+$video-card-text-height-sm-up: ($video-card-text-line-height-multiplier * $video-card-text-font-size* $video-card-text-num-lines-sm) +
+  $video-card-text-padding-top + $video-card-text-padding-bottom + ($video-card-text-line-height-multiplier * $video-card-text-font-size);

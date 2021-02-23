@@ -1,8 +1,8 @@
 .video-card {
   transition: box-shadow 0.3s ease-in-out;
   text-align: center;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: $video-card-text-font-size;
+  line-height: $video-card-text-font-size * $video-card-text-line-height-multiplier;
   border: 1px rgba(250, 102, 0, 0.8) solid;
   overflow: hidden;
   border-radius: 0.4rem;
@@ -111,7 +111,7 @@
   > .entry-title {
     overflow: hidden;
     flex-grow: 1;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   > .text-muted {
