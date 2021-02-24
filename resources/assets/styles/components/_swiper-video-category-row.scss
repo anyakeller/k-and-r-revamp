@@ -54,7 +54,7 @@
       padding-bottom: $video-card-text-height;
       // box-shadow: 0 0 14px 12px rgba(255, 255, 255, 0.9);
       box-shadow: 0 0 14px 18px rgba(255, 255, 255, 0.99);
-      width: 0;
+      // width: 0;
 
       &::after {
         display: none;
@@ -78,17 +78,17 @@
   }
 
   .swiper-button-next {
-    right: 30px;
+    right: 12px;
   }
 
   .swiper-button-prev {
-    left: -1px;
+    left: -21px;
     margin-left: 0;
   }
 
   @include media-breakpoint-up(xs) {
     .swiper-button-next {
-      right: 40px;
+      right: 20px;
     }
   }
 
