@@ -12,7 +12,7 @@
 @font-face {
   font-family: Yantramanav;
   src: url("../fonts/Yantramanav/Yantramanav-Light.ttf") format("truetype");
-  font-weight: 200 300;
+  font-weight: 300;
 }
 
 @font-face {
@@ -30,13 +30,13 @@
 @font-face {
   font-family: Yantramanav;
   src: url("../fonts/Yantramanav/Yantramanav-Bold.ttf") format("truetype");
-  font-weight: 600 700;
+  font-weight: 700;
 }
 
 @font-face {
   font-family: Yantramanav;
   src: url("../fonts/Yantramanav/Yantramanav-Black.ttf") format("truetype");
-  font-weight: 800 900;
+  font-weight: 900;
 }
 
 // H tags
@@ -49,7 +49,8 @@ h3 {
 
 // Span
 .video-card-text span:last-child {
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: 300;
 }
 
 /* LAYOUT
