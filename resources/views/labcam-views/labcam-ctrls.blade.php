@@ -17,30 +17,17 @@
             clip-path: circle(54px at center);
             cursor: pointer;
         }
-
     </style>
     <div id="zoomPngs" class="clip-circle">
-        {{-- <div>
-      <div style="background-image:url(@asset('images/labcam-imgs/1_left_zoom_in_transparent.png'))"></div>
-      <div style="background-image:url(@asset('images/labcam-imgs/2_left_zoom_out_transparent.png'))"></div>
-    </div> --}}
-        <div>
-
-        </div>
-        <div>
-            <img draggable="false" (dragstart)="false;" class="zoomPng" style="display: block;"
-                src="@asset('images/labcam-imgs/labcam_zoom_in_transparent.png')" />
-            <img draggable="false" (dragstart)="false;" class="zoomPng" style="display: block;"
-                src="@asset('images/labcam-imgs/labcam_zoom_out_transparent.png')" />
-        </div>
+        <img draggable="false" (dragstart)="false;" class="zoomPng"
+            style="display: block;"
+            src="@asset('images/labcam-imgs/labcam_zoom_in_transparent.png')"
+            data-command="in" />
+        <img draggable="false" (dragstart)="false;" class="zoomPng"
+            style="display: block;"
+            src="@asset('images/labcam-imgs/labcam_zoom_out_transparent.png')"
+            data-command="out" />
     </div>
-    <script>
-        let zoomPngs = document.querySelector('#zoomPngs');
-        zoomPngs.addEventListener('click', function(event) {
-            console.log(event);
-        });
-
-    </script>
 </div>
 
 
@@ -50,9 +37,11 @@
 </div>
 
 <div class="btn-group zoomBtns m-2" role="group" aria-label="ctrls-zoom">
-    <button id="zoomInBtn" class="btn btn-primary" value="in" style="border: solid 1px rgba(0, 6, 10, 0.075);">Zoom
+    <button id="zoomInBtn" class="btn btn-primary" value="in"
+        style="border: solid 1px rgba(0, 6, 10, 0.075);">Zoom
         In</button>
-    <button id="zoomOutBtn" class="btn btn-primary" value="out" style="border: solid 1px rgba(0, 6, 10, 0.075);">Zoom
+    <button id="zoomOutBtn" class="btn btn-primary" value="out"
+        style="border: solid 1px rgba(0, 6, 10, 0.075);">Zoom
         Out</button>
 </div>
 
