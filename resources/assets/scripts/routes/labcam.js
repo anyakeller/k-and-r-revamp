@@ -30,12 +30,21 @@ export default {
       console.log("walk mouseup");
       camCtrlThing.killAction("camera_walk", $(e.target).val());
     });
-    $("#zoomPngs").mousedown(function (e) {
+
+    // PNG CONTROLS
+    $(".zoomPng").mousedown(function (e) {
       console.log("Zoom mousedown", $(e.target).attr("data-command"));
       camCtrlThing.doCommand("continuous_zoom", $(e.target).attr("data-command"));
     }).mouseup(function () {
       console.log("Zoom mouseup");
       camCtrlThing.killAction("continuous_zoom");
+    });
+    $(".walkPng").mousedown(function (e) {
+      console.log("walk mousedown");
+      camCtrlThing.doCommand("camera_walk", $(e.target).attr("data-command"));
+    }).mouseup(function (e) {
+      console.log("walk mouseup");
+      camCtrlThing.killAction("camera_walk", $(e.target).attr("data-command"));
     });
   },
   finalize() {

@@ -45,12 +45,12 @@
     }
 </style>
 <div class="d-flex align-items-center mb-4">
-    <div id="zoomPngs" class="clip-circle clip-circle-120">
-        <img draggable="false" (dragstart)="false;" class="ctrl-png"
+    <div class="clip-circle clip-circle-120">
+        <img draggable="false" (dragstart)="false;" class="zoomPng ctrl-png"
             style="display: block;"
             src="@asset('images/labcam-imgs/labcam_zoom_in_transparent.png')"
             data-command="in" />
-        <img draggable="false" (dragstart)="false;" class="ctrl-png"
+        <img draggable="false" (dragstart)="false;" class="zoomPng ctrl-png"
             style="display: block;"
             src="@asset('images/labcam-imgs/labcam_zoom_out_transparent.png')"
             data-command="out" />
@@ -59,7 +59,8 @@
         <img draggable="false" (dragstart)="false;" class="ctrl-png hover-left"
             style="display: inline-block;"
             src="@asset('images/labcam-imgs/mid_look_left_transparent.png')"
-            data-command="left" /><div style="display: inline-block">
+            data-command="left" />
+        <div style="display: inline-block">
             <img draggable="false" (dragstart)="false;"
                 class="ctrl-png hover-up" style="display: block;"
                 src="@asset('images/labcam-imgs/mid_look_up_transparent.png')" />
@@ -68,23 +69,24 @@
             <img draggable="false" (dragstart)="false;"
                 class="ctrl-png hover-down" style="display: block;"
                 src="@asset('images/labcam-imgs/mid_look_down_transparent.png')" />
-        </div><img draggable="false" (dragstart)="false;" class="ctrl-png hover-right"
-            style="display: inline-block;"
+        </div><img draggable="false" (dragstart)="false;"
+            class="ctrl-png hover-right" style="display: inline-block;"
             src="@asset('images/labcam-imgs/mid_look_right_transparent.png')"
             data-command="right" />
     </div>
-    <div id="walkPngs" class="clip-circle clip-circle-120">
-        <img draggable="false" (dragstart)="false;" class="ctrl-png"
+    <div class="clip-circle clip-circle-120">
+        <img draggable="false" (dragstart)="false;" class="walkPng ctrl-png"
             style="display: block;"
             src="@asset('images/labcam-imgs/labcam_walk_forward_transparent.png')"
-            data-command="in" />
+            data-command="forward" />
         <img draggable="false" (dragstart)="false;" class="ctrl-png"
             style="display: block;"
-            src="@asset('images/labcam-imgs/labcam_walk_man_transparent.png')" />
-        <img draggable="false" (dragstart)="false;" class="ctrl-png"
+            src="@asset('images/labcam-imgs/labcam_walk_man_transparent.png')"
+            data-command="" />
+        <img draggable="false" (dragstart)="false;" class="walkPng ctrl-png"
             style="display: block;"
             src="@asset('images/labcam-imgs/labcam_walk_backward_transparent.png')"
-            data-command="out" />
+            data-command="backward" />
     </div>
 </div>
 <div>
