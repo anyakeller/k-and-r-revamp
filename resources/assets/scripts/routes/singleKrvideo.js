@@ -27,8 +27,8 @@ export default {
         // breakpoint md
         768: {
           slidesPerView: 3,
-          slidesOffsetBefore: 33,
-          slidesOffsetAfter: 33,
+          slidesOffsetBefore: 43,
+          slidesOffsetAfter: 43,
         },
         // breakpoint lg
         1200: {
