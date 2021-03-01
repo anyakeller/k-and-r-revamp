@@ -13,12 +13,23 @@
     }
 
     .clip-circle {
-        clip-path: circle(54px at center);
+        cursor: pointer;
+    }
+
+    .clip-circle-120 {
+        /* clip-path: circle(56px at center); */
+        clip-path: ellipse(54px 54px at center);
+        cursor: pointer;
+    }
+
+    .clip-circle-130 {
+        /* clip-path: circle(56px at center); */
+        clip-path: ellipse(53px 55px at center);
         cursor: pointer;
     }
 </style>
-<div class="d-flex mb-4">
-    <div id="zoomPngs" class="clip-circle">
+<div class="d-flex align-items-center mb-4">
+    <div id="zoomPngs" class="clip-circle clip-circle-120">
         <img draggable="false" (dragstart)="false;" class="ctrlPng"
             style="display: block;"
             src="@asset('images/labcam-imgs/labcam_zoom_in_transparent.png')"
@@ -28,11 +39,12 @@
             src="@asset('images/labcam-imgs/labcam_zoom_out_transparent.png')"
             data-command="out" />
     </div>
-    <div id="lookPngs" class="clip-circle">
+    <div id="lookPngs" class="clip-circle clip-circle-130">
         <img draggable="false" (dragstart)="false;" class="ctrlPng"
             style="display: inline-block;"
             src="@asset('images/labcam-imgs/mid_look_left_transparent.png')"
-            data-command="left" /><div style="display: inline-block">
+            data-command="left" />
+        <div style="display: inline-block">
             <img draggable="false" (dragstart)="false;" class="ctrlPng"
                 style="display: block;"
                 src="@asset('images/labcam-imgs/mid_look_up_transparent.png')" />
