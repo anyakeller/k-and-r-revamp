@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center mb-4">
+<div class="d-flex justify-content-center align-items-center mb-4">
     <div class="clip-circle clip-circle-120">
         <img draggable="false" (dragstart)="false;" class="zoomPng ctrl-png"
             style="display: block;"
@@ -36,8 +36,7 @@
             data-command="forward" />
         <img draggable="false" (dragstart)="false;" class="ctrl-png"
             style="display: block;"
-            src="@asset('images/labcam-imgs/labcam_walk_man_transparent.png')"
-            data-command="" />
+            src="@asset('images/labcam-imgs/labcam_walk_man_transparent.png')"/>
         <img draggable="false" (dragstart)="false;" class="walkPng ctrl-png"
             style="display: block;"
             src="@asset('images/labcam-imgs/labcam_walk_backward_transparent.png')"

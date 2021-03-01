@@ -114,7 +114,8 @@ export default class CameraControllerThing {
     //run command
     let actionKey = this.getActionKey(action);
     if (command !== stopCommand) {
-      let secondsToGo = 5;
+      // 90s to traverse whole lab
+      let secondsToGo = 60;
       this.timeOut = setTimeout(this.killAction.bind(this, action, command), 1000 * secondsToGo);
     }
     this.sendCommand(action, actionKey, command);
