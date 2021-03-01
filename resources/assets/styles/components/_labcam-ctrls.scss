@@ -1,0 +1,60 @@
+/* ----------------------------- Labcam Controls ---------------------------- */
+
+.ctrl-png img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.ctrl-png {
+  &:hover {
+    background: rgba(255, 126, 0, 0.94);
+  }
+
+  &.hover-up:hover {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 126, 0, 0.94) 20%
+    );
+  }
+
+  &.hover-right:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 126, 0, 0.94) 20%
+    );
+  }
+
+  &.hover-down:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 126, 0, 0.94) 20%
+    );
+  }
+
+  &.hover-left:hover {
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 126, 0, 0.94) 20%
+    );
+  }
+}
+
+.clip-circle {
+  cursor: pointer;
+  
+  &-120 {
+    /* clip-path: circle(56px at center); */
+    clip-path: ellipse(53px 54px at center);
+    cursor: pointer;
+  }
+
+  &-130 {
+    /* clip-path: circle(56px at center); */
+    clip-path: ellipse(54px 53px at center);
+    cursor: pointer;
+  }
+}
