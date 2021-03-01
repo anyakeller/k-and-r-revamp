@@ -93,7 +93,10 @@ export default class CameraControllerThing {
     this.timeOut = null;
     this.activeAction = null;
     this.activeCommand = null;
-    console.log(`${actionToKill} ${commandToKill} killed`);
+    console.log(
+      `${actionToKill} ${commandToKill
+      ? commandToKill
+      : ""} killed`);
   }
 
   // universal helper to control camera

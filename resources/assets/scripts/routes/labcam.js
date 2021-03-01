@@ -9,28 +9,7 @@ export default {
       console.log("PANIC PANIC PANIC");
       camCtrlThing.panic();
     });
-    $(".zoomBtns").mousedown(function (e) {
-      console.log("Zoom in mousedown");
-      camCtrlThing.doCommand("continuous_zoom", $(e.target).val());
-    }).mouseup(function () {
-      console.log("Zoom in mouseup");
-      camCtrlThing.killAction("continuous_zoom");
-    });
-    $(".lookBtns").mousedown(function (e) {
-      console.log("look mousedown");
-      camCtrlThing.doCommand("camera_look", $(e.target).val());
-    }).mouseup(function () {
-      console.log("look mouseup");
-      camCtrlThing.killAction("camera_look");
-    });
-    $(".walkBtns").mousedown(function (e) {
-      console.log("walk mousedown");
-      camCtrlThing.doCommand("camera_walk", $(e.target).val());
-    }).mouseup(function (e) {
-      console.log("walk mouseup");
-      camCtrlThing.killAction("camera_walk", $(e.target).val());
-    });
-
+    
     // PNG CONTROLS
     $(".zoomPng").mousedown(function (e) {
       console.log("Zoom mousedown", $(e.target).attr("data-command"));
@@ -38,6 +17,13 @@ export default {
     }).mouseup(function () {
       console.log("Zoom mouseup");
       camCtrlThing.killAction("continuous_zoom");
+    });
+    $(".lookPng").mousedown(function (e) {
+      console.log("look mousedown");
+      camCtrlThing.doCommand("camera_look", $(e.target).attr("data-command"));
+    }).mouseup(function () {
+      console.log("look mouseup");
+      camCtrlThing.killAction("camera_look");
     });
     $(".walkPng").mousedown(function (e) {
       console.log("walk mousedown");
