@@ -25,6 +25,7 @@
   &::after {
     transition: filter 0.1s ease 0s;
     opacity: 0.6;
+    font-size: 38px;
   }
 
   &:hover::after {

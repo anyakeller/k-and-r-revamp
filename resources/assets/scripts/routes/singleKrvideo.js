@@ -34,7 +34,7 @@ export default {
         1200: {
           slidesPerView: 4,
           slidesPerGroup: 2,
-          slidesOffsetBefore: 33,
+          slidesOffsetBefore: 43,
         },
       },
 
