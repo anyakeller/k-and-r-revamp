@@ -24,7 +24,7 @@
 
     .clip-circle-130 {
         /* clip-path: circle(56px at center); */
-        clip-path: ellipse(53px 55px at center);
+        clip-path: ellipse(54px 53px at center);
         cursor: pointer;
     }
 </style>
@@ -43,8 +43,7 @@
         <img draggable="false" (dragstart)="false;" class="ctrlPng"
             style="display: inline-block;"
             src="@asset('images/labcam-imgs/mid_look_left_transparent.png')"
-            data-command="left" />
-        <div style="display: inline-block">
+            data-command="left" /><div style="display: inline-block">
             <img draggable="false" (dragstart)="false;" class="ctrlPng"
                 style="display: block;"
                 src="@asset('images/labcam-imgs/mid_look_up_transparent.png')" />
