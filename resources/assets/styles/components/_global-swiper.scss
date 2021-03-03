@@ -1,5 +1,6 @@
 .swiper-button-next {
-  justify-content: end;
+  // justify-content: end;
+  justify-content: flex-end;
 
   &::after {
     padding-right: 3px;
@@ -7,8 +8,8 @@
 }
 
 .swiper-button-prev {
-  // flex-direction: row-reverse;
-  justify-content: start;
+  // justify-content: start;
+  justify-content: flex-start;
 
   &::after {
     padding-left: 3px;
@@ -19,11 +20,12 @@
 .swiper-button-prev {
   transition: opacity 0.2s ease 0s;
   color: theme-color("primary");
-  width: 27px;
+  width: 37px;
 
   &::after {
     transition: filter 0.1s ease 0s;
     opacity: 0.6;
+    font-size: 38px;
   }
 
   &:hover::after {
