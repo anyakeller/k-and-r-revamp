@@ -9,7 +9,7 @@ export default {
       console.log("PANIC PANIC PANIC");
       camCtrlThing.panic();
     });
-    
+
     // PNG CONTROLS
     $(".zoomPng").mousedown(function (e) {
       console.log("Zoom mousedown", $(e.target).attr("data-command"));
