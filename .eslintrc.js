@@ -27,7 +27,6 @@ module.exports = {
     "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|svg|json)$"]
   },
   rules: {
-    "no-console": 0,
-    quotes: ["error", "double"]
+    "no-console": 0
   }
 };

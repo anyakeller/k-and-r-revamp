@@ -32,21 +32,19 @@ function loadSettings() {
     .text(tilt);
 }
 */
-
 export default class CameraControllerThing {
   constructor() {
-    console.log("CameraControllerThing initialized");
-    this.formUrl = "http://rebootalpha.local/wp-admin/admin-ajax.php";
+    console.log('CameraControllerThing initialized');
+    this.formUrl = 'http://rebootalpha.local/wp-admin/admin-ajax.php';
     this.timeOut = null; // safety precaution so the camera doesn't smash into things
     this.activeAction = null;
     this.activeCommand = null;
   }
-
   // direct command sender
   sendCommand(action, actionKey, command) {
     let commandQuery = {
       url: this.formUrl,
-      method: "POST",
+      method: 'POST',
       data: {
         action: action,
         [actionKey]: command
@@ -54,22 +52,20 @@ export default class CameraControllerThing {
     };
     $.ajax(commandQuery);
   }
-
   // helper to get stop command
   getStopCommand(action, command = null) {
-    if (action === "camera_walk") 
-      return `${command}Stop`;
-    return "stop";
+    if (action === 'camera_walk') return `${command}Stop`;
+    return 'stop';
   }
   // helper for building commands
   getActionKey(action) {
     switch (action) {
-      case "continuous_zoom":
-        return "zoomAction";
-      case "camera_look":
-        return "lookDirection";
-      case "camera_walk":
-        return "walkDirection";
+      case 'continuous_zoom':
+        return 'zoomAction';
+      case 'camera_look':
+        return 'lookDirection';
+      case 'camera_walk':
+        return 'walkDirection';
       default:
         console.log(`Action ${action} is invalid`);
         return null;
@@ -78,12 +74,11 @@ export default class CameraControllerThing {
 
   // kill everything AHHHHHHH
   panic() {
-    this.killAction("camera_walk", "forward");
-    this.killAction("camera_walk", "backward");
-    this.killAction("camera_look");
-    this.killAction("continuous_zoom");
+    this.killAction('camera_walk', 'forward');
+    this.killAction('camera_walk', 'backward');
+    this.killAction('camera_look');
+    this.killAction('continuous_zoom');
   }
-
   // kill an action
   killAction(actionToKill, commandToKill = null) {
     let actionKey = this.getActionKey(actionToKill);
@@ -93,19 +88,15 @@ export default class CameraControllerThing {
     this.timeOut = null;
     this.activeAction = null;
     this.activeCommand = null;
-    console.log(
-      `${actionToKill} ${commandToKill
-      ? commandToKill
-      : ""} killed`);
+    console.log(`${actionToKill} ${commandToKill ? commandToKill : ''} killed`);
   }
-
   // universal helper to control camera
   doCommand(action, command) {
     console.log(`Command ${action} sent to ${command}`);
     // kill and clear last action
-    if (this.activeAction && this.timeOut) 
+    if (this.activeAction && this.timeOut)
       this.killAction(this.activeAction, this.activeCommand);
-    
+
     // set the active action
     this.activeAction = action;
     this.activeCommand = command;
@@ -116,7 +107,10 @@ export default class CameraControllerThing {
     if (command !== stopCommand) {
       // 90s to traverse whole lab
       let secondsToGo = 60;
-      this.timeOut = setTimeout(this.killAction.bind(this, action, command), 1000 * secondsToGo);
+      this.timeOut = setTimeout(
+        this.killAction.bind(this, action, command),
+        1000 * secondsToGo
+      );
     }
     this.sendCommand(action, actionKey, command);
   }
