@@ -1,4 +1,4 @@
-import Swiper from 'swiper/bundle';
+import Swiper from "swiper/bundle";
 export default {
   init() {
     // JavaScript to be fired on a post page
@@ -6,7 +6,7 @@ export default {
   finalize() {
     // JavaScript to be fired on a post page, after the init JS
 
-    new Swiper('.swiper-container', {
+    new Swiper(".swiper-container", {
       slidesPerView: 2,
       // slidesPerView: 'auto',
       slidesPerGroup: 1,
@@ -16,8 +16,8 @@ export default {
       slidesOffsetAfter: 46,
 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
       },
       breakpoints: {
         // breakpoint sm

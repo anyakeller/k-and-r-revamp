@@ -196,7 +196,7 @@ add_action('template_redirect', function () {
         $args = array(
            'post_type' => 'krvideo',
            'posts_per_page' => 1,
-           'meta_key'		=> 'is_featured_video',
+           'meta_key'		=> 'category_and_featuring_options_is_featured_video',
            'meta_value'	=> 1
          );
         $featured_video = new \WP_Query($args);
