@@ -1,8 +1,10 @@
 # Kite and Rocket Wordpress Theme Reboot
+<img width="60%" alt="kiteandrocket desktop" src="https://user-images.githubusercontent.com/10265250/197405276-56ced979-1b44-4535-946f-c4a9f8e5cab0.png">
+
 
 ###### By Anya L. Keller
 
-**THIS IS AN UNOFFICIAL TEST THEME**
+**THIS IS THE EX-OFFICIAL KITEANDROCKET WORDPRESS THEME**
 
 This theme built on [Roots Sage v9.0.9](https://roots.io/sage/) which uses [Laravel's Blade](https://laravel.com/docs/5.8/blade) templating engine
 
